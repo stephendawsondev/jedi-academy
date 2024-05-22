@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  background: url("../assets/images/template.png") no-repeat center center/cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: overlay;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+.dialog {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  display: none;
+}
+
+.dialog p {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
