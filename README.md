@@ -25,6 +25,12 @@ May the force be with you, as always!
 ### Memory Game - Laptop View
 ![Memory Game - Laptop View](assets/wireframes/memory-game-laptop.png)
 
+### Whack a Jar-Jar Game - Mobile View
+![Whack a Jar-Jar Game - Mobile View](assets/wireframes/whack-a-jar-jar-mobile.png)
+### Whack a Jar-Jar Game - Tablet View
+![Whack a Jar-Jar Game - Tablet View](assets/wireframes/whack-a-jar-jar-tablet.png)
+### Whack a Jar-Jar Game - Laptop View
+![Whack a Jar-Jar Game - Laptop View](assets/wireframes/whack-a-jar-jar-laptop.pngx)
 ## Credits
 
 ## Collaborators
