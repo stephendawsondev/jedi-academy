@@ -30,7 +30,15 @@ May the force be with you, as always!
 ### Whack a Jar-Jar Game - Tablet View
 ![Whack a Jar-Jar Game - Tablet View](assets/wireframes/whack-a-jar-jar-tablet.png)
 ### Whack a Jar-Jar Game - Laptop View
-![Whack a Jar-Jar Game - Laptop View](assets/wireframes/whack-a-jar-jar-laptop.pngx)
+![Whack a Jar-Jar Game - Laptop View](assets/wireframes/whack-a-jar-jar-laptop.png)
+
+### Star Wars Themed Wordle - Mobile View
+![Star Wars Themed Wordle - Mobile View](assets/wireframes/star-wars-wordle-mobile.png)
+### Star Wars Themed Wordle - Tablet View
+![Star Wars Themed Wordle - Tablet View](assets/wireframes/star-wars-wordle-tablet.png)
+### Star Wars Themed Wordle - Laptop View
+![Star Wars Themed Wordle - Laptop View](assets/wireframes/star-wars-wordle-laptop.png)
+
 ## Credits
 
 ## Collaborators
