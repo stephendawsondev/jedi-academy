@@ -18,6 +18,13 @@ May the force be with you, as always!
 
 ## Wireframes
 
+### Memory Game - Mobile View
+![Memory Game - Mobile View](assets/wireframes/memory-game-mobile.png)
+### Memory Game - Tablet View
+![Memory Game - Tablet View](assets/wireframes/memory-game-tablet.png)
+### Memory Game - Laptop View
+![Memory Game - Laptop View](assets/wireframes/memory-game-laptop.png)
+
 ## Credits
 
 ## Collaborators
