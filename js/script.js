@@ -1,49 +1,79 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const dialog = document.getElementById("dialog");
-  const dialogText = document.getElementById("dialog-text");
-  const nextButton = document.getElementById("next-button");
-
-  let textIndex = 0;
-
-  const texts = [
-    "Welcome to the Star Wars adventure!",
-    "You are about to embark on a journey...",
-    "Make wise choices and may the Force be with you.",
-    runWhackAMoleGame,
-  ];
-
-  const showDialog = () => {
-    dialog.style.display = "block";
-    updateDialogContent();
+/**
+ * Initializes the local storage with the default structure if not already set.
+ */
+const initializeLocalStorage = () => {
+  const initialData = {
+    wordle: { result: 0, gameComplete: false },
+    "whack-a-droid": { result: 0, gameComplete: false },
+    memory: { result: 0, gameComplete: false },
+    allGamesComplete: false,
+    totalScore: 0,
   };
 
-  const updateDialogContent = () => {
-    const currentTextOrFunction = texts[textIndex];
-    if (typeof currentTextOrFunction === "string") {
-      dialogText.textContent = currentTextOrFunction;
-    } else if (typeof currentTextOrFunction === "function") {
-      dialog.style.display = "none";
-      currentTextOrFunction();
-    }
-  };
-
-  const nextText = () => {
-    if (textIndex < texts.length - 1) {
-      textIndex++;
-      updateDialogContent();
-    } else {
-      dialog.style.display = "none";
-    }
-  };
-
-  nextButton.addEventListener("click", nextText);
-
-  // Initialize dialog
-  showDialog();
-
-  // Example function to demonstrate functionality
-  function runWhackAMoleGame() {
-    alert("Running Whack-A-JarJar Game!");
-    // Add your game initialization code here
+  if (!localStorage.getItem("gameData")) {
+    localStorage.setItem("gameData", JSON.stringify(initialData));
   }
+};
+
+/**
+ * Calculates the average score of all games rounded to the nearest integer.
+ * @returns {number} - The average score of all games.
+ */
+const calculateAverageScore = () => {
+  const gameData = JSON.parse(localStorage.getItem("gameData"));
+  const totalScore =
+    gameData.wordle.result +
+    gameData["whack-a-droid"].result +
+    gameData.memory.result;
+  const averageScore = Math.floor(totalScore / 3);
+  return averageScore;
+};
+
+/**
+ * Updates the local storage with the provided game data.
+ * @param {string} game - The name of the game (e.g., 'wordle', 'whack-a-droid', 'memory').
+ * @param {object} data - The data object containing result and gameComplete status.
+ * Example:
+ * {
+ * result: 0,
+ * gameComplete: false
+ * }
+ */
+const updateLocalStorage = (game, data) => {
+  const gameData = JSON.parse(localStorage.getItem("gameData"));
+  gameData[game] = data;
+
+  // Check if all games are complete
+  gameData.allGamesComplete =
+    gameData.wordle.gameComplete &&
+    gameData["whack-a-droid"].gameComplete &&
+    gameData.memory.gameComplete;
+
+  if (gameData.allGamesComplete) {
+    gameData.totalScore = calculateAverageScore();
+  }
+
+  localStorage.setItem("gameData", JSON.stringify(gameData));
+};
+
+/**
+ * Clears the data for that game in the local storage.
+ * @param {string} game - The name of the game (e.g., 'wordle', 'whack-a-droid', 'memory').
+ */
+const clearGameData = (game) => {
+  const gameData = JSON.parse(localStorage.getItem("gameData"));
+  gameData[game] = { result: 0, gameComplete: false };
+  localStorage.setItem("gameData", JSON.stringify(gameData));
+};
+
+/**
+ * Clears the local storage for game data.
+ */
+const clearLocalStorage = () => {
+  localStorage.removeItem("gameData");
+  initializeLocalStorage();
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  initializeLocalStorage();
 });
