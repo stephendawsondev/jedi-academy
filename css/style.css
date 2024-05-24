@@ -1,7 +1,13 @@
+@font-face {
+  font-family: 'Star Jedi';
+  src: url('/fonts/index-font/Starjedi.ttf') format('truetype');
+}
+
+
 body {
   font-family: Arial, sans-serif;
   background: url("../assets/images/template.png") no-repeat center center/cover;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: overlay;
   color: #fff;
   margin: 0;
@@ -17,6 +23,72 @@ body {
   width: 100%;
 }
 
+/* Home page title */
+.header, #game-choices-header {
+  width: 65%;
+  margin: 0 auto;
+  font-family: 'Star Jedi', sans-serif;
+  font-size: 2.5em;
+  color: #F9D71C;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#game-choices-header {
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+/* Home page "Enter the jedi temple" button */
+.home-play-button, .trial-selection {
+  margin: 50px auto;
+  display: block;
+  width: 200px;
+  height: 80px;
+  background: #F9D71C;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  line-height: 25px;
+  font-family: "Star Jedi", sans-serif;
+  font-size: 1.5em;
+}
+
+.game-choices {
+  width: 100%;
+}
+
+.trial-selection {
+  display: inline-flex;
+  margin: 0 10px;
+  width: 150px;
+  height: 60px;
+}
+
+/* Transition from page title to game play options/links */
+
+.header h1, .header h3, .home-play-button {
+  transition: opacity 1s ease, transform 1s ease; 
+}
+
+.hidden {
+  opacity: 0;
+  transform: scaleY(0);
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* .game-choices {
+  opacity: 1;
+  height: auto;
+  transform: scaleY(1);
+} */
+
+
+
+
 .dialog {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 20px;
@@ -24,6 +96,7 @@ body {
   margin: 20px 0;
   display: none;
 }
+
 
 .dialog p {
   margin: 0;
@@ -43,3 +116,6 @@ body {
 .btn:hover {
   background-color: #0056b3;
 }
+
+
+
