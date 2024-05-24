@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: url("../assets/images/template.png") no-repeat center center/cover;
+  background: url("../assets/images-home/template.png") no-repeat center center/cover;
   background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: overlay;
   color: #fff;
@@ -40,10 +40,10 @@ body {
 
 /* Home page "Enter the jedi temple" button */
 .home-play-button, .trial-selection, .info-button {
-  margin: 50px auto;
+  margin: 5% auto;
   display: block;
-  width: 200px;
-  height: 80px;
+  width: 80%;
+  height: auto;
   background: #F9D71C;
   padding: 10px;
   text-align: center;
@@ -107,30 +107,33 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  z-index: 1000; /* Ensure the pop-up is above other elements */
-  max-width: 400px; /* Set a maximum width for better readability */
+  z-index: 1000;
+  max-width: 400px;
+  background: url("../assets/images-home/pexels-instawally-176851.png") no-repeat center center cover;
 }
+
 
 .popup-content {
   text-align: center;
+  font-family: "Star Jedi", sans-serif;
+  /* font-weight: 100; */
 }
 
 .close-popup-button {
-  margin-top: 20px; /* Add some space between the content and the close button */
+  margin-top: 20px;
   padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
   border: none;
   cursor: pointer;
-}
-
-.close-popup-button:hover {
-  background-color: #0056b3;
+  background: #F9D71C;
+  text-align: center;
+  border-radius: 5px;
+  color: #000;
+  line-height: 25px;
+  font-family: "Star Jedi", sans-serif;
 }
 
 
@@ -165,3 +168,10 @@ body {
 
 
 
+/* Home Page Media Queries */
+
+@media screen and (max-width: 600px) {
+  .header {
+    font-size: 1.8em;
+  }
+}
