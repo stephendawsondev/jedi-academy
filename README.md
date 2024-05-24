@@ -45,8 +45,59 @@ May the force be with you, as always!
 ![Star Wars Main Page - Tablet View](assets/wireframes/tablet-wireframe-index.png)
 ### Main Page - Laptop View
 ![Star Wars Main Page - Laptop View](assets/wireframes/laptop-wireframe-index.png)
+
 ## Credits
 
+### Images
+https://starwars.fandom.com/wiki/Yoda
+https://www.shakudo.io/blog/chatgpt-the-ai-smarter-than-c-3po
+https://www.starwars.com/databank/c-3po
+https://www.starwars.com/databank/bb-8
+https://starwars.fandom.com/wiki/Anakin_Skywalker
+https://www.starwars.com/databank/leia-organa
+https://www.starwars.com/databank/jar-jar-binks
+Wordle background-image: https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/
+
+### Sound Clips
+https://www.101soundboards.com/sounds/27903371-ow-why-did-you-do-that
+https://www.101soundboards.com/sounds/27903338-sadly-that-is-a-wrong-choice
+https://www.101soundboards.com/sounds/27905918-over-it-is-for-you-sidious-your-empire-at-an-end-it-is
+https://www.101soundboards.com/sounds/27911492-from-younglings-first-steps-to-padawans-eager-strides-the-journey-to-mastery-begins
+https://www.101soundboards.com/sounds/27911417-oh-dear-r2-must-you-always-be-so-crude-i-must-remind-you-once-again-that-it-is-not-polite-
+https://www.101soundboards.com/sounds/27876007-finally-a-great-victory-we-have-achieved-over-the-sith-lords-hmm
+https://www.101soundboards.com/sounds/27911699-ouchie-mesa-head-goin-bombad
+https://www.101soundboards.com/sounds/27912421-ouchie
+
+### Documentation for Code
+For the basic layout of the keyboard for Wordle we used [Wordle Keyboard](https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/) for the keyboard.
+For help with building the Wordle game we used [Wordle Tutorial](https://www.youtube.com/watch?v=ckjRsPaWHX8)
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+
+### Other Documentation/content
+https://en.wikipedia.org/wiki/Death_Star
+Wireframes: https://my.moqups.com/login and https://balsamiq.com/
+https://www.kennyyipcoding.com
+
 ## Collaborators
+
+Stephen Dawson
+Github: https://www.github.com/stephendawsondev
+LinkedIn: https://www.linkedin.com/in/sdstephendawson/
+Stackportfol.io: https://www.stackportfol.io/user/stephendawson/
+
+Donald MacRitchie
+
+George Small
+Github: https://github.com/creepersguitar
+LinkedIn: https://www.linkedin.com/in/george-small-055151204/
+
+Hannah Olbrich
+Github: https://github.com/hannahro15
+LinkedIn: https://www.linkedin.com/in/hannah-olbrich-0303074b/
+
+Tharindu Nadeeshan
+
+Towbie
+
 
 ## Deployment
