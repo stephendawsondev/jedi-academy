@@ -35,8 +35,32 @@ function intialize() {
               if (currTile.innerText == "") {
                     currTile.innerText = e.key.toUpperCase();
                     col += 1;
+<<<<<<<<< Temporary merge branch 1
+               }
+           }
+=========
                 }
             }
+        }        
+        else if (e.code == "Backspace") {
+            if (0 < col && col <= width) {
+                col -=1;
+            }
+            let currTile = document.getElementById(row.toString() + col.toString());
+            currTile.innerText = "";
+        }
+
+        else if (e.code == "Enter") {
+            checkForMatch();
+            row += 1; 
+            col = 0; 
+        }
+
+
+        if (!gameOver && row == height) {
+            gameOver = true;
+            document.getElementById("answer").innerText = word;
+>>>>>>>>> Temporary merge branch 2
         }
     });
 }
@@ -65,17 +89,4 @@ function checkForMatch() {
 
     }
 }
-
-// Trying to show letter in boxes on the button click of the keyboard-button
-
-// const keyboardButton = document.querySelectorAll(".keyboard-button");
-// const displayBox = document.getElementById("display-box");
-
-// keyboardButton.forEach(button => {
-   // button.addEventListener('click', function() {
-     //   const letter = button.textContent;
-      //  displayBox.textContent = letter;
-    // })
-// })
-
-    
+>>>>>>>>> Temporary merge branch 2
