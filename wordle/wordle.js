@@ -37,28 +37,9 @@ function intialize() {
                     col += 1;
 
                }
-           }
-        }
-    });
-}
-
-// Trying to show letter in boxes on the button click of the keyboard-button
-
-// const keyboardButton = document.querySelectorAll(".keyboard-button");
-// const displayBox = document.getElementById("display-box");
-
-// keyboardButton.forEach(button => {
-   // button.addEventListener('click', function() {
-     //   const letter = button.textContent;
-      //  displayBox.textContent = letter;
-    // })
-// })
-
-    
-=======
-                }
-            }
+           }       
         }        
+
         else if (e.code == "Backspace") {
             if (0 < col && col <= width) {
                 col -=1;
@@ -77,6 +58,7 @@ function intialize() {
         if (!gameOver && row == height) {
             gameOver = true;
             document.getElementById("answer").innerText = word;
+
         }
     });
 }
