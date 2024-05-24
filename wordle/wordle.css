@@ -19,13 +19,19 @@ h1 {
 }
 
 #board {
-    width: 290px;
-    height: 400px;
+    width: 300px;
+    height: 390px;
     margin: 0 auto;
     margin-top: 5px;
     display: flex;
     flex-wrap: wrap;
     background-color: darkolivegreen;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.keyboard-button {
+    align-items: center;
 }
 
 .tile {
@@ -33,7 +39,6 @@ h1 {
     width: 50px;
     height: 50px;
     margin: 2px;
-    margin-top: 10px;
 }
 
 .row-one, .row-two {
