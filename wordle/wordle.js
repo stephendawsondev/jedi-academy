@@ -32,9 +32,30 @@ function intialize() {
         if ("KeyA" <= e.code && e.code <= "KeyZ") {
             if (col < width) {
                 let currTile = document.getElementById(row.toString() + col.toString());
-                if (currTile.innerText == "") {
+              if (currTile.innerText == "") {
                     currTile.innerText = e.key.toUpperCase();
                     col += 1;
+
+               }
+           }
+        }
+    });
+}
+
+// Trying to show letter in boxes on the button click of the keyboard-button
+
+// const keyboardButton = document.querySelectorAll(".keyboard-button");
+// const displayBox = document.getElementById("display-box");
+
+// keyboardButton.forEach(button => {
+   // button.addEventListener('click', function() {
+     //   const letter = button.textContent;
+      //  displayBox.textContent = letter;
+    // })
+// })
+
+    
+=======
                 }
             }
         }        
@@ -84,3 +105,4 @@ function checkForMatch() {
 
     }
 }
+
