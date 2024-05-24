@@ -6,28 +6,38 @@ hr {
     width: 500px;
 }
 
-#title {
+h1 {
     font-size: 40px;
+    color: black;
+    margin-bottom: 30px;
 }
 
 .container {
     width: 500px;
-    height: 600px;
+    height: 700px;
+    background-color: orange;
 }
 
 #board {
-    width: 320px;
+    width: 290px;
     height: 400px;
     margin: 0 auto;
     margin-top: 5px;
     display: flex;
     flex-wrap: wrap;
+    background-color: darkolivegreen;
 }
 
 .tile {
     border: 2px solid gainsboro;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin: 2px;
+    margin-top: 10px;
 }
+
+.row-one, .row-two {
+    margin: 5px;
+}
+
 
