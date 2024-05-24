@@ -39,7 +39,7 @@ body {
 }
 
 /* Home page "Enter the jedi temple" button */
-.home-play-button, .trial-selection {
+.home-play-button, .trial-selection, .info-button {
   margin: 50px auto;
   display: block;
   width: 200px;
@@ -55,6 +55,40 @@ body {
   font-size: 1.5em;
 }
 
+/* Name input on Home page */
+
+.name-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.name-input label {
+  font-family: "Star Jedi", sans-serif;
+  font-size: 1.1em;
+  color: #F9D71C;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.name-input input[type="text"] {
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.name-input button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: "Star Jedi", sans-serif;
+  color: #F9D71C;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
 .game-choices {
   width: 100%;
 }
@@ -66,26 +100,38 @@ body {
   height: 60px;
 }
 
-/* Transition from page title to game play options/links */
+/* How to play pop up */
 
-.header h1, .header h3, .home-play-button {
-  transition: opacity 1s ease, transform 1s ease; 
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000; /* Ensure the pop-up is above other elements */
+  max-width: 400px; /* Set a maximum width for better readability */
 }
 
-.hidden {
-  opacity: 0;
-  transform: scaleY(0);
-  height: 0;
-  overflow: hidden;
-  pointer-events: none;
+.popup-content {
+  text-align: center;
 }
 
-/* .game-choices {
-  opacity: 1;
-  height: auto;
-  transform: scaleY(1);
-} */
+.close-popup-button {
+  margin-top: 20px; /* Add some space between the content and the close button */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
 
+.close-popup-button:hover {
+  background-color: #0056b3;
+}
 
 
 
