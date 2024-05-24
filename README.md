@@ -56,7 +56,7 @@ https://www.starwars.com/databank/bb-8
 https://starwars.fandom.com/wiki/Anakin_Skywalker
 https://www.starwars.com/databank/leia-organa
 https://www.starwars.com/databank/jar-jar-binks
-Wordle background-image: https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/
+Wordle Background-image: https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/
 
 ### Sound Clips
 https://www.101soundboards.com/sounds/27903371-ow-why-did-you-do-that
