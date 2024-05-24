@@ -35,13 +35,11 @@ function intialize() {
               if (currTile.innerText == "") {
                     currTile.innerText = e.key.toUpperCase();
                     col += 1;
-<<<<<<<<< Temporary merge branch 1
+
                }
-           }
-=========
-                }
-            }
+           }       
         }        
+
         else if (e.code == "Backspace") {
             if (0 < col && col <= width) {
                 col -=1;
@@ -60,7 +58,7 @@ function intialize() {
         if (!gameOver && row == height) {
             gameOver = true;
             document.getElementById("answer").innerText = word;
->>>>>>>>> Temporary merge branch 2
+
         }
     });
 }
@@ -89,4 +87,4 @@ function checkForMatch() {
 
     }
 }
->>>>>>>>> Temporary merge branch 2
+
