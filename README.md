@@ -56,6 +56,7 @@ https://www.starwars.com/databank/bb-8
 https://starwars.fandom.com/wiki/Anakin_Skywalker
 https://www.starwars.com/databank/leia-organa
 https://www.starwars.com/databank/jar-jar-binks
+Wordle background-image: https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/
 
 ### Sound Clips
 https://www.101soundboards.com/sounds/27903371-ow-why-did-you-do-that
@@ -74,8 +75,28 @@ https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
 
 ### Other Documentation/content
 https://en.wikipedia.org/wiki/Death_Star
-
+Wireframes: https://my.moqups.com/login and https://balsamiq.com/
+https://www.kennyyipcoding.com
 
 ## Collaborators
+
+Stephen Dawson
+Github: https://www.github.com/stephendawsondev
+LinkedIn: https://www.linkedin.com/in/sdstephendawson/
+Stackportfol.io: https://www.stackportfol.io/user/stephendawson/
+
+Donald MacRitchie
+
+George Small
+Github: https://github.com/creepersguitar
+LinkedIn: https://www.linkedin.com/in/george-small-055151204/
+
+Hannah Olbrich
+Github: https://github.com/hannahro15
+LinkedIn: https://www.linkedin.com/in/hannah-olbrich-0303074b/
+
+Tharindu Nadeeshan
+
+Towbie
 
 ## Deployment
