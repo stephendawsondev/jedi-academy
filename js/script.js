@@ -77,3 +77,31 @@ const clearLocalStorage = () => {
 document.addEventListener("DOMContentLoaded", () => {
   initializeLocalStorage();
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const playButton = document.querySelector(".home-play-button");
+  const header = document.querySelector(".header");
+  const headerTitles = document.querySelectorAll(".header h1, .header h3");
+  const gameChoices = document.querySelector(".game-choices");
+
+  playButton.addEventListener("click", function(event) {
+      event.preventDefault();
+
+      // Hide the header titles and the play button with a smooth transition
+      headerTitles.forEach(title => title.classList.add("hidden"));
+      playButton.classList.add("hidden");
+
+      // Wait for the transition to complete before hiding the header and showing game choices
+      setTimeout(function() {
+          header.style.display = "none";
+          gameChoices.style.display = "block";
+
+          // Trigger reflow to ensure the transition runs
+          gameChoices.offsetHeight;
+
+          gameChoices.classList.remove("hidden");
+      }, 1000); // Wait for the duration of the transition (1s)
+  });
+});
+
