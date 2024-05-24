@@ -78,30 +78,54 @@ document.addEventListener("DOMContentLoaded", () => {
   initializeLocalStorage();
 });
 
+// *********** Home Page JS
 
 document.addEventListener("DOMContentLoaded", function() {
   const playButton = document.querySelector(".home-play-button");
-  const header = document.querySelector(".header");
-  const headerTitles = document.querySelectorAll(".header h1, .header h3");
+  const nameInput = document.querySelector(".name-input");
+  const nameSubmitButton = document.querySelector(".name-submit-button");
   const gameChoices = document.querySelector(".game-choices");
+  const header = document.querySelector(".header");
+  const infoButton = document.querySelector(".info-button");
+  const popupDialog = document.querySelector(".popup-dialog");
+  const closePopupButton = document.querySelector(".close-popup-button");
+
 
   playButton.addEventListener("click", function(event) {
       event.preventDefault();
+      // Hide the main header and the play button, and show the name input field
+      header.style.display = "none";
+      playButton.style.display = "none";
+      infoButton.style.display = "none"; // Hide the "How to Play" button when "Enter the Jedi Temple" button is clicked
+      nameInput.style.display = "block";
+  });
 
-      // Hide the header titles and the play button with a smooth transition
-      headerTitles.forEach(title => title.classList.add("hidden"));
-      playButton.classList.add("hidden");
-
-      // Wait for the transition to complete before hiding the header and showing game choices
-      setTimeout(function() {
-          header.style.display = "none";
+  nameSubmitButton.addEventListener("click", function(event) {
+      event.preventDefault();
+      const userName = document.getElementById("name").value.trim();
+      if (userName !== "") {
+          nameInput.style.display = "none";
           gameChoices.style.display = "block";
+      } else {
+          alert("Please enter your name.");
+      }
+  });
 
-          // Trigger reflow to ensure the transition runs
-          gameChoices.offsetHeight;
+  infoButton.addEventListener("click", function(event) {
+      event.preventDefault();
+      // Show the pop-up dialog
+      popupDialog.showModal();
+  });
 
-          gameChoices.classList.remove("hidden");
-      }, 1000); // Wait for the duration of the transition (1s)
+  closePopupButton.addEventListener("click", function(event) {
+      event.preventDefault();
+      // Close the pop-up dialog
+      popupDialog.close();
   });
 });
+
+
+
+
+
 
