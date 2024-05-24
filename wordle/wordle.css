@@ -14,7 +14,7 @@ h1 {
 
 .container {
     width: 500px;
-    height: 700px;
+    height: 650px;
     background-color: orange;
 }
 
@@ -40,4 +40,17 @@ h1 {
     margin: 5px;
 }
 
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
 
+.back-button {
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+.next-button {
+    margin-right: 10px;
+    text-transform: uppercase;
+}
