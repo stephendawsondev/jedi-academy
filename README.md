@@ -39,6 +39,12 @@ May the force be with you, as always!
 ### Star Wars Themed Wordle - Laptop View
 ![Star Wars Themed Wordle - Laptop View](assets/wireframes/star-wars-wordle-laptop.png)
 
+### Main Page - Mobile View
+![Star Wars Main Page - Phone View](assets/wireframes/phone-wireframe-index.png)
+### Main Page - Tablet View
+![Star Wars Main Page - Tablet View](assets/wireframes/tablet-wireframe-index.png)
+### Main Page - Laptop View
+![Star Wars Main Page - Laptop View](assets/wireframes/laptop-wireframe-index.png)
 ## Credits
 
 ## Collaborators
