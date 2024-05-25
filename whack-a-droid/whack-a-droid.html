@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="whack-a-droid.css" />
-    <title>Whack-a-droid - Star Wars</title>
-  </head>
-  <body>
-    <main>
-      <div class="container">
-          <h1>Whack-a-droid</h1>
-          <button>How to Play</button>
-          <h2 id="score">0</h2>
-      </div>
-      <div id="board">
 
-      </div>
-    </main>
-    <button
-      title="Toggle music"
-      id="music-button"
-      class="audio-button music-button"
-    >
-      <img
-        id="music-icon"
-        src="../assets/images/music_on.webp"
-        alt="music icon"
-      />
-    </button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="whack-a-droid.css" />
+  <title>Whack-a-droid - Star Wars</title>
+</head>
 
-    <button
-      title="Toggle sound"
-      id="sound-button"
-      class="audio-button sound-button"
-    >
-      <img
-        id="sound-icon"
-        src="../assets/images/sound_on.webp"
-        alt="sound icon"
-      />
-    </button>
-    <script src="../js/script.js"></script>
-    <script src="whack-a-droid.js"></script>
-  </body>
+<body>
+  <main>
+    <div class="container">
+      <h1>Whack-a-droid</h1>
+      <!-- Open The Modal -->
+      <button id="instructions">How to Play</button>
+      <h2 id="score">0</h2>
+    </div>
+    <div id="board">
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">X</span>
+        <h2>How to Play</h2>
+        <p>Click on the droids when they pop up from their holes to get point but be sure to avoid Jawa!</p>
+        <p>Have fun!</p>
+      </div>
+
+    </div>
+  </main>
+  <button title="Toggle music" id="music-button" class="audio-button music-button">
+    <img id="music-icon" src="../assets/images/music_on.webp" alt="music icon" />
+  </button>
+
+  <button title="Toggle sound" id="sound-button" class="audio-button sound-button">
+    <img id="sound-icon" src="../assets/images/sound_on.webp" alt="sound icon" />
+  </button>
+  <script src="../js/script.js"></script>
+  <script src="whack-a-droid.js"></script>
+</body>
+
 </html>
