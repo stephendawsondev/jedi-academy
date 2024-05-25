@@ -4,43 +4,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <title>Star Wars</title>
   </head>
   <body>
-    <div class="container">
-      <!-- Site Title -->
-      <div class="header">
-        <h1>Jedi Academy</h1>
-        <h3>A Star Wars Story</h3>
+    <main>
+      <div class="container">
+        <!-- Site Title -->
+        <div class="header">
+          <h1>Jedi Academy</h1>
+          <h3>A Star Wars Story</h3>
+        </div>
+
+        <!-- Play Button -->
+        <button class="home-play-button">Enter the Jedi Temple</button>
+
+        <!-- Name Input -->
+        <div class="name-input" style="display: none">
+          <label for="name">Enter your name:</label>
+          <input type="text" id="name" name="name" placeholder="Your name" />
+          <button class="name-submit-button">Begin your Training</button>
+        </div>
+
+        <!-- Game Choices -->
+        <div class="game-choices" style="display: none">
+          <h2 id="game-choices-header">Select Your Trial</h2>
+          <a href="memory/memory.html" class="trial-selection"
+            >Trial of Memory</a
+          >
+          <a href="whack-a-droid/whack-a-droid.html" class="trial-selection"
+            >Trial of Agility</a
+          >
+          <a href="wordle/wordle.html" class="trial-selection"
+            >Trial of Wisdom</a
+          >
+        </div>
+
+        <!-- How to Play -->
+        <button class="info-button">How to Play</button>
+
+        <!-- how to play pop up -->
+        <dialog class="popup-dialog">
+          <div class="popup-content">
+            <h2>Welcome to Jedi Academy</h2>
+            <p>
+              You have just arrived at the Jedi Temple waiting to start your
+              journey on the road to becoming a Jedi.
+            </p>
+            <p>
+              During your journey you will face a number of challenges that you
+              will have to overcome to be part of our ancient order.
+            </p>
+            <p>You may tackle the Trials in any order you wish.</p>
+            <p>Proceed to "Enter the Jedi Temple".</p>
+            <p>Tell us what we should call you.</p>
+            <p>Choose your trial.</p>
+            <p>Carry on your journey and complete the remaining trials.</p>
+            <p>
+              After all Trials are complete, you will be judged and awarded your
+              Jedi rank.
+            </p>
+            <p>Good Luck. And may the Force be with you.</p>
+            <button class="close-popup-button">Close</button>
+          </div>
+        </dialog>
       </div>
+    </main>
+    <button
+      title="Toggle music"
+      id="music-button"
+      class="audio-button music-button"
+    >
+      <img id="music-icon" src="assets/images/music_on.webp" alt="music icon" />
+    </button>
 
-      <!-- Play Button -->
-
-      <button class="home-play-button">Enter the Jedi Temple</button>
-
-      <!-- Select the Trial/Mini Game -->
-
-      <div class="game-choices" style="display: none;">
-
-        <h2 id="game-choices-header">Select Your Trial</h2>
-
-        <a href="#" class="trial-selection">Trial of Memory</a>
-        <a href="#" class="trial-selection">Trial of Agility</a>
-        <a href="#" class="trial-selection">Trial of Wisdom</a>
-
-      </div>
-
-      <!-- Story Mode -->
-
-      <!-- Exhibition Mode -->
-
-      <!-- Meet The Team -->
-
-    </div>
+    <button
+      title="Toggle sound"
+      id="sound-button"
+      class="audio-button sound-button"
+    >
+      <img id="sound-icon" src="assets/images/sound_on.webp" alt="sound icon" />
+    </button>
     <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
-
 
 <!-- <div class="container">
   <h1>Star Wars</h1>

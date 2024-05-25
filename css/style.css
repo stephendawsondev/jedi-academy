@@ -1,13 +1,13 @@
 @font-face {
-  font-family: 'Star Jedi';
-  src: url('/fonts/index-font/Starjedi.ttf') format('truetype');
+  font-family: "Star Jedi";
+  src: url("../fonts/index-font/Starjedi.ttf") format("truetype");
 }
-
 
 body {
   font-family: Arial, sans-serif;
-  background: url("../assets/images/template.png") no-repeat center center/cover;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-blend-mode: overlay;
   color: #fff;
   margin: 0;
@@ -23,14 +23,40 @@ body {
   width: 100%;
 }
 
+/* Audio icons */
+.audio-button {
+  position: fixed;
+  border: none;
+  top: 5px;
+  left: 5px;
+  z-index: 5;
+  background-color: transparent;
+  opacity: 0.5;
+  pointer-events: all;
+}
+
+.music-button {
+  top: 5px;
+  left: 5px;
+  z-index: 6;
+}
+
+.sound-button {
+  top: 5px;
+  left: 50px;
+  z-index: 6;
+}
+
 /* Home page title */
-.header, #game-choices-header {
+.header,
+#game-choices-header {
   width: 65%;
   margin: 0 auto;
-  font-family: 'Star Jedi', sans-serif;
+  font-family: "Star Jedi", sans-serif;
   font-size: 2.5em;
-  color: #F9D71C;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #f9d71c;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 #game-choices-header {
@@ -39,12 +65,14 @@ body {
 }
 
 /* Home page "Enter the jedi temple" button */
-.home-play-button, .trial-selection {
-  margin: 50px auto;
+.home-play-button,
+.trial-selection,
+.info-button {
+  margin: 5% auto;
   display: block;
-  width: 200px;
-  height: 80px;
-  background: #F9D71C;
+  width: 80%;
+  height: auto;
+  background: #f9d71c;
   padding: 10px;
   text-align: center;
   border-radius: 5px;
@@ -55,39 +83,89 @@ body {
   font-size: 1.5em;
 }
 
+/* Name input on Home page */
+
+.name-input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.name-input label {
+  font-family: "Star Jedi", sans-serif;
+  font-size: 1.1em;
+  color: #f9d71c;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.name-input input[type="text"] {
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.name-input button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-family: "Star Jedi", sans-serif;
+  color: #f9d71c;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
 .game-choices {
   width: 100%;
 }
 
 .trial-selection {
+  text-decoration: none;
   display: inline-flex;
   margin: 0 10px;
   width: 150px;
   height: 60px;
 }
 
-/* Transition from page title to game play options/links */
+/* How to play pop up */
 
-.header h1, .header h3, .home-play-button {
-  transition: opacity 1s ease, transform 1s ease; 
+.popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  max-width: 400px;
+  background: url("../assets/images-home/pexels-instawally-176851.png")
+    no-repeat center center cover;
 }
 
-.hidden {
-  opacity: 0;
-  transform: scaleY(0);
-  height: 0;
-  overflow: hidden;
-  pointer-events: none;
+.popup-content {
+  text-align: center;
+  font-family: "Star Jedi", sans-serif;
+  /* font-weight: 100; */
 }
 
-/* .game-choices {
-  opacity: 1;
-  height: auto;
-  transform: scaleY(1);
-} */
-
-
-
+.close-popup-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  background: #f9d71c;
+  text-align: center;
+  border-radius: 5px;
+  color: #000;
+  line-height: 25px;
+  font-family: "Star Jedi", sans-serif;
+}
 
 .dialog {
   background-color: rgba(0, 0, 0, 0.8);
@@ -96,7 +174,6 @@ body {
   margin: 20px 0;
   display: none;
 }
-
 
 .dialog p {
   margin: 0;
@@ -117,5 +194,10 @@ body {
   background-color: #0056b3;
 }
 
+/* Home Page Media Queries */
 
-
+@media screen and (max-width: 600px) {
+  .header {
+    font-size: 1.8em;
+  }
+}

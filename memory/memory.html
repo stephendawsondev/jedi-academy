@@ -8,10 +8,128 @@
     <title>Memory - Star Wars</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Memory</h1>
+    
+    <!-- The game board container -->
+<body>
+  <!-- Page title -->
+  <header>
+    <h1>Trial of Memory</h1>
+    <button class="how-to-play-button">How to play</button>
+    <dialog class="memory-popup-dialog">
+      <div class="memory-popup-content">
+        <h3>Welcome to the Trial of Memory</h3>
+        <p>This is one of many challenges to becoming a Jedi.</p>
+        <p>Here you will have to use the Force to find all the matching pairs.</p>
+        <p>"Find all the pairs, pfft! Easy!"</p>
+        <p>Well, maybe not so easy...</p>
+        <p>You will only have 30 seconds to find all the pairs.</p>
+        <p>How many pairs you match correctly will determine your rank.</p>
+        <p>This score will contribute to your overall Jedi Rank.</p>
+        <p>Find all 6 pairs - You will achieve the Rank of <strong>Master</strong></p>
+        <p>Find 4/5 pairs - You will achieve the Rank of <strong>Knight</strong></p>
+        <p>Find 2/3 pairs - You will achieve the Rank of <strong>Padawan</strong></p>
+        <p>Good luck. And may the Force be with you.</p>
+        <button class="close-popup-button">Close</button>
+      </div>
+    </dialog>
+  </header>
+    <section class="game-controls">
+      <div>
+        <button id="startGame">Begin the Trial!</button>
+      </div>
+  
+      <div class="game-stats">
+        <div>
+          <!-- Timer -->
+          <div id="game-time">
+            <p>Time left: <span id="timer">30</span> SEC</p>
+          </div>
+    
+          <!-- Score Board -->
+          <div id="score-board">
+            <p>You have <span id="score">0</span> / 6 correct!</p>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+  
+    <section class="memory-game">
+      <!-- Boba Fett -->
+      <div class="memory-card" data-logo="boba-fett">
+        <img class="front-face" src="./images/card-images/boba-fett-logo.png" alt="boba-fett-logo" />
+        <img class="back-face" src="./images/card-images/star-wars-logo.png" alt="Star Wars logo" />
+      </div>
+      <div class="memory-card" data-logo="boba-fett">
+        <img class="front-face" src="./images/card-images/boba-fett-logo.png" alt="boba-fett-logo" />
+        <img class="back-face" src="./images/card-images/star-wars-logo.png" alt="Star Wars logo" />
+      </div>
+      <!-- Darth Vader -->
+      <div class="memory-card" data-logo="darth-vader">
+        <img class="front-face" src="./images/card-images/darth-vader-logo.png" alt="Darth Vader Logo" />
+        <img class="back-face" src="./images/card-images/star-wars-logo.png" alt="star-wars-logo" />
+      </div>
+      <div class="memory-card" data-logo="darth-vader">
+        <img class="front-face" src="./images/card-images/darth-vader-logo.png" alt="Darth Vader Logo" />
+        <img class="back-face" src="./images/card-images/star-wars-logo.png" alt="star-wars-logo" />
+      </div>
+      <!-- Jedi logo -->
+      <div class="memory-card" data-logo="jedi">
+        <img class="front-face" src="./images/card-images/jedi-logo.png" alt="Jedi Logo" />
+        <img class="back-face" src="./images/card-images/star-wars-logo.png" alt="star-wars-logo" />
+      </div>
+      <div class="memory-card" data-logo="jedi">
+        <img class="front-face" src="./images/card-images/jedi-logo.png" alt="Jedi Logo" />
+        <img class="back-face" src="./images/card-images/star-wars-logo.png" alt="star-wars-logo" />
+      </div>
+      <!-- Lightsaber logo -->
+      <div class="memory-card" data-logo="lightsaber">
+        <img class="front-face" src="./images/card-images/lightsaber-logo.png" alt="lightsaber logo" />
+        <img class="back-face" src="./images/card-images/star-wars-logo.png" alt="star-wars-logo" />
+      </div>
+      <div class="memory-card" data-logo="lightsaber">
+        <img class="front-face" src="./images/card-images/lightsaber-logo.png" alt="lightsaber logo" />
+        <img class="back-face" src="./images/card-images/star-wars-logo.png" alt="star-wars-logo" />
+      </div>
+      <!-- republic logo -->
+      <div class="memory-card" data-logo="republic">
+        <img class="front-face" src="./images/card-images/republic-logo.png" alt="republic logo" />
+        <img class="back-face" src="./images/card-images/star-wars-logo.png" alt="star-wars-logo" />
+      </div>
+      <div class="memory-card" data-logo="republic">
+        <img class="front-face" src="./images/card-images/republic-logo.png" alt="republic logo" />
+        <img class="back-face" src="./images/card-images/star-wars-logo.png" alt="star-wars-logo" />
+      </div>
+      <!-- Stromtrooper logo -->
+      <div class="memory-card" data-logo="stormtrooper">
+        <img class="front-face" src="./images/card-images/stormtrooper-logo.png" alt="Stromtrooper logo" />
+        <img class="back-face" src="./images/card-images/star-wars-logo.png" alt="star-wars-logo" />
+      </div>
+      <div class="memory-card" data-logo="stormtrooper">
+        <img class="front-face" src="./images/card-images/stormtrooper-logo.png" alt="Stromtrooper logo" />
+        <img class="back-face" src="./images/card-images/star-wars-logo.png" alt="star-wars-logo" />
+      </div>
+    </section>
+  
+  
+    <div>
+      <button id="resetGame">Reset Game</button>
     </div>
-    <script src="../js/script.js"></script>
-    <script src="memory.js"></script>
-  </body>
+  
+    <div class="back-to-trials">
+      <a href="#" class="back-to-trials-button">Back to Trials</a>
+    </div>
+  
+
+  <button title="Toggle music" id="music-button" class="audio-button music-button">
+    <img id="music-icon" src="../assets/images/music_on.webp" alt="music icon" />
+  </button>
+
+  <button title="Toggle sound" id="sound-button" class="audio-button sound-button">
+    <img id="sound-icon" src="../assets/images/sound_on.webp" alt="sound icon" />
+  </button>
+  
+  <script src="../js/script.js"></script>
+  <script src="memory.js"></script>
+</body>
 </html>

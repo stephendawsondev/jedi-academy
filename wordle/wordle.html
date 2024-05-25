@@ -26,8 +26,8 @@
             <button class="keyboard-button">i</button>
             <button class="keyboard-button">o</button>
             <button class="keyboard-button">p</button>
-        </div>
-        <div class="row-two">
+          </div>
+          <div class="row-two">
             <button class="keyboard-button">a</button>
             <button class="keyboard-button">s</button>
             <button class="keyboard-button">d</button>
@@ -37,8 +37,8 @@
             <button class="keyboard-button">j</button>
             <button class="keyboard-button">k</button>
             <button class="keyboard-button">l</button>
-        </div>
-        <div class="row-three">
+          </div>
+          <div class="row-three">
             <button class="keyboard-button">Enter</button>
             <button class="keyboard-button">z</button>
             <button class="keyboard-button">x</button>
@@ -47,13 +47,34 @@
             <button class="keyboard-button">b</button>
             <button class="keyboard-button">n</button>
             <button class="keyboard-button">m</button>
-            <button class="keyboard-button">Delete</button>
+            <button class="keyboard-button">
+              <i class="fas fa-backspace"></i>
+            </button>
+          </div>
+          <div id="display_box">_</div>
         </div>
-    </div>
+        <br />
+        <div class="button-container">
+          <button class="back-button">Back</button>
+          <button class="next-button">Next</button>
+        </div>
 
-      <h1 id="answer"></h1>
-    </div>
+        <h1 id="answer"></h1>
+      </section>
+    </main>
+    <button title="Toggle music" id="music-button" class="audio-button music-button">
+      <img id="music-icon" src="../assets/images/music_on.webp" alt="music icon" />
+    </button>
+  
+    <button title="Toggle sound" id="sound-button" class="audio-button sound-button">
+      <img id="sound-icon" src="../assets/images/sound_on.webp" alt="sound icon" />
+    </button>
+    <script
+      src="https://kit.fontawesome.com/65aa973f6f.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="../js/script.js"></script>
     <script src="wordle.js"></script>
+    <script src="wordle-modal.js"></script>
   </body>
 </html>

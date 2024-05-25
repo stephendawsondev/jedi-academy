@@ -1,18 +1,113 @@
+let userAllowsSounds = false;
+let userAllowsMusic = false;
+let playerData = {};
+let audioObject = {};
+const envAudioUrl =
+  window.location.href.indexOf("github.io") == -1 ? "../public/" : "public/";
+const envImageUrl =
+  window.location.href.indexOf("github.io") == -1
+    ? "../assets/images/"
+    : "assets/images/";
+
+const audioFiles = {
+  r2d2Scream: "r2d2-scream.mp3",
+};
+
 /**
  * Initializes the local storage with the default structure if not already set.
  */
 const initializeLocalStorage = () => {
   const initialData = {
-    wordle: { result: 0, gameComplete: false },
-    "whack-a-droid": { result: 0, gameComplete: false },
-    memory: { result: 0, gameComplete: false },
+    wordle: { result: 0, gameComplete: false, firstTimePlayed: true },
+    "whack-a-droid": {
+      result: 0,
+      gameComplete: false,
+      firstTimePlayed: true,
+    },
+    memory: { result: 0, gameComplete: false, firstTimePlayed: true },
+    name: "",
     allGamesComplete: false,
     totalScore: 0,
+    playerAllowsSound: false,
+    playerAllowsMusic: false,
   };
 
   if (!localStorage.getItem("gameData")) {
     localStorage.setItem("gameData", JSON.stringify(initialData));
   }
+
+  playerData = JSON.parse(localStorage.getItem("gameData"));
+
+  userAllowsSounds = playerData.playerAllowsSound;
+  userAllowsMusic = playerData.playerAllowsMusic;
+};
+
+/**
+ * Updates the player data in local storage.
+ * @param {Object} data - Data to update in local storage.
+ */
+const updateLocalStoragePlayerData = (data) => {
+  const playerData = JSON.parse(localStorage.getItem("gameData"));
+  if (data.hasOwnProperty("playerAllowsSound")) {
+    playerData.playerAllowsSound = data.playerAllowsSound;
+    userAllowsSounds = data.playerAllowsSound;
+  }
+  if (data.hasOwnProperty("playerAllowsMusic")) {
+    playerData.playerAllowsMusic = data.playerAllowsMusic;
+    userAllowsMusic = data.playerAllowsMusic;
+  }
+  localStorage.setItem("gameData", JSON.stringify(playerData));
+};
+
+/**
+ * Loads the audio files.
+ * @param {Object} audioObj - The audio object to load the files into.
+ * @param {Object} audioFiles - The audio files to load.
+ * @param {string} path - The path to the audio files.
+ * @returns {Object} audioObj
+ */
+const loadAudio = (audioObj, audioFiles, path) => {
+  audioObj = audioObj || {};
+  for (const [key, fileName] of Object.entries(audioFiles)) {
+    audioObj[key] = new Audio(`${path}${fileName}`);
+  }
+  return audioObj;
+};
+
+/**
+ * Adds event listeners to the audio icons.
+ * Updates the local storage with the player's audio preferences.
+ * Updates the audio icons based on the player's audio preferences.
+ */
+const addAudioIconEventListeners = () => {
+  const musicIcon = document.getElementById("music-icon");
+  const soundIcon = document.getElementById("sound-icon");
+  musicIcon.src = userAllowsMusic
+    ? `${envImageUrl}music_on.webp`
+    : `${envImageUrl}music_off.webp`;
+  soundIcon.src = userAllowsSounds
+    ? `${envImageUrl}sound_on.webp`
+    : `${envImageUrl}sound_off.webp`;
+
+  const musicButton = document.getElementById("music-button");
+  const soundButton = document.getElementById("sound-button");
+
+  musicButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    userAllowsMusic = !userAllowsMusic;
+    updateLocalStoragePlayerData({ playerAllowsMusic: userAllowsMusic });
+    musicIcon.src = userAllowsMusic
+      ? `${envImageUrl}music_on.webp`
+      : `${envImageUrl}music_off.webp`;
+  });
+
+  soundButton.addEventListener("click", () => {
+    userAllowsSounds = !userAllowsSounds;
+    updateLocalStoragePlayerData({ playerAllowsSound: userAllowsSounds });
+    soundIcon.src = userAllowsSounds
+      ? `${envImageUrl}sound_on.webp`
+      : `${envImageUrl}sound_off.webp`;
+  });
 };
 
 /**
@@ -32,18 +127,12 @@ const calculateAverageScore = () => {
 /**
  * Updates the local storage with the provided game data.
  * @param {string} game - The name of the game (e.g., 'wordle', 'whack-a-droid', 'memory').
- * @param {object} data - The data object containing result and gameComplete status.
- * Example:
- * {
- * result: 0,
- * gameComplete: false
- * }
+ * @param {Object} data - The data object containing result and gameComplete status.
  */
-const updateLocalStorage = (game, data) => {
+const updateLocalStorageGameData = (game, data) => {
   const gameData = JSON.parse(localStorage.getItem("gameData"));
   gameData[game] = data;
 
-  // Check if all games are complete
   gameData.allGamesComplete =
     gameData.wordle.gameComplete &&
     gameData["whack-a-droid"].gameComplete &&
@@ -62,7 +151,7 @@ const updateLocalStorage = (game, data) => {
  */
 const clearGameData = (game) => {
   const gameData = JSON.parse(localStorage.getItem("gameData"));
-  gameData[game] = { result: 0, gameComplete: false };
+  gameData[game] = { result: 0, gameComplete: false, firstTimePlayed: false };
   localStorage.setItem("gameData", JSON.stringify(gameData));
 };
 
@@ -73,35 +162,6 @@ const clearLocalStorage = () => {
   localStorage.removeItem("gameData");
   initializeLocalStorage();
 };
-
-document.addEventListener("DOMContentLoaded", () => {
-  initializeLocalStorage();
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  const playButton = document.querySelector(".home-play-button");
-  const header = document.querySelector(".header");
-  const headerTitles = document.querySelectorAll(".header h1, .header h3");
-  const gameChoices = document.querySelector(".game-choices");
-
-  playButton.addEventListener("click", function(event) {
-      event.preventDefault();
-
-      // Hide the header titles and the play button with a smooth transition
-      headerTitles.forEach(title => title.classList.add("hidden"));
-      playButton.classList.add("hidden");
-
-      // Wait for the transition to complete before hiding the header and showing game choices
-      setTimeout(function() {
-          header.style.display = "none";
-          gameChoices.style.display = "block";
-
-          // Trigger reflow to ensure the transition runs
-          gameChoices.offsetHeight;
-
-          gameChoices.classList.remove("hidden");
-      }, 1000); // Wait for the duration of the transition (1s)
-  });
-});
-
+initializeLocalStorage();
+addAudioIconEventListeners();
+audioObject = loadAudio(audioObject, audioFiles, envAudioUrl);
