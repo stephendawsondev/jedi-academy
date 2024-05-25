@@ -1,10 +1,3 @@
-var height = 6;
-var width = 5;
-
-var row = 0;
-var col = 0;
-var gameOver = false;
-
 const words = [
   {
     term: "FORCE",
@@ -31,7 +24,6 @@ const words = [
   { term: "BINKS", hint: "Gungan from the planet Naboo." },
   { term: "WEDGE", hint: "Skilled X-wing pilot and member of Rogue Squadron." },
   { term: "JANGO", hint: "Bounty hunter and template for the clone army." },
-  { term: "POE", hint: "Skilled pilot and commander in the Resistance." },
   { term: "SABRE", hint: "Elegant weapon used by Jedi and Sith." },
   { term: "TROOP", hint: "Group of soldiers or fighters." },
   {
@@ -42,14 +34,25 @@ const words = [
   { term: "HONDO", hint: "Weequay pirate and smuggler." },
 ];
 
+var height = 6;
+var width = 5;
+var row = 0;
+var col = 0;
+var gameOver = false;
+var guessedLetters = [];
+
 var selectedWordObj = words[Math.floor(Math.random() * words.length)];
 var word = selectedWordObj.term;
 var hint = selectedWordObj.hint;
+
+const playAgainButton = document.querySelector(".play-again");
+
 let score = 0;
-console.log(word);
+let attempts = 0;
 let wordleAudio;
+
 window.onload = async function () {
-  intialize();
+  initialize();
 
   const wordleAudioFiles = {
     wisdomTrialComplete: "complete-wisdom-trial.mp3",
@@ -58,23 +61,33 @@ window.onload = async function () {
   wordleAudio = loadAudio(wordleAudio, wordleAudioFiles, "assets/sounds/");
 };
 
-function intialize() {
-  // Create the game board
-  for (let x = 0; x < height; x++) {
-    for (let y = 0; y < width; y++) {
-      let tile = document.createElement("span");
-      tile.id = x.toString() + y.toString();
-      tile.classList.add("tile");
-      tile.innerText = "";
-      document.getElementById("board").appendChild(tile);
-    }
+function initialize() {
+  guessedLetters = [];
+  word = selectedWordObj.term;
+  const board = document.getElementById("board");
+  const fragment = document.createDocumentFragment();
+
+  for (let i = 0; i < height * width; i++) {
+    let tile = document.createElement("span");
+    tile.id = Math.floor(i / width).toString() + (i % width).toString();
+    tile.classList.add("tile");
+    tile.innerText = "";
+    fragment.appendChild(tile);
   }
+
+  board.appendChild(fragment);
 
   // Add event listeners to on-screen buttons
   document.querySelectorAll(".keyboard-button").forEach((button) => {
-    button.addEventListener("click", () => {
-      handleKeyPress(button.innerText);
+    button.addEventListener("click", (event) => {
+      let key = event.target.innerText.toUpperCase();
+      if (key === "ENTER") key = "Enter";
+      handleKeyPress(key);
     });
+  });
+
+  document.querySelector(".backspace").addEventListener("click", () => {
+    handleKeyPress("Backspace");
   });
 
   document.addEventListener("keyup", (e) => {
@@ -84,23 +97,11 @@ function intialize() {
     }
 
     if ("KeyA" <= e.code && e.code <= "KeyZ") {
-      if (col < width) {
-        let currTile = document.getElementById(row.toString() + col.toString());
-        if (currTile.innerText == "") {
-          currTile.innerText = e.key.toUpperCase();
-          col += 1;
-        }
-      }
+      handleKeyPress(e.key.toUpperCase());
     } else if (e.code == "Backspace") {
-      if (0 < col && col <= width) {
-        col -= 1;
-      }
-      let currTile = document.getElementById(row.toString() + col.toString());
-      currTile.innerText = "";
+      handleKeyPress("Backspace");
     } else if (e.code == "Enter") {
-      checkForMatch();
-      row += 1;
-      col = 0;
+      handleKeyPress("Enter");
     }
 
     if (!gameOver && row == height) {
@@ -129,23 +130,40 @@ function checkForMatch() {
       if (userAllowsSounds) {
         wordleAudio.wisdomTrialComplete.play();
       }
+      score = calculateScore();
+      updateLocalStorageGameData("wordle", {
+        result: score,
+        gameComplete: true,
+        firstTimePlayed: false,
+      });
     }
   }
 
   for (let colm = 0; colm < width; colm++) {
     let currTile = document.getElementById(row.toString() + colm.toString());
     let letter = currTile.innerText;
+    let keyboardKey = document.querySelector(
+      `.keyboard-button[data-key="${letter}"]`
+    );
+
+    guessedLetters.push(letter);
 
     // skip the letter if it has been marked correct
     if (!currTile.classList.contains("correct")) {
       if (word.includes(letter) && letterCount[letter] > 0) {
         currTile.classList.add("exist");
         letterCount[letter] -= 1;
+        if (keyboardKey) keyboardKey.classList.add("exist");
       } else {
         currTile.classList.add("absent");
+        if (keyboardKey) keyboardKey.classList.add("guess-incorrect");
       }
+    } else {
+      if (keyboardKey) keyboardKey.classList.add("correct");
     }
   }
+
+  attempts++;
 }
 
 function mapLetterCount(letterCount) {
@@ -161,27 +179,46 @@ function mapLetterCount(letterCount) {
 }
 
 function handleKeyPress(key) {
-  if (col < width) {
-    let currTile = document.getElementById(row.toString() + col.toString());
-    if (currTile.innerText == "") {
-      currTile.innerText = key.toUpperCase();
-      col += 1;
-    }
+  if (gameOver) {
+    console.log("Game is over. No more input accepted.");
+    return;
   }
 
-  // Check for Enter key press
   if (key === "Enter") {
-    checkForMatch();
-    row += 1;
-    col = 0;
-  }
-
-  // Check for Backspace key press
-  if (key === "Backspace") {
+    if (col === width) {
+      checkForMatch();
+      row += 1;
+      col = 0;
+    } else {
+      console.log("Not enough letters entered.");
+    }
+  } else if (key === "Backspace") {
     if (col > 0) {
       col -= 1;
       let currTile = document.getElementById(row.toString() + col.toString());
       currTile.innerText = "";
     }
+  } else if (col < width && /^[A-Z]$/.test(key)) {
+    let currTile = document.getElementById(row.toString() + col.toString());
+    if (currTile.innerText == "") {
+      currTile.innerText = key;
+      col += 1;
+    }
+  }
+}
+
+playAgainButton.addEventListener("click", () => {
+  window.location.reload();
+});
+
+function calculateScore() {
+  if (attempts <= 3) {
+    return 3;
+  } else if (attempts <= 4) {
+    return 2;
+  } else if (attempts <= 6) {
+    return 1;
+  } else {
+    return 0;
   }
 }
