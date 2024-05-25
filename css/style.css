@@ -47,6 +47,31 @@ body {
   z-index: 6;
 }
 
+.btn,
+.how-to-play-button,
+.back-button {
+  display: block;
+  max-width: 200px;
+  background: #f9d71c;
+  padding: 0.5em 1em;
+  text-align: center;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  line-height: 30px;
+  font-family: "Star Jedi", sans-serif;
+  font-size: 1.2em;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.btn:hover,
+.back-button:hover {
+  color: #f9d71c;
+  background-color: #000;
+  border: 2px #f9d71c solid;
+}
+
 /* Home page title */
 .header,
 #game-choices-header {
@@ -178,20 +203,6 @@ body {
 .dialog p {
   margin: 0;
   padding: 0;
-}
-
-.btn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin-top: 10px;
-  border-radius: 5px;
-}
-
-.btn:hover {
-  background-color: #0056b3;
 }
 
 /* Home Page Media Queries */
