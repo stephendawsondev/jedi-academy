@@ -25,6 +25,14 @@ main {
   align-items: center;
 }
 
+img {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 .container {
   text-align: center;
   max-width: 600px;
@@ -70,6 +78,7 @@ main {
   font-family: "Star Jedi", sans-serif;
   font-size: 1.2em;
   margin: 0 auto;
+  cursor: pointer;
   text-decoration: none;
 }
 
