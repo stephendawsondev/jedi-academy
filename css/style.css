@@ -5,9 +5,9 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: url("../assets/images-home/template.png") no-repeat center
-    center/cover;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   background-blend-mode: overlay;
   color: #fff;
   margin: 0;
@@ -124,6 +124,7 @@ body {
 }
 
 .trial-selection {
+  text-decoration: none;
   display: inline-flex;
   margin: 0 10px;
   width: 150px;

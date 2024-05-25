@@ -1,125 +1,122 @@
 body {
-    text-align: center;
-    background-image: url("../assets/images/wordle-background-image.jpg")
+  text-align: center;
+  background-image: url("../assets/images/wordle-background-image.jpg");
 }
 
 #title {
-    font-size: 40px;
-    color: black;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    font-weight: 600;
-}
-
-.container {
-    width: 500px;
-    height: 680px;
-    background-color: orange;
-    margin: 0 auto;
+  width: initial;
 }
 
 #board {
-    width: 300px;
-    height: 390px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    background-color: darkolivegreen;
-    align-items: center;
-    justify-content: space-evenly;
-    vertical-align: baseline;
+  width: 300px;
+  height: 390px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f9d71c;
+  align-items: center;
+  justify-content: space-evenly;
+  vertical-align: baseline;
+  border-radius: 5px;
+  border: solid 3px white;
 }
 
 .keyboard-button {
-    align-items: center;
-    vertical-align: baseline;
+  align-items: center;
+  vertical-align: baseline;
+  background-color: #f9d71c;
+  border-radius: 5px;
+  font-family: "Star Jedi", sans-serif;
 }
 
 .tile {
-    width: 50px;
-    height: 50px;
-    margin: 2px;
-    background-color: lightgrey;
-    border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  background-color: darkgrey;
+  border-radius: 5px;
+  border: solid 2px black;
 }
 
-.row-one, .row-two, .row-three {
-    margin: 5px;
+.row-one,
+.row-two,
+.row-three {
+  margin: 5px;
 }
 
 .button-container {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .back-button {
-    margin-left: 10px;
-    text-transform: uppercase;
+  margin-left: 10px;
 }
 
 .next-button {
-    margin-right: 10px;
-    text-transform: uppercase;
+  margin-right: 10px;
+}
+
+.back-button,
+.next-button {
+  text-transform: uppercase;
+  background-color: #f9d71c;
+  border-radius: 5px;
+  font-family: "Star Jedi";
 }
 
 .correct {
-    background-color: lightgreen;
+  background-color: lightgreen;
 }
 
 .exist {
-    background-color: yellow;
+  background-color: #f9d71c;
 }
 
 .absent {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 /* Modal for Wordle Instructions */
-
-.open-wordle-modal {
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
 #wordle-modal-title {
-    color: black;
-    text-transform: uppercase;
+  color: black;
+  text-transform: uppercase;
 }
 
 .modal {
-    display: none;
-    position: fixed;
-    margin: 0 auto;
-    position: fixed;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.modal-content {
-    position: relative;
-    top: 50%;
-}
-
-.modal, #open-wordle-modal {
-    display: block;
+  display: none;
+  position: fixed;
+  margin: 0 auto;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #wordle-instructions {
-    padding: 10px;
-    color: black;
-    margin: 0 auto;
-    margin-left: 50px;
-    font-size: 12px;
-    background-color: white;
-    height: 400px;
-    min-width: 300px;
-    top: 50%;
-    border:  double 2px black;
+  padding: 10px;
+  color: black;
+  margin: 0 auto;
+  margin-left: 50px;
+  font-size: 12px;
+  background-color: white;
+  height: 440px;
+  width: 250px;
+  top: 50%;
+  border: double 2px black;
+}
+
+#wordle-instructions p {
+  font-style: italic;
 }
 
 .close-button {
-    float: right;
-    width: 3.2rem;
-    cursor: pointer;
+  float: right;
+  width: 3.2rem;
+  cursor: pointer;
 }

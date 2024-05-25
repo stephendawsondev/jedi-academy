@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     whackADroidSoundFiles,
     "assets/sounds/"
   );
-  console.log(loadAudio);
+
   if (userAllowsSounds) {
-    whackADroidAudio.jawaAngry.play();
+    whackADroidAudio.droidBleep.play();
   }
 
   // audioObject.r2d2Scream.play();
@@ -103,6 +103,5 @@ document.addEventListener("DOMContentLoaded", async function () {
     setInterval(setJawa, 3000); // 2000ms = 2 seconds
   }
 
-  console.log(userAllowsSounds);
   setGame();
 });
