@@ -34,7 +34,8 @@
     margin-bottom: 10px;
   }
   
-  .how-to-play-button {
+  .how-to-play-button,
+  .back-to-trials-button {
     display: block;
     width: 200px;
     height: 50px;
@@ -48,6 +49,11 @@
     font-family: "Star Jedi", sans-serif;
     font-size: 1.2em;
     margin: 0 auto;
+  }
+
+  .back-to-trials-button {
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   
   .memory-game {
@@ -111,7 +117,7 @@
   
   .memory-popup-content {
     text-align: center;
-    font-family: "Star Jedi", sans-serif;
+    
   }
   
   .memory-popup-dialog[open] {
@@ -122,3 +128,26 @@
     margin-top: 10px;
   }
   
+  /* Responsive styles */
+@media (max-width: 650px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+}
+
+@media screen and (max-width:680px) {
+
+    .memory-card img {
+        width: 90%;
+        height: 70%;
+    }
+
+    .memory-game {
+        width: 80%;
+        height: 40vh;
+        margin: 50 auto;
+        
+    }
+
+}
