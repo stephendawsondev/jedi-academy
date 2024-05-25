@@ -1,7 +1,5 @@
-let userAllowsSounds =
-  JSON.parse(localStorage.getItem("gameData")).playerAllowsSound || false;
-let userAllowsMusic =
-  JSON.parse(localStorage.getItem("gameData")).playerAllowsMusic || false;
+let userAllowsSounds = false;
+let userAllowsMusic = false;
 let playerData = {};
 let audioObject = {};
 const envAudioUrl =
@@ -21,7 +19,11 @@ const audioFiles = {
 const initializeLocalStorage = () => {
   const initialData = {
     wordle: { result: 0, gameComplete: false, firstTimePlayed: true },
-    "whack-a-droid": { result: 0, gameComplete: false, firstTimePlayed: true },
+    "whack-a-droid": {
+      result: 0,
+      gameComplete: false,
+      firstTimePlayed: true,
+    },
     memory: { result: 0, gameComplete: false, firstTimePlayed: true },
     name: "",
     allGamesComplete: false,
@@ -160,9 +162,6 @@ const clearLocalStorage = () => {
   localStorage.removeItem("gameData");
   initializeLocalStorage();
 };
-
-document.addEventListener("DOMContentLoaded", () => {
-  initializeLocalStorage();
-  addAudioIconEventListeners();
-  audioObject = loadAudio(audioObject, audioFiles, envAudioUrl);
-});
+initializeLocalStorage();
+addAudioIconEventListeners();
+audioObject = loadAudio(audioObject, audioFiles, envAudioUrl);

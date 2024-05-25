@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     whackADroidSoundFiles,
     "assets/sounds/"
   );
-
+  console.log(loadAudio);
   if (userAllowsSounds) {
     whackADroidAudio.jawaAngry.play();
   }
