@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="wordle.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="wordle.css" />
     <title>Star Wars - Wordle</title>
   </head>
   <body>
-    <div class="container">
-      <h1 id="title">The Trial of Wisdom</h1>
-      <button class="open-wordle-modal">How to Play</button>
-      <div class="modal">
-        <div id="wordle-instructions">
-           <h1>Instructions</h1>
-            <p>So now you have become a Jedi Knight, and in order to become a Jedi Master you have to play a game called the Trial of Wisdom which is based on the classic game, Wordle. </p>
+    <main>
+      <section class="container">
+        <h1 id="title" class="header">The Trial of Wisdom</h1>
+        <button class="info-button open-wordle-modal">How to Play</button>
+        <div class="modal">
+          <div id="wordle-instructions">
+            <h1>Instructions</h1>
+            <p>
+              So now you have become a Jedi Knight, and in order to become a Jedi
+              Master you have to play a game called the Trial of Wisdom which is
+              based on the classic game, Wordle.
+            </p>
             <h2>How the game works</h2>
-            <p>The aim of the game is to guess the word in 6 attempts. The way the game works is you that you have to try and guess a word starting with the top row by inputting one letter in per tile by clicking on the relevant keyboard buttons. 
-             After you have tried guessing the word on the top row, click enter, and then the correct letters in the right place will be highlighted in green, correct letters in the wrong place will be highlighted in yellow, and any letter not in the word 
-            will stay as grey(same as the tile colour with the letter showing). You will move down row by row entering letters and clicking enter at the end of the each row. When you have correctly guessed a word all tiles will become green and to say you have correctly guessed the word.</p>
-        <div>
-          <button class="close-button">Close</button>
+            <p>
+              The aim of the game is to guess the word in 6 attempts. The way the
+              game works is you that you have to try and guess a word starting
+              with the top row by inputting one letter in per tile by clicking on
+              the relevant keyboard buttons. After you have tried guessing the
+              word on the top row, click enter, and then the correct letters in
+              the right place will be highlighted in green, correct letters in the
+              wrong place will be highlighted in yellow, and any letter not in the
+              word will stay as grey(same as the tile colour with the letter
+              showing). You will move down row by row entering letters and
+              clicking enter at the end of the each row. When you have correctly
+              guessed a word all tiles will become green and to say you have
+              correctly guessed the word.
+            </p>
+            <div>
+              <button class="close-button">Close</button>
+            </div>
+          </div>
         </div>
-      </div>
-      </div>
-      <div id="board">
-      </div>
-      <br>
-      <div id="keyboard-container">
-        <div class="row-one">
+        <div id="board"></div>
+        <br />
+        <div id="keyboard-container">
+          <div class="row-one">
             <button class="keyboard-button">q</button>
             <button class="keyboard-button">w</button>
             <button class="keyboard-button">e</button>
@@ -39,8 +54,8 @@
             <button class="keyboard-button">i</button>
             <button class="keyboard-button">o</button>
             <button class="keyboard-button">p</button>
-        </div>
-        <div class="row-two">
+          </div>
+          <div class="row-two">
             <button class="keyboard-button">a</button>
             <button class="keyboard-button">s</button>
             <button class="keyboard-button">d</button>
@@ -50,8 +65,8 @@
             <button class="keyboard-button">j</button>
             <button class="keyboard-button">k</button>
             <button class="keyboard-button">l</button>
-        </div>
-        <div class="row-three">
+          </div>
+          <div class="row-three">
             <button class="keyboard-button">Enter</button>
             <button class="keyboard-button">z</button>
             <button class="keyboard-button">x</button>
@@ -60,18 +75,32 @@
             <button class="keyboard-button">b</button>
             <button class="keyboard-button">n</button>
             <button class="keyboard-button">m</button>
-            <button class="keyboard-button">Delete</button>
+            <button class="keyboard-button">
+              <i class="fas fa-backspace"></i>
+            </button>
+          </div>
+          <div id="display_box">_</div>
         </div>
-        <div id="display_box">_</div>
-    </div>
-    <br>
-    <div class="button-container">
+        <br />
+        <div class="button-container">
           <button class="back-button">Back</button>
           <button class="next-button">Next</button>
-    </div>
+        </div>
 
-      <h1 id="answer"></h1>
-    </div>
+        <h1 id="answer"></h1>
+      </section>
+    </main>
+    <button title="Toggle music" id="music-button" class="audio-button music-button">
+      <img id="music-icon" src="../assets/images/music_on.webp" alt="music icon" />
+    </button>
+  
+    <button title="Toggle sound" id="sound-button" class="audio-button sound-button">
+      <img id="sound-icon" src="../assets/images/sound_on.webp" alt="sound icon" />
+    </button>
+    <script
+      src="https://kit.fontawesome.com/65aa973f6f.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="../js/script.js"></script>
     <script src="wordle.js"></script>
     <script src="wordle-modal.js"></script>
