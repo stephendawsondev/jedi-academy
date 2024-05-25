@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', async function() {
     const memorySoundFiles = {
         r2d2happy: "r2r2-happy.mp3", // Succesful Match
         memoryTrialComplete: "trial-memory-completion.mp3", // Game Completion
-        // wrongMatch: "r2d2-scream.mp3" // Incorrect Match
     };
     
     memoryAudio = await loadAudio(
@@ -70,24 +69,35 @@ document.addEventListener('DOMContentLoaded', async function() {
     function disableCards() {
         firstCard.removeEventListener('click', flipCard);
         secondCard.removeEventListener('click', flipCard);
-
+    
         memoryAudio.r2d2happy.play();
-
+    
         resetBoard();
         score++;
         document.getElementById('score').innerHTML = score;
+        let playerRank = 0;
+        if (score === 5 || score === 6) {
+            playerRank = 3;
+        } else if (score === 3 || score === 4) {
+            playerRank = 2;
+        } else if (score === 2 || score === 1) {
+            playerRank = 1;
+        } else {
+            playerRank = 0;
+        }
+        
         if (score === 6) {
-        stopTimer();
-        memoryAudio.memoryTrialComplete.play();
-        // alert('Congratulations! You found all pairs!');
+            stopTimer();
+            memoryAudio.memoryTrialComplete.play();
+            console.log(playerRank);
         }
     }
+    
 
     function unflipCards() {
       setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
-        // memoryAudio.wrongMatch.play();
         resetBoard();
       }, 1000);
     }
