@@ -28,11 +28,11 @@ May the force be with you, as always!
 ![Memory Game - Laptop View](assets/wireframes/memory-game-laptop.png)
 
 ### Whack a Jar-Jar Game - Mobile View
-![Whack a Jar-Jar Game - Mobile View](assets/wireframes/whack-a-jar-jar-mobile.png)
+![Whack a Jar-Jar Game - Mobile View](assets/wireframes/whack-a-droid-mobile.png)
 ### Whack a Jar-Jar Game - Tablet View
-![Whack a Jar-Jar Game - Tablet View](assets/wireframes/whack-a-jar-jar-tablet.png)
+![Whack a Jar-Jar Game - Tablet View](assets/wireframes/whack-a-droid-tablet.png)
 ### Whack a Jar-Jar Game - Laptop View
-![Whack a Jar-Jar Game - Laptop View](assets/wireframes/whack-a-jar-jar-laptop.png)
+![Whack a Jar-Jar Game - Laptop View](assets/wireframes/whack-a-droid-laptop.png)
 
 ### Star Wars Themed Wordle - Mobile View
 ![Star Wars Themed Wordle - Mobile View](assets/wireframes/star-wars-wordle-mobile.png)
@@ -64,7 +64,16 @@ https://www.starwars.com/databank/bb-8
 https://starwars.fandom.com/wiki/Anakin_Skywalker
 https://www.starwars.com/databank/leia-organa
 https://www.starwars.com/databank/jar-jar-binks
-Wordle background-image: https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/
+Wordle Background-image: https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/
+Star Wars Logo - https://w7.pngwing.com/pngs/723/1016/
+Darth Vader - png-transparent-star-wars-logo-star-wars-text-logo-silhouette-thumbnail.png
+https://w7.pngwing.com/pngs/6/73/png-transparent-anakin-skywalker-star-wars-sticker-darth-supervillain-star-wars-sticker-fictional-character-anakin-skywalker-thumbnail.png
+Republic Logo - https://w7.pngwing.com/pngs/83/395/png-transparent-leia-organa-rebel-alliance-star-wars-galactic-empire-logo-star-wars-thumbnail.png
+Jedi Logo - https://w7.pngwing.com/pngs/429/138/png-transparent-the-new-jedi-order-star-wars-the-clone-wars-star-wars-emblem-logo-monochrome-thumbnail.png
+Stormtrooper Logo - https://w7.pngwing.com/pngs/983/735/png-transparent-stormtrooper-illustration-stormtrooper-drawing-star-wars-stencil-stormtrooper-white-face-photography-thumbnail.png
+Bobba-fett Logo - https://w7.pngwing.com/pngs/854/808/png-transparent-boba-fett-jango-fett-mandalorian-leia-organa-star-wars-death-star-angle-logo-monochrome-thumbnail.png
+Lightsaber - https://www.pngwing.com/en/free-png-pqhkp/download
+Jedi Temple memory game background - https://static.wikia.nocookie.net/starwars/images/2/2d/Jedi_Temple_spires_ROTS.png/revision/latest/scale-to-width-down/1000?cb=20130215030848
 
 ### Sound Clips
 https://www.101soundboards.com/sounds/27903371-ow-why-did-you-do-that
@@ -76,15 +85,17 @@ https://www.101soundboards.com/sounds/27876007-finally-a-great-victory-we-have-a
 https://www.101soundboards.com/sounds/27911699-ouchie-mesa-head-goin-bombad
 https://www.101soundboards.com/sounds/27912421-ouchie
 
+
 ### Documentation for Code
 For the basic layout of the keyboard for Wordle we used [Wordle Keyboard](https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/) for the keyboard.
 For help with building the Wordle game we used [Wordle Tutorial](https://www.youtube.com/watch?v=ckjRsPaWHX8)
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+https://www.kennyyipcoding.com
 
 ### Other Documentation/content
 https://en.wikipedia.org/wiki/Death_Star
 Wireframes: https://my.moqups.com/login and https://balsamiq.com/
-https://www.kennyyipcoding.com
+Star Wars font - https://www.dafont.com/star-jedi.font
 
 ## Collaborators
 
