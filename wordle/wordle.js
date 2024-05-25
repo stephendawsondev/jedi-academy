@@ -51,6 +51,15 @@ function intialize() {
         }
     }
 
+    // Add event listeners to on-screen buttons
+    document.querySelectorAll('.keyboard-button').forEach(button => {
+        button.addEventListener('click', () => {
+            handleKeyPress(button.innerText);
+        });
+    });
+
+ 
+
     document.addEventListener("keyup", (e) => {
         if (gameOver) {
             console.log("Game is over. No more input accepted.");
@@ -85,7 +94,7 @@ function intialize() {
 
         if (!gameOver && row == height) {
             gameOver = true;
-            document.getElementById("answer").innerText = word;
+            document.getElementById("display_box").innerText = word;
 
         }
     });
@@ -140,6 +149,32 @@ function mapLetterCount(letterCount){
         } 
         else {
            letterCount[letter] = 1;
+        }
+    }
+}
+
+function handleKeyPress(key) {
+    if (col < width) {
+        let currTile = document.getElementById(row.toString() + col.toString());
+        if (currTile.innerText == "") {
+            currTile.innerText = key.toUpperCase();
+            col += 1;
+        }
+    }
+
+    // Check for Enter key press
+    if (key === "Enter") {
+        checkForMatch();
+        row += 1; 
+        col = 0;
+    }
+
+    // Check for Backspace key press
+    if (key === "Backspace") {
+        if (col > 0) {
+            col -= 1;
+            let currTile = document.getElementById(row.toString() + col.toString());
+            currTile.innerText = "";
         }
     }
 }
