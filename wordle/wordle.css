@@ -1,21 +1,19 @@
+@font-face {
+    font-family: 'Star Jedi';
+    src: url('../fonts/index-font/Starjedi.ttf') format('truetype');
+  }
+
 body {
     text-align: center;
     background-image: url("../assets/images/wordle-background-image.jpg")
 }
 
 #title {
+    font-family: 'Star Jedi', sans-serif;
     font-size: 40px;
-    color: black;
+    color: #F9D71C;
     margin-bottom: 10px;
     text-transform: uppercase;
-    font-weight: 600;
-}
-
-.container {
-    width: 500px;
-    height: 680px;
-    background-color: orange;
-    margin: 0 auto;
 }
 
 #board {
@@ -24,23 +22,29 @@ body {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    background-color: darkolivegreen;
+    background-color: #F9D71C;
     align-items: center;
     justify-content: space-evenly;
     vertical-align: baseline;
+    border-radius: 5px;
+    border: solid 3px white;
 }
 
 .keyboard-button {
     align-items: center;
     vertical-align: baseline;
+    background-color: #F9D71C;
+    border-radius: 5px;
+    font-family: 'Star Jedi', sans-serif;
 }
 
 .tile {
     width: 50px;
     height: 50px;
     margin: 2px;
-    background-color: lightgrey;
+    background-color: darkgrey;
     border-radius: 5px;
+    border: solid 2px black;
 }
 
 .row-one, .row-two, .row-three {
@@ -54,12 +58,18 @@ body {
 
 .back-button {
     margin-left: 10px;
-    text-transform: uppercase;
 }
 
 .next-button {
     margin-right: 10px;
+}
+    
+
+.back-button, .next-button {
     text-transform: uppercase;
+    background-color: #F9D71C;
+    border-radius: 5px;
+    font-family: 'Star Jedi'
 }
 
 .correct {
@@ -79,7 +89,12 @@ body {
 .open-wordle-modal {
     padding: 5px;
     margin-bottom: 10px;
+    text-transform: uppercase;
+    background-color: #F9D71C;
+    border-radius: 5px;
+    font-family: 'Star Jedi'
 }
+
 
 #wordle-modal-title {
     color: black;
@@ -96,15 +111,6 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.modal-content {
-    position: relative;
-    top: 50%;
-}
-
-.modal, #open-wordle-modal {
-    display: block;
-}
-
 #wordle-instructions {
     padding: 10px;
     color: black;
@@ -112,10 +118,14 @@ body {
     margin-left: 50px;
     font-size: 12px;
     background-color: white;
-    height: 400px;
-    min-width: 300px;
+    height: 440px;
+    width: 250px;
     top: 50%;
     border:  double 2px black;
+}
+
+#wordle-instructions p {
+    font-style: italic;
 }
 
 .close-button {
