@@ -1,7 +1,9 @@
 # may-hackathon-2024
+
 A Star Wars-themed Hackathon Project
 
 ## Project Description
+
 In a galaxy far, far away, the Jedi Order stands as the guardian of peace and justice.
 At the heart of the Order lies the Jedi Temple, where younglings from across the 
 galaxy come to begin their journey towards becoming a Jedi. You are one of these 
@@ -45,6 +47,12 @@ May the force be with you, as always!
 ![Star Wars Main Page - Tablet View](assets/wireframes/tablet-wireframe-index.png)
 ### Main Page - Laptop View
 ![Star Wars Main Page - Laptop View](assets/wireframes/laptop-wireframe-index.png)
+
+## Technologies used
+
+*HTML
+*CSS
+*Vanilla Javascript
 
 ## Credits
 
