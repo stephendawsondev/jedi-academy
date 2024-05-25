@@ -6,14 +6,14 @@ body {
 #title {
     font-size: 40px;
     color: black;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: 600;
 }
 
 .container {
     width: 500px;
-    height: 650px;
+    height: 680px;
     background-color: orange;
     margin: 0 auto;
 }
@@ -72,4 +72,54 @@ body {
 
 .absent {
     background-color: lightgray;
+}
+
+/* Modal for Wordle Instructions */
+
+.open-wordle-modal {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#wordle-modal-title {
+    color: black;
+    text-transform: uppercase;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    margin: 0 auto;
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-content {
+    position: relative;
+    top: 50%;
+}
+
+.modal, #open-wordle-modal {
+    display: block;
+}
+
+#wordle-instructions {
+    padding: 10px;
+    color: black;
+    margin: 0 auto;
+    margin-left: 50px;
+    font-size: 12px;
+    background-color: white;
+    height: 400px;
+    min-width: 300px;
+    top: 50%;
+    border:  double 2px black;
+}
+
+.close-button {
+    float: right;
+    width: 3.2rem;
+    cursor: pointer;
 }
