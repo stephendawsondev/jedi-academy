@@ -8,9 +8,39 @@
     <title>Whack-a-droid - Star Wars</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Whack-a-droid</h1>
-    </div>
+    <main>
+      <div class="container">
+          <h1>Whack-a-droid</h1>
+          <button>How to Play</button>
+          <h2 id="score">0</h2>
+      </div>
+      <div id="board">
+
+      </div>
+    </main>
+    <button
+      title="Toggle music"
+      id="music-button"
+      class="audio-button music-button"
+    >
+      <img
+        id="music-icon"
+        src="../assets/images/music_on.webp"
+        alt="music icon"
+      />
+    </button>
+
+    <button
+      title="Toggle sound"
+      id="sound-button"
+      class="audio-button sound-button"
+    >
+      <img
+        id="sound-icon"
+        src="../assets/images/sound_on.webp"
+        alt="sound icon"
+      />
+    </button>
     <script src="../js/script.js"></script>
     <script src="whack-a-droid.js"></script>
   </body>

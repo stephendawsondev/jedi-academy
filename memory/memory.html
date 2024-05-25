@@ -11,6 +11,50 @@
     
     <!-- The game board container -->
 <body>
+  <!-- Page title -->
+  <header>
+    <h1>Trial of Memory</h1>
+    <button class="how-to-play-button">How to play</button>
+    <dialog class="memory-popup-dialog">
+      <div class="memory-popup-content">
+        <h3>Welcome to the Trial of Memory</h3>
+        <p>This is one of many challenges to becoming a Jedi.</p>
+        <p>Here you will have to use the Force to find all the matching pairs.</p>
+        <p>"Find all the pairs, pfft! Easy!"</p>
+        <p>Well, maybe not so easy...</p>
+        <p>You will only have 30 seconds to find all the pairs.</p>
+        <p>How many pairs you match correctly will determine your rank.</p>
+        <p>This score will contribute to your overall Jedi Rank.</p>
+        <p>Find all 6 pairs - You will achieve the Rank of <strong>Master</strong></p>
+        <p>Find 4/5 pairs - You will achieve the Rank of <strong>Knight</strong></p>
+        <p>Find 2/3 pairs - You will achieve the Rank of <strong>Padawan</strong></p>
+        <p>Good luck. And may the Force be with you.</p>
+        <button class="close-popup-button">Close</button>
+      </div>
+    </dialog>
+  </header>
+
+  <section class="game-controls">
+    <div>
+      <button id="startGame">Begin the Trail!</button>
+    </div>
+
+    <div class="game-stats">
+      <div>
+        <!-- Timer -->
+        <div id="game-time">
+          <p>Time left: <span id="timer">30</span> SEC</p>
+        </div>
+  
+        <!-- Score Board -->
+        <div id="score-board">
+          <p>You have <span id="score">0</span> / 6 correct!</p>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
   <section class="memory-game">
     <!-- Boba Fett -->
     <div class="memory-card" data-logo="boba-fett">
@@ -68,6 +112,14 @@
     </div>
   </section>
 
+
+  <div>
+    <button id="resetGame">Reset Game</button>
+  </div>
+
+  <div class="back-to-trials">
+    <a href="#" class="back-to-trials-button">Back to Trials</a>
+  </div>
 
   <script src="../js/script.js"></script>
   <script src="memory.js"></script>

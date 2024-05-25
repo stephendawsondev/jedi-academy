@@ -1,0 +1,39 @@
+body {
+    text-align: center;
+    background: url(assets/images/tatooine.jpg);
+    background-size: cover;
+    color: black;
+}
+
+#board {
+    width: 540px;
+    height: 540px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background: url(assets/images/sand-background.jpg);
+    background-size: cover;
+    border: 3px solid white;
+    border-radius: 25px;
+}
+
+#board div {
+    width: 180px;
+    height: 180px;
+    background-image: url(assets/images/hole-325.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#board div img {
+    width: 100px;
+    height: 100px;
+    /* To make sure img tags are not dragable/selectable */
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+

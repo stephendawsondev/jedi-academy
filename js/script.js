@@ -1,3 +1,12 @@
+let userAllowsSounds;
+let userAllowsMusic;
+let playerData = {};
+let audioObject = {};
+
+const audioFiles = {
+  r2d2Scream: "r2d2-scream.mp3",
+};
+
 /**
  * Initializes the local storage with the default structure if not already set.
  */
@@ -9,11 +18,98 @@ const initializeLocalStorage = () => {
     name: "",
     allGamesComplete: false,
     totalScore: 0,
+    playerAllowsSound: false,
+    playerAllowsMusic: false,
   };
 
   if (!localStorage.getItem("gameData")) {
     localStorage.setItem("gameData", JSON.stringify(initialData));
   }
+
+  playerData = JSON.parse(localStorage.getItem("gameData"));
+
+  userAllowsSounds = playerData.playerAllowsSound;
+  userAllowsMusic = playerData.playerAllowsMusic;
+};
+
+/**
+ * Updates the player data in local storage.
+ * @returns {Object} playerData
+ */
+const updateLocalStoragePlayerData = (data) => {
+  const playerData = JSON.parse(localStorage.getItem("gameData"));
+  playerData.playerAllowsSound = data.playerAllowsSound;
+  playerData.playerAllowsMusic = data.playerAllowsMusic;
+  localStorage.setItem("gameData", JSON.stringify(playerData));
+  return playerData;
+};
+
+/**
+ * Loads the audio files
+ * @param {Object} audioObj - The audio object to load the files into.
+ * @param {Object} audioFiles - The audio files to load.
+ * @param {string} path - The path to the audio files.
+ * @returns {Object} audioObj
+ */
+const loadAudio = (audioObj, audioFiles, path) => {
+  audioObj = audioObj || {};
+  for (const [key, fileName] of Object.entries(audioFiles)) {
+    audioObj[key] = new Audio(`${path}${fileName}`);
+  }
+
+  return audioObj;
+};
+
+/**
+ * Adds event listeners to the audio icons.
+ * Updates the local storage with the player's audio preferences.
+ * Updates the audio icons based on the player's audio preferences.
+ * @returns {void}
+ * @listens musicButton:click
+ * @listens soundButton:click
+ * @fires updateLocalStoragePlayerData
+ * @fires calculateAverageScore
+ * @fires loadAudio
+ */
+const addAudioIconEventListeners = () => {
+  // Update icons based on initial state
+  const musicIcon = document.getElementById("music-icon");
+  const soundIcon = document.getElementById("sound-icon");
+  musicIcon.src = userAllowsMusic
+    ? `../assets/images/music_on.webp`
+    : `../assets/images/music_off.webp`;
+  soundIcon.src = userAllowsSounds
+    ? `../assets/images/sound_on.webp`
+    : `../assets/images/sound_off.webp`;
+
+  // Add event listeners
+  const musicButton = document.getElementById("music-button");
+  const soundButton = document.getElementById("sound-button");
+
+  musicButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    userAllowsMusic = !userAllowsMusic;
+    updateLocalStoragePlayerData({
+      ...playerData,
+      playerAllowsMusic: userAllowsMusic,
+    });
+
+    musicIcon.src = userAllowsMusic
+      ? `../assets/images/music_on.webp`
+      : `../assets/images/music_off.webp`;
+  });
+
+  soundButton.addEventListener("click", () => {
+    userAllowsSounds = !userAllowsSounds;
+    updateLocalStoragePlayerData({
+      ...playerData,
+      playerAllowsSound: userAllowsSounds,
+    });
+
+    soundIcon.src = userAllowsSounds
+      ? `../assets/images/sound_on.webp`
+      : `../assets/images/sound_off.webp`;
+  });
 };
 
 /**
@@ -40,7 +136,7 @@ const calculateAverageScore = () => {
  * gameComplete: false
  * }
  */
-const updateLocalStorage = (game, data) => {
+const updateLocalStorageGameData = (game, data) => {
   const gameData = JSON.parse(localStorage.getItem("gameData"));
   gameData[game] = data;
 
@@ -77,4 +173,6 @@ const clearLocalStorage = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   initializeLocalStorage();
+  addAudioIconEventListeners();
+  audioObject = loadAudio(audioObject, audioFiles, "../public/");
 });
