@@ -10,30 +10,15 @@
 </head>
 
 <body>
-  
-    <div class="container">
-      <header >
-        <h1 class="header">Whack-a-droid</h1>
-        <!-- Open The Modal -->
-        <button id="instructions">How to Play</button>
-        <h2 id="score">0</h2>
-      </header>
-      <main>
-    <div id="board">
-    </div>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-      <!-- Modal content -->
-      <div class="modal-content">
-        <span class="close">X</span>
-        <h2>How to Play</h2>
-        <p>Click on the droids when they pop up from their holes to get point but be sure to avoid Jawa!</p>
-        <p>Have fun!</p>
-      </div>
-
-    </div>
+<div class="container">
+  <header >
+    <h1 class="header">Whack-a-droid</h1>
+    <button class="btn how-to-play-button" id="instructions">How to Play</button>
+    <h2 id="score">0</h2>
+  </header>
+  <main>
+    <div id="board"></div>
   </main>
   <button title="Toggle music" id="music-button" class="audio-button music-button">
     <img id="music-icon" src="../assets/images/music_on.webp" alt="music icon" />
@@ -42,6 +27,15 @@
   <button title="Toggle sound" id="sound-button" class="audio-button sound-button">
     <img id="sound-icon" src="../assets/images/sound_on.webp" alt="sound icon" />
   </button>
+
+  <dialog class="popup-dialog">
+    <div class="popup-content">
+      <h2>Trial of Agility</h2>
+      <p>Click on the droids when they pop up from their holes to get point but be sure to avoid Jawa!</p>
+      <button class="close-popup-button">Close</button>
+    </div>
+  </dialog>
+
   <script src="../js/script.js"></script>
   <script src="whack-a-droid.js"></script>
 </body>
