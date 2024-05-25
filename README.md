@@ -46,6 +46,19 @@ May the force be with you, as always!
 ### Main Page - Laptop View
 ![Star Wars Main Page - Laptop View](assets/wireframes/laptop-wireframe-index.png)
 
+### Results Page - Phone View
+![Results Page - Phone View](assets/wireframes/results-phone-view.png)
+### Results Page - Tablet View
+![Results Page - Tablet View](assets/wireframes/Results-tablet-view.png)
+### Results Page - Laptop View
+![Results Page - Laptop View](assets/wireframes/Results-laptop-view.png)
+
+### Meet The Team Page - Phone View
+![Meet The Team Page - Phone View](assets/wireframes/meet-the-team-phone.png)
+### Meet The Team Page - Tablet View
+![Meet The Team Page - Tablet View](assets/wireframes/meet-the-team-tablet.png)
+### Meet The Team Page - Laptop View
+![Meet The Team Page - Laptop View](assets/wireframes/meet-the-team-laptop.png)
 ## Credits
 
 ### Images
