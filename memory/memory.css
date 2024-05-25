@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Star Jedi';
+    src: url('../fonts/index-font/Starjedi.ttf') format('truetype');
+  }
+
 * {
     padding: 0;
     margin: 0;
@@ -7,16 +12,55 @@
   body {
     height: 100vh;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     background-image: url(./images/Jedi_Temple_spires_ROTS.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  header h1 {
+    font-family: 'Star Jedi', sans-serif;
+    font-size: 2.5em;
+    color: #F9D71C;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    margin-bottom: 10px;
+  }
+  
+  .how-to-play-button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    background: #F9D71C;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: #000;
+    font-weight: bold;
+    line-height: 30px;
+    font-family: "Star Jedi", sans-serif;
+    font-size: 1.2em;
+    margin: 0 auto;
   }
   
   .memory-game {
     width: 640px;
     height: 640px;
-    margin: auto;
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     perspective: 1000px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5%;
+    border: 2px solid #F9D71C;
   }
   
   .memory-card {
@@ -25,15 +69,16 @@
     margin: 5px;
     position: relative;
     transform: scale(1);
-    box-shadow: 1px 1px 1px rgba(0,0,0,.3);
     transform-style: preserve-3d;
+    transition: transform 0.5s;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
   }
   
   .memory-card:active {
     transform: scale(0.97);
-    transition: transform .2s;
+    transition: transform 0.2s;
   }
-
+  
   .memory-card.flip {
     transform: rotateY(180deg);
   }
@@ -42,14 +87,38 @@
   .back-face {
     width: 100%;
     height: 100%;
-    padding: 20px;
+    padding: 5px;
     position: absolute;
     border-radius: 5px;
-    background: #1C7CCC;
+    background: #F9D71C;
     backface-visibility: hidden;
   }
-
+  
   .front-face {
     transform: rotateY(180deg);
   }
-
+  
+  /* How to play popup */
+  .memory-popup-dialog {
+    margin: auto;
+    display: none;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: white;
+    padding: 20px;
+  }
+  
+  .memory-popup-content {
+    text-align: center;
+    font-family: "Star Jedi", sans-serif;
+  }
+  
+  .memory-popup-dialog[open] {
+    display: block;
+  }
+  
+  .how-to-play-button {
+    margin-top: 10px;
+  }
+  
