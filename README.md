@@ -1,7 +1,9 @@
 # may-hackathon-2024
+
 A Star Wars-themed Hackathon Project
 
 ## Project Description
+
 In a galaxy far, far away, the Jedi Order stands as the guardian of peace and justice.
 At the heart of the Order lies the Jedi Temple, where younglings from across the 
 galaxy come to begin their journey towards becoming a Jedi. You are one of these 
@@ -65,6 +67,13 @@ User/player:
 ### Main Page - Laptop View
 ![Star Wars Main Page - Laptop View](assets/wireframes/laptop-wireframe-index.png)
 
+
+## Technologies used
+
+* HTML
+* CSS
+* Vanilla Javascript
+
 ### Results Page - Phone View
 ![Results Page - Phone View](assets/wireframes/results-phone-view.png)
 ### Results Page - Tablet View
@@ -78,6 +87,7 @@ User/player:
 ![Meet The Team Page - Tablet View](assets/wireframes/meet-the-team-tablet.png)
 ### Meet The Team Page - Laptop View
 ![Meet The Team Page - Laptop View](assets/wireframes/meet-the-team-laptop.png)
+
 ## Credits
 
 ### Images
@@ -88,7 +98,17 @@ https://www.starwars.com/databank/bb-8
 https://starwars.fandom.com/wiki/Anakin_Skywalker
 https://www.starwars.com/databank/leia-organa
 https://www.starwars.com/databank/jar-jar-binks
-Wordle background-image: https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/
+
+Wordle Background-image: https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/
+Star Wars Logo - https://w7.pngwing.com/pngs/723/1016/
+Darth Vader - png-transparent-star-wars-logo-star-wars-text-logo-silhouette-thumbnail.png
+https://w7.pngwing.com/pngs/6/73/png-transparent-anakin-skywalker-star-wars-sticker-darth-supervillain-star-wars-sticker-fictional-character-anakin-skywalker-thumbnail.png
+Republic Logo - https://w7.pngwing.com/pngs/83/395/png-transparent-leia-organa-rebel-alliance-star-wars-galactic-empire-logo-star-wars-thumbnail.png
+Jedi Logo - https://w7.pngwing.com/pngs/429/138/png-transparent-the-new-jedi-order-star-wars-the-clone-wars-star-wars-emblem-logo-monochrome-thumbnail.png
+Stormtrooper Logo - https://w7.pngwing.com/pngs/983/735/png-transparent-stormtrooper-illustration-stormtrooper-drawing-star-wars-stencil-stormtrooper-white-face-photography-thumbnail.png
+Bobba-fett Logo - https://w7.pngwing.com/pngs/854/808/png-transparent-boba-fett-jango-fett-mandalorian-leia-organa-star-wars-death-star-angle-logo-monochrome-thumbnail.png
+Lightsaber - https://www.pngwing.com/en/free-png-pqhkp/download
+Jedi Temple memory game background - https://static.wikia.nocookie.net/starwars/images/2/2d/Jedi_Temple_spires_ROTS.png/revision/latest/scale-to-width-down/1000?cb=20130215030848
 Image for whack-a-droid: https://pngtree.com/freepng/bb8-clipart-cartoon-star-wars-bb-vector_11054353.html
 Image 2 for whack-a-droid: https://www.deviantart.com/art-of-moore/art/Jawa-Droidsmith-310484097
 Image 3: https://www.wallpaperflare.com/star-wars-building-desert-jawa-start-wars-robot-tatooine-star-wars-wallpaper-hdffs
@@ -111,11 +131,13 @@ R2D2 Sound: https://www.101soundboards.com/sounds/24263888-r2d2-text-short
 For the basic layout of the keyboard for Wordle we used [Wordle Keyboard](https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/) for the keyboard.
 For help with building the Wordle game we used [Wordle Tutorial](https://www.youtube.com/watch?v=ckjRsPaWHX8)
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+https://www.kennyyipcoding.com
+
 
 ### Other Documentation/content
 https://en.wikipedia.org/wiki/Death_Star
 Wireframes: https://my.moqups.com/login and https://balsamiq.com/
-https://www.kennyyipcoding.com
+Star Wars font - https://www.dafont.com/star-jedi.font
 
 ## Collaborators
 

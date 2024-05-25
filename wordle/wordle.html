@@ -7,39 +7,12 @@
     <link rel="stylesheet" href="wordle.css" />
     <title>Star Wars - Wordle</title>
   </head>
-  <body>
+  <body id="wordle-background-image">
     <main>
       <section class="container">
-        <h1 id="title" class="header">The Trial of Wisdom</h1>
+        <h1 id="title">Trial of Wisdom</h1>
         <button class="info-button open-wordle-modal">How to Play</button>
-        <div class="modal">
-          <div id="wordle-instructions">
-            <h1>Instructions</h1>
-            <p>
-              So now you have become a Jedi Knight, and in order to become a Jedi
-              Master you have to play a game called the Trial of Wisdom which is
-              based on the classic game, Wordle.
-            </p>
-            <h2>How the game works</h2>
-            <p>
-              The aim of the game is to guess the word in 6 attempts. The way the
-              game works is you that you have to try and guess a word starting
-              with the top row by inputting one letter in per tile by clicking on
-              the relevant keyboard buttons. After you have tried guessing the
-              word on the top row, click enter, and then the correct letters in
-              the right place will be highlighted in green, correct letters in the
-              wrong place will be highlighted in yellow, and any letter not in the
-              word will stay as grey(same as the tile colour with the letter
-              showing). You will move down row by row entering letters and
-              clicking enter at the end of the each row. When you have correctly
-              guessed a word all tiles will become green and to say you have
-              correctly guessed the word.
-            </p>
-            <div>
-              <button class="close-button">Close</button>
-            </div>
-          </div>
-        </div>
+        <dialog id="wordle-modal">How to Play</dialog>
         <div id="board"></div>
         <br />
         <div id="keyboard-container">
