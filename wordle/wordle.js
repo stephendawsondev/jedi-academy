@@ -4,7 +4,7 @@ var width = 5;
 var row = 0; 
 var col = 0; 
 var gameOver = false;
-var word = "FORCE";
+var word = "FFORCE";
 
 window.onload = function(){
     intialize();
@@ -65,18 +65,21 @@ function intialize() {
 
 function checkForMatch() {
     let correctCount = 0;
+    let letterCount = {};
+    mapLetterCount(letterCount);
+    console.log(letterCount);
     for (let colm = 0; colm < width; colm++) {
         let currTile = document.getElementById(row.toString()  + colm.toString());
         let letter = currTile.innerText;
 
-        //add styles for correct class
+
         if (word[colm] == letter) {
             currTile.classList.add("correct");
             correctCount += 1;
-        } //add styles for exist class
+        } 
         else if (word.includes(letter)) {
             currTile.classList.add("exist");
-        } // add styles for absent class
+        } 
         else {
             currTile.classList.add("absent");
         }
@@ -88,3 +91,16 @@ function checkForMatch() {
     }
 }
 
+
+function mapLetterCount(letterCount){
+    for (let i = 0; i < word.length; i++) {
+        let letter = word[i];
+
+        if (letterCount[letter]) {
+           letterCount[letter] += 1;
+        } 
+        else {
+           letterCount[letter] = 1;
+        }
+    }
+}
