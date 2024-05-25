@@ -4,24 +4,24 @@ let score = 0;
 let gameOver = false;
 
 document.addEventListener("DOMContentLoaded", async function () {
-  let whackADroidAudio;
+    let whackADroidAudio;
 
-  const whackADroidSoundFiles = {
-    droidBleep: "r2d2-sound.mp3",
-    jawaAngry: "jawa-angry.mp3",
-  };
+    const whackADroidSoundFiles = {
+        droidBleep: "r2d2-sound.mp3",
+        jawaAngry: "jawa-angry.mp3",
+    };
 
-  whackADroidAudio = await loadAudio(
-    whackADroidAudio,
-    whackADroidSoundFiles,
-    "assets/sounds/"
-  );
-  
-  
-  // audioObject.r2d2Scream.play();
+    whackADroidAudio = await loadAudio(
+        whackADroidAudio,
+        whackADroidSoundFiles,
+        "assets/sounds/"
+    );
 
-  // audioObject.r2d2Scream.play();
-  // whackADroidAudio.jawaAngry.play();
+
+    // audioObject.r2d2Scream.play();
+
+    // audioObject.r2d2Scream.play();
+    // whackADroidAudio.jawaAngry.play();
 
 });
 
@@ -92,7 +92,7 @@ selectTile = () => {
     if (gameOver) {
         return;
     }
-console.log('clicked');
+    console.log('clicked');
     if (this == droidTile) {
         console.log('clickedd');
         score += 10;
@@ -104,3 +104,19 @@ console.log('clicked');
         gameOver = true;
     }
 }
+// Get the modal
+let modal = document.getElementById("myModal");
+
+// Open modal when clicked
+let instruction = document.getElementById('instructions');
+
+instruction.addEventListener('click', () => {
+    modal.style.display = 'block';
+})
+
+// Get the <span> element that closes the modal
+let span = document.getElementsByClassName("close")[0];
+
+span.addEventListener('click', () => {
+    modal.style.display = 'none';
+})
