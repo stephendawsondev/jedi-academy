@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', async function() {
     
     const memorySoundFiles = {
         r2d2happy: "r2r2-happy.mp3", // Succesful Match
-        memoryTrialComplete: "trial-memory-completion.mp3" // Game Completion
+        memoryTrialComplete: "trial-memory-completion.mp3", // Game Completion
+        // wrongMatch: "r2d2-scream.mp3" // Incorrect Match
     };
     
     memoryAudio = await loadAudio(
@@ -34,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     const cards = document.querySelectorAll('.memory-card');
     let hasFlippedCard = false;
-    let lockBoard = false;
+    let lockBoard = true;
     let firstCard, secondCard;
 
     function flipCard() {
@@ -86,8 +87,9 @@ document.addEventListener('DOMContentLoaded', async function() {
       setTimeout(() => {
         firstCard.classList.remove('flip');
         secondCard.classList.remove('flip');
+        // memoryAudio.wrongMatch.play();
         resetBoard();
-      }, 1500);
+      }, 1000);
     }
 
     function resetBoard() {
@@ -128,7 +130,7 @@ document.addEventListener('DOMContentLoaded', async function() {
       clearTimeout(countdown);
       document.getElementById('timer').innerHTML = '30';
       score = 0;
-      lockBoard = false;
+      lockBoard = true;
       hasFlippedCard = false;
       firstCard = null;
       secondCard = null;
