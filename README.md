@@ -50,9 +50,9 @@ May the force be with you, as always!
 
 ## Technologies used
 
-*HTML
-*CSS
-*Vanilla Javascript
+* HTML
+* CSS
+* Vanilla Javascript
 
 ## Credits
 
