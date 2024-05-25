@@ -4,7 +4,7 @@ var width = 5;
 var row = 0; 
 var col = 0; 
 var gameOver = false;
-var word = "FFORCE";
+var word = "FFORC";
 
 window.onload = function(){
     intialize();
@@ -76,18 +76,29 @@ function checkForMatch() {
         if (word[colm] == letter) {
             currTile.classList.add("correct");
             correctCount += 1;
+            letterCount[letter] -= 1;
         } 
-        else if (word.includes(letter)) {
-            currTile.classList.add("exist");
-        } 
-        else {
-            currTile.classList.add("absent");
-        }
 
         if (correctCount == width) {
             gameOver = true;
         }
 
+    }
+
+    for (let colm = 0; colm < width; colm++) {
+        let currTile = document.getElementById(row.toString()  + colm.toString());
+        let letter = currTile.innerText;
+
+        // skip the letter if it has been marked correct
+        if (!currTile.classList.contains("correct")) {
+            if (word.includes(letter) && letterCount[letter] > 0) {
+                currTile.classList.add("exist");
+                letterCount[letter] -= 1;
+            } 
+            else {
+                currTile.classList.add("absent");
+            }
+        }
     }
 }
 
