@@ -52,8 +52,7 @@
   }
 
   .back-to-trials-button {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: 10px auto;
   }
   
   .memory-game {
@@ -154,7 +153,8 @@
     color: #F9D71C;
 }
 
-#startGame {
+#startGame,
+#resetGame {
     display: block;
     width: 200px;
     height: 50px;
@@ -170,7 +170,14 @@
     margin: 10px auto;
 }
 
-#startGame:hover {
+#resetGame {
+    margin-bottom: 0;
+}
+
+#startGame:hover, 
+#resetGame:hover,
+.how-to-play-button:hover,
+.back-to-trials-button:hover {
     color: #F9D71C;
     background-color: #000;
     border: 2px #F9D71C solid;
