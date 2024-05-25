@@ -1,207 +1,200 @@
 @font-face {
-    font-family: 'Star Jedi';
-    src: url('../fonts/index-font/Starjedi.ttf') format('truetype');
-  }
+  font-family: "Star Jedi";
+  src: url("../fonts/index-font/Starjedi.ttf") format("truetype");
+}
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url(./images/Jedi_Temple_spires_ROTS.png);
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    font-family: Arial, sans-serif;
-  }
-  
-  header {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  header h1 {
-    font-family: 'Star Jedi', sans-serif;
-    font-size: 2.5em;
-    color: #F9D71C;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-    margin-bottom: 10px;
-  }
-  
-  .how-to-play-button,
-  .back-to-trials-button {
-    display: block;
-    width: 200px;
-    height: 50px;
-    background: #F9D71C;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: #000;
-    font-weight: bold;
-    line-height: 30px;
-    font-family: "Star Jedi", sans-serif;
-    font-size: 1.2em;
-    margin: 0 auto;
-  }
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  .back-to-trials-button {
-    margin: 10px auto;
-  }
-  
-  .memory-game {
-    width: 640px;
-    height: 640px;
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    perspective: 1000px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 5%;
-    border: 2px solid #F9D71C;
-  }
-  
-  .memory-card {
-    width: calc(25% - 10px);
-    height: calc(33.333% - 10px);
-    margin: 5px;
-    position: relative;
-    transform: scale(1);
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  }
-  
-  .memory-card:active {
-    transform: scale(0.97);
-    transition: transform 0.2s;
-  }
-  
-  .memory-card.flip {
-    transform: rotateY(180deg);
-  }
-  
-  .front-face,
-  .back-face {
-    width: 100%;
-    height: 100%;
-    padding: 5px;
-    position: absolute;
-    border-radius: 5px;
-    background: #F9D71C;
-    backface-visibility: hidden;
-  }
-  
-  .front-face {
-    transform: rotateY(180deg);
-  }
-  
-  /* How to play popup */
-  .memory-popup-dialog {
-    margin: auto;
-    display: none;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    background-color: white;
-    padding: 20px;
-  }
-  
-  .memory-popup-content {
-    text-align: center;
-    font-family: 'Star Jedi', sans-serif;
-    
-  }
-  
-  .memory-popup-dialog[open] {
-    display: block;
-  }
-  
-  .how-to-play-button {
-    margin-top: 10px;
-  }
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(./images/Jedi_Temple_spires_ROTS.png);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
 
+header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+header h1 {
+  font-family: "Star Jedi", sans-serif;
+  font-size: 2.5em;
+  color: #f9d71c;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  margin-bottom: 10px;
+}
+
+.how-to-play-button,
+.back-button {
+  display: block;
+  width: 200px;
+  height: 50px;
+  background: #f9d71c;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  line-height: 30px;
+  font-family: "Star Jedi", sans-serif;
+  font-size: 1.2em;
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.back-button {
+  margin: 10px auto;
+}
+
+.memory-game {
+  width: 640px;
+  height: 640px;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5%;
+  border: 2px solid #f9d71c;
+}
+
+.memory-card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  position: absolute;
+  border-radius: 5px;
+  background: #f9d71c;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+/* How to play popup */
+.memory-popup-dialog {
+  margin: auto;
+  display: none;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  padding: 20px;
+}
+
+.memory-popup-content {
+  text-align: center;
+  font-family: "Star Jedi", sans-serif;
+}
+
+.memory-popup-dialog[open] {
+  display: block;
+}
+
+.how-to-play-button {
+  margin-top: 10px;
+}
 
 /* Game Controls Section */
 .game-controls {
-    width: 100%;
-    max-width: 400px;
-    margin: 10px auto;
-    text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  text-align: center;
 }
-
 
 .game-stats {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 5px;
-    padding: 5px;
-    border: 2px solid #F9D71C;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 5px;
+  border: 2px solid #f9d71c;
 }
 
-#game-time, #score-board, #startGame {
-    font-family: 'Star Jedi', sans-serif;
-    color: #F9D71C;
+#game-time,
+#score-board,
+#startGame {
+  font-family: "Star Jedi", sans-serif;
+  color: #f9d71c;
 }
 
 #startGame,
 #resetGame {
-    display: block;
-    width: 200px;
-    height: 50px;
-    background: #F9D71C;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: #000;
-    font-weight: bold;
-    line-height: 30px;
-    font-family: "Star Jedi", sans-serif;
-    font-size: 1.1em;
-    margin: 10px auto;
+  display: block;
+  width: 200px;
+  height: 50px;
+  background: #f9d71c;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: #000;
+  font-weight: bold;
+  line-height: 30px;
+  font-family: "Star Jedi", sans-serif;
+  font-size: 1.1em;
+  margin: 10px auto;
 }
 
 #resetGame {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-#startGame:hover, 
+#startGame:hover,
 #resetGame:hover,
 .how-to-play-button:hover,
-.back-to-trials-button:hover {
-    color: #F9D71C;
-    background-color: #000;
-    border: 2px #F9D71C solid;
+.back-button:hover {
+  color: #f9d71c;
+  background-color: #000;
+  border: 2px #f9d71c solid;
 }
 
-
-
-
-  
-  /* Responsive styles */
+/* Responsive styles */
 @media (max-width: 650px) {
-    header h1 {
-        font-size: 2em;
-    }
-
+  header h1 {
+    font-size: 2em;
+  }
 }
 
-@media screen and (max-width:680px) {
-
-    .memory-game {
-        width: 90%;
-        height: 50vh;
-        margin: 50 auto;
-        
-    }
-
+@media screen and (max-width: 680px) {
+  .memory-game {
+    width: 90%;
+    height: 50vh;
+    margin: 50 auto;
+  }
 }

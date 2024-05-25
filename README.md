@@ -46,12 +46,21 @@ User/player:
 ### Memory Game - Laptop View
 ![Memory Game - Laptop View](assets/wireframes/memory-game-laptop.png)
 
+<<<<<<<<< Temporary merge branch 1
+### Whack a Droid Game - Mobile View
+![Whack a Droid Game - Mobile View](assets/wireframes/whack-a-jar-jar-mobile.png)
+### Whack a Droid Game - Tablet View
+![Whack a Droid Game - Tablet View](assets/wireframes/whack-a-jar-jar-tablet.png)
+### Whack a Droid Game - Laptop View
+![Whack a Droid Game - Laptop View](assets/wireframes/whack-a-jar-jar-laptop.png)
+=========
 ### Whack a Jar-Jar Game - Mobile View
-![Whack a Jar-Jar Game - Mobile View](assets/wireframes/whack-a-jar-jar-mobile.png)
+![Whack a Jar-Jar Game - Mobile View](assets/wireframes/whack-a-droid-mobile.png)
 ### Whack a Jar-Jar Game - Tablet View
-![Whack a Jar-Jar Game - Tablet View](assets/wireframes/whack-a-jar-jar-tablet.png)
+![Whack a Jar-Jar Game - Tablet View](assets/wireframes/whack-a-droid-tablet.png)
 ### Whack a Jar-Jar Game - Laptop View
-![Whack a Jar-Jar Game - Laptop View](assets/wireframes/whack-a-jar-jar-laptop.png)
+![Whack a Jar-Jar Game - Laptop View](assets/wireframes/whack-a-droid-laptop.png)
+>>>>>>>>> Temporary merge branch 2
 
 ### Star Wars Themed Wordle - Mobile View
 ![Star Wars Themed Wordle - Mobile View](assets/wireframes/star-wars-wordle-mobile.png)
@@ -66,8 +75,116 @@ User/player:
 ![Star Wars Main Page - Tablet View](assets/wireframes/tablet-wireframe-index.png)
 ### Main Page - Laptop View
 ![Star Wars Main Page - Laptop View](assets/wireframes/laptop-wireframe-index.png)
+
+<<<<<<<<< Temporary merge branch 1
+### Results Page - Phone View
+![Results Page - Phone View](assets/wireframes/results-phone-view.png)
+### Results Page - Tablet View
+![Results Page - Tablet View](assets/wireframes/Results-tablet-view.png)
+### Results Page - Laptop View
+![Results Page - Laptop View](assets/wireframes/Results-laptop-view.png)
+
+### Meet The Team Page - Phone View
+![Meet The Team Page - Phone View](assets/wireframes/meet-the-team-phone.png)
+### Meet The Team Page - Tablet View
+![Meet The Team Page - Tablet View](assets/wireframes/meet-the-team-tablet.png)
+### Meet The Team Page - Laptop View
+![Meet The Team Page - Laptop View](assets/wireframes/meet-the-team-laptop.png)
+=========
+## Technologies used
+
+* HTML
+* CSS
+* Vanilla Javascript
+
+>>>>>>>>> Temporary merge branch 2
 ## Credits
+
+### Images
+https://starwars.fandom.com/wiki/Yoda
+https://www.shakudo.io/blog/chatgpt-the-ai-smarter-than-c-3po
+https://www.starwars.com/databank/c-3po
+https://www.starwars.com/databank/bb-8
+https://starwars.fandom.com/wiki/Anakin_Skywalker
+https://www.starwars.com/databank/leia-organa
+https://www.starwars.com/databank/jar-jar-binks
+<<<<<<<<< Temporary merge branch 1
+Wordle background-image: https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/
+Image for whack-a-droid: https://pngtree.com/freepng/bb8-clipart-cartoon-star-wars-bb-vector_11054353.html
+Image 2 for whack-a-droid: https://www.deviantart.com/art-of-moore/art/Jawa-Droidsmith-310484097
+Image 3: https://www.wallpaperflare.com/star-wars-building-desert-jawa-start-wars-robot-tatooine-star-wars-wallpaper-hdffs
+Sand hole image: https://depositphotos.com/illustrations/sand-pit.html
+Sand background: https://www.freepik.com/free-photo/desert-landscape-morocco_4245806.htm
+=========
+Wordle Background-image: https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/
+Star Wars Logo - https://w7.pngwing.com/pngs/723/1016/
+Darth Vader - png-transparent-star-wars-logo-star-wars-text-logo-silhouette-thumbnail.png
+https://w7.pngwing.com/pngs/6/73/png-transparent-anakin-skywalker-star-wars-sticker-darth-supervillain-star-wars-sticker-fictional-character-anakin-skywalker-thumbnail.png
+Republic Logo - https://w7.pngwing.com/pngs/83/395/png-transparent-leia-organa-rebel-alliance-star-wars-galactic-empire-logo-star-wars-thumbnail.png
+Jedi Logo - https://w7.pngwing.com/pngs/429/138/png-transparent-the-new-jedi-order-star-wars-the-clone-wars-star-wars-emblem-logo-monochrome-thumbnail.png
+Stormtrooper Logo - https://w7.pngwing.com/pngs/983/735/png-transparent-stormtrooper-illustration-stormtrooper-drawing-star-wars-stencil-stormtrooper-white-face-photography-thumbnail.png
+Bobba-fett Logo - https://w7.pngwing.com/pngs/854/808/png-transparent-boba-fett-jango-fett-mandalorian-leia-organa-star-wars-death-star-angle-logo-monochrome-thumbnail.png
+Lightsaber - https://www.pngwing.com/en/free-png-pqhkp/download
+Jedi Temple memory game background - https://static.wikia.nocookie.net/starwars/images/2/2d/Jedi_Temple_spires_ROTS.png/revision/latest/scale-to-width-down/1000?cb=20130215030848
+>>>>>>>>> Temporary merge branch 2
+
+### Sound Clips
+https://www.101soundboards.com/sounds/27903371-ow-why-did-you-do-that
+https://www.101soundboards.com/sounds/27903338-sadly-that-is-a-wrong-choice
+https://www.101soundboards.com/sounds/27905918-over-it-is-for-you-sidious-your-empire-at-an-end-it-is
+https://www.101soundboards.com/sounds/27911492-from-younglings-first-steps-to-padawans-eager-strides-the-journey-to-mastery-begins
+https://www.101soundboards.com/sounds/27911417-oh-dear-r2-must-you-always-be-so-crude-i-must-remind-you-once-again-that-it-is-not-polite-
+https://www.101soundboards.com/sounds/27876007-finally-a-great-victory-we-have-achieved-over-the-sith-lords-hmm
+https://www.101soundboards.com/sounds/27911699-ouchie-mesa-head-goin-bombad
+https://www.101soundboards.com/sounds/27912421-ouchie
+<<<<<<<<< Temporary merge branch 1
+Jawa Sounds: https://www.101soundboards.com/boards/10339-jawas-sounds-star-wars#goog_rewarded
+R2D2 Sound: https://www.101soundboards.com/sounds/24263888-r2d2-text-short
+=========
+
+>>>>>>>>> Temporary merge branch 2
+
+### Documentation for Code
+For the basic layout of the keyboard for Wordle we used [Wordle Keyboard](https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/) for the keyboard.
+For help with building the Wordle game we used [Wordle Tutorial](https://www.youtube.com/watch?v=ckjRsPaWHX8)
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+<<<<<<<<< Temporary merge branch 1
+=========
+https://www.kennyyipcoding.com
+>>>>>>>>> Temporary merge branch 2
+
+### Other Documentation/content
+https://en.wikipedia.org/wiki/Death_Star
+Wireframes: https://my.moqups.com/login and https://balsamiq.com/
+<<<<<<<<< Temporary merge branch 1
+https://www.kennyyipcoding.com
+=========
+Star Wars font - https://www.dafont.com/star-jedi.font
+>>>>>>>>> Temporary merge branch 2
 
 ## Collaborators
 
+Stephen Dawson
+Github: https://www.github.com/stephendawsondev
+LinkedIn: https://www.linkedin.com/in/sdstephendawson/
+Stackportfol.io: https://www.stackportfol.io/user/stephendawson/
+
+Donald MacRitchie
+
+George Small
+Github: https://github.com/creepersguitar
+LinkedIn: https://www.linkedin.com/in/george-small-055151204/
+
+Hannah Olbrich
+Github: https://github.com/hannahro15
+LinkedIn: https://www.linkedin.com/in/hannah-olbrich-0303074b/
+
+Tharindu Nadeeshan
+
+Towbie
+
+<<<<<<<<< Temporary merge branch 1
+=========
+
+>>>>>>>>> Temporary merge branch 2
 ## Deployment
