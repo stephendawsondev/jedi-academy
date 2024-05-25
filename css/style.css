@@ -1,12 +1,12 @@
 @font-face {
-  font-family: 'Star Jedi';
-  src: url('../fonts/index-font/Starjedi.ttf') format('truetype');
+  font-family: "Star Jedi";
+  src: url("../fonts/index-font/Starjedi.ttf") format("truetype");
 }
-
 
 body {
   font-family: Arial, sans-serif;
-  background: url("../assets/images-home/template.png") no-repeat center center/cover;
+  background: url("../assets/images-home/template.png") no-repeat center
+    center/cover;
   background-color: rgba(0, 0, 0, 0.3);
   background-blend-mode: overlay;
   color: #fff;
@@ -23,14 +23,40 @@ body {
   width: 100%;
 }
 
+/* Audio icons */
+.audio-button {
+  position: fixed;
+  border: none;
+  top: 5px;
+  left: 5px;
+  z-index: 5;
+  background-color: transparent;
+  opacity: 0.5;
+  pointer-events: all;
+}
+
+.music-button {
+  top: 5px;
+  left: 5px;
+  z-index: 6;
+}
+
+.sound-button {
+  top: 5px;
+  left: 50px;
+  z-index: 6;
+}
+
 /* Home page title */
-.header, #game-choices-header {
+.header,
+#game-choices-header {
   width: 65%;
   margin: 0 auto;
-  font-family: 'Star Jedi', sans-serif;
+  font-family: "Star Jedi", sans-serif;
   font-size: 2.5em;
-  color: #F9D71C;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #f9d71c;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 #game-choices-header {
@@ -39,12 +65,14 @@ body {
 }
 
 /* Home page "Enter the jedi temple" button */
-.home-play-button, .trial-selection, .info-button {
+.home-play-button,
+.trial-selection,
+.info-button {
   margin: 5% auto;
   display: block;
   width: 80%;
   height: auto;
-  background: #F9D71C;
+  background: #f9d71c;
   padding: 10px;
   text-align: center;
   border-radius: 5px;
@@ -68,8 +96,9 @@ body {
 .name-input label {
   font-family: "Star Jedi", sans-serif;
   font-size: 1.1em;
-  color: #F9D71C;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #f9d71c;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .name-input input[type="text"] {
@@ -85,8 +114,9 @@ body {
   border: none;
   cursor: pointer;
   font-family: "Star Jedi", sans-serif;
-  color: #F9D71C;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  color: #f9d71c;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .game-choices {
@@ -113,9 +143,9 @@ body {
   padding: 20px;
   z-index: 1000;
   max-width: 400px;
-  background: url("../assets/images-home/pexels-instawally-176851.png") no-repeat center center cover;
+  background: url("../assets/images-home/pexels-instawally-176851.png")
+    no-repeat center center cover;
 }
-
 
 .popup-content {
   text-align: center;
@@ -128,15 +158,13 @@ body {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  background: #F9D71C;
+  background: #f9d71c;
   text-align: center;
   border-radius: 5px;
   color: #000;
   line-height: 25px;
   font-family: "Star Jedi", sans-serif;
 }
-
-
 
 .dialog {
   background-color: rgba(0, 0, 0, 0.8);
@@ -145,7 +173,6 @@ body {
   margin: 20px 0;
   display: none;
 }
-
 
 .dialog p {
   margin: 0;
@@ -165,8 +192,6 @@ body {
 .btn:hover {
   background-color: #0056b3;
 }
-
-
 
 /* Home Page Media Queries */
 
