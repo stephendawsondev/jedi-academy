@@ -96,11 +96,6 @@ body {
     transform: translate(-50%, -50%);
 }
 
-.modal-content {
-    position: relative;
-    top: 50%;
-}
-
 .modal, #open-wordle-modal {
     display: block;
 }
@@ -112,10 +107,14 @@ body {
     margin-left: 50px;
     font-size: 12px;
     background-color: white;
-    height: 400px;
-    min-width: 300px;
+    height: 440px;
+    width: 250px;
     top: 50%;
     border:  double 2px black;
+}
+
+#wordle-instructions p {
+    font-style: italic;
 }
 
 .close-button {
