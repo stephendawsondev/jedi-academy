@@ -1,3 +1,22 @@
+// ********************* how to play button popup
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const howToPlayButton = document.querySelector('.how-to-play-button');
+    const popupDialog = document.querySelector('.memory-popup-dialog');
+    const closePopupButton = document.querySelector('.close-popup-button');
+  
+    howToPlayButton.addEventListener('click', function() {
+      popupDialog.showModal();
+    });
+  
+    closePopupButton.addEventListener('click', function() {
+      popupDialog.close();
+    });
+  });
+
+// ********************* Main game logic
+
 const cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard = false;
@@ -63,3 +82,7 @@ function resetBoard() {
 })();
 
 cards.forEach(card => card.addEventListener('click', flipCard));
+
+// ********************* Score logic
+// ********************* Timer Logic
+
