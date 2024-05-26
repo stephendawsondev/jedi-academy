@@ -6,29 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="whack-a-droid.css" />
-  <title>Whack-a-droid - Star Wars</title>
+  <title>Trial of Agility - Jedi Academy</title>
 </head>
 
 <body>
-
   <div class="container">
     <header>
       <h1 class="header">Trial of Agility</h1>
       <button class="btn how-to-play-button" id="instructions">How to Play</button>
-      <h2 id="score">0</h2>
-      <div id="timer">Time Left: 30</div>
+      <div class="score-timer__container">
+        <div>Score: <span id="score">0</span></div>
+        <div>High Score: <span id="high-score">0</span></div>
+        <div id="timer">Time Left: 30</div>
+      </div>
     </header>
     <main>
       <div id="board"></div>
+      <a href="#" class="btn back-button">Back to Trials</a>
     </main>
     <button title="Toggle music" id="music-button" class="audio-button music-button">
       <img id="music-icon" src="../assets/images/music_on.webp" alt="music icon" />
     </button>
-
     <button title="Toggle sound" id="sound-button" class="audio-button sound-button">
       <img id="sound-icon" src="../assets/images/sound_on.webp" alt="sound icon" />
     </button>
-
     <dialog class="popup-dialog">
       <div class="popup-content">
         <h2>Trial of Agility</h2>
@@ -41,7 +42,8 @@
             </div>
             <div class="instruction-container">
               <img src="assets/images/jawa-click.png" alt="click the droid" class="instructions-img">
-              <p class="instruction-text">Be careful! There's Jawas here too, so be sure not to hurt them or it's Game
+              <p class="instruction-text">
+                Be careful! There's Jawas here too, so be sure not to hurt them or it's Game
                 Over!
               </p>
             </div>
@@ -51,9 +53,8 @@
             <h3>Trial details</h3>
             <div class="story-container__content">
               <p class="story-text">
-                This test will
-                challenge your reflexes and ability to remain calm under pressure. The trial is
-                inspired by the lessons learned from battling droids.
+                This test will challenge your reflexes and ability to remain calm under pressure.
+                The trial is inspired by the lessons learned from battling droids.
               </p>
               <img src="assets/images/c3po.png" alt="" class="story-img">
             </div>
@@ -62,9 +63,9 @@
         <button class="close-popup-button">Close</button>
       </div>
     </dialog>
-
     <script src="../js/script.js"></script>
     <script src="whack-a-droid.js"></script>
+  </div>
 </body>
 
 </html>

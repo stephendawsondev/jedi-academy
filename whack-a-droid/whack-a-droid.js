@@ -3,10 +3,23 @@ let jawaTile;
 let score = 0;
 let gameOver = false;
 let timer = 30;
+let highestScore = 0;
+let droidInterval;
+let jawaInterval;
+let timerInterval;
 
 document.addEventListener("DOMContentLoaded", async function () {
   let whackADroidAudio;
+  const firstTimePlayed = playerData["whack-a-droid"].firstTimePlayed;
+  if (firstTimePlayed) {
+    setTimeout(() => {
+      popupDialog.showModal();
+    }, 1000);
+  }
   const board = document.getElementById("board");
+  const timerDisplay = document.getElementById("timer");
+  const scoreDisplay = document.getElementById("score");
+  const highScoreDisplay = document.getElementById("high-score");
 
   const whackADroidSoundFiles = {
     droidBleep: "r2d2-sound.mp3",
@@ -78,61 +91,111 @@ document.addEventListener("DOMContentLoaded", async function () {
         whackADroidAudio.smashMetal.play();
       }
       score += 10;
-      document.getElementById("score").innerText = score.toString();
+      scoreDisplay.innerText = score.toString();
+      droidTile.innerHTML = ""; // Make the droid disappear immediately
+      droidTile = null; // Reset droidTile
     } else if (event.target.parentElement === jawaTile) {
       if (userAllowsSounds) {
         whackADroidAudio.jawaAngry.play();
       }
-      document.getElementById("score").innerText =
-        "Game Over! You scored " + score.toString() + " points";
-      gameOver = true;
+      endGame("You hit a Jawa!");
     }
   };
 
-  function setUpBoard() {
+  const endGame = (message) => {
+    gameOver = true;
+    clearInterval(droidInterval);
+    clearInterval(jawaInterval);
+    clearInterval(timerInterval);
+    if (score > highestScore) {
+      highestScore = score;
+      highScoreDisplay.innerText = highestScore.toString();
+    }
+    let rank = "You need 50 or more points to rank!";
+    let result = 1;
+    if (highestScore >= 50) {
+      rank = "Jedi";
+      result = 1;
+    } else if (highestScore >= 120) {
+      rank = "Jedi Knight";
+      result = 2;
+    } else if (highestScore >= 200) {
+      rank = "Jedi Master";
+      result = 3;
+    }
+
+    if (highestScore > 50) {
+      updateLocalStorageGameData("whack-a-droid", {
+        result: result,
+        gameComplete: true,
+        firstTimePlayed: false,
+      });
+    }
+
+    overlay.querySelector(
+      ".overlay-message"
+    ).innerText = `${message} \nYou scored ${score} points.\nHigh score: ${highestScore}\nCurrent rank: ${rank}`;
+    overlay.querySelector(".btn").innerText = "Retake the Trial";
+    overlay.style.display = "flex";
+  };
+
+  const setUpBoard = () => {
     for (let i = 0; i < 9; i++) {
       let tile = document.createElement("div");
       tile.id = i.toString();
       tile.addEventListener("click", selectTile);
       board.appendChild(tile);
     }
-  }
+  };
+
+  const resetGame = () => {
+    score = 0;
+    timer = 30;
+    gameOver = false;
+    scoreDisplay.innerText = score.toString();
+    timerDisplay.innerText = `Time Left: ${timer}`;
+    setDroid();
+    setJawa();
+    startTimer();
+    droidInterval = setInterval(setDroid, 1000);
+    jawaInterval = setInterval(setJawa, 1250);
+  };
 
   const overlay = document.createElement("div");
   overlay.className = "overlay";
+  const overlayMessage = document.createElement("p");
+  overlayMessage.className = "overlay-message";
   const startButton = document.createElement("button");
   startButton.className = "btn";
-  startButton.innerText = "Start Game";
+  startButton.innerText = "Begin the Trial";
   startButton.addEventListener("click", () => {
     overlay.style.display = "none";
-
-    setInterval(setDroid, 1000);
-    setInterval(setJawa, 1500);
-
-    // Start the timer ******* DM
-    startTimer();
+    resetGame();
   });
 
-  setUpBoard();
+  overlay.appendChild(overlayMessage);
   overlay.appendChild(startButton);
   board.appendChild(overlay);
 
-  // Function to start the timer ********* DM
+  setUpBoard();
+
   const startTimer = () => {
-    const timerDisplay = document.getElementById("timer");
-    const countdown = setInterval(() => {
+    timerInterval = setInterval(() => {
       if (gameOver) {
-        clearInterval(countdown);
+        clearInterval(timerInterval);
         return;
       }
       timer--;
       timerDisplay.innerText = `Time Left: ${timer}`;
       if (timer <= 0) {
-        clearInterval(countdown);
-        document.getElementById("score").innerText =
-          "Time's Up! You scored " + score.toString() + " points";
-        gameOver = true;
+        clearInterval(timerInterval);
+        endGame("Time's Up!");
       }
     }, 1000);
   };
+
+  // Show initial overlay
+  overlay.style.display = "flex";
+  overlay.style.flexDirection = "column";
+  overlayMessage.innerText = "";
 });

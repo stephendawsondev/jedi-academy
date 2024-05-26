@@ -2,6 +2,8 @@ let userAllowsSounds = false;
 let userAllowsMusic = false;
 let playerData = {};
 let audioObject = {};
+let popupDialog;
+let closePopupButton;
 
 const repoName = "may-hackathon-2024";
 
@@ -13,7 +15,7 @@ const envImageUrl = `${baseURL}assets/images/`;
 
 const audioFiles = {
   battlemusic: 'starwars-battle-music.mp3',
-  youngling: 'youngling-padawan.mp3' // Add the new sound file here
+  youngling: 'youngling-padawan.mp3' 
 };
 
 if (document.querySelector(".how-to-play-button")) {
@@ -23,13 +25,13 @@ if (document.querySelector(".how-to-play-button")) {
   });
 }
 if (document.querySelector(".popup-dialog")) {
-  const popupDialog = document.querySelector(".popup-dialog");
-  const closePopupButton = document.querySelector(".close-popup-button");
+  popupDialog = document.querySelector(".popup-dialog");
+  closePopupButton = document.querySelector(".close-popup-button");
 
   closePopupButton.addEventListener("click", function () {
     popupDialog.close();
   });
-};
+}
 
 /**
  * Initializes the local storage with the default structure if not already set.
@@ -147,8 +149,8 @@ const addAudioIconEventListeners = () => {
 const playMusic = () => {
   if (userAllowsMusic && audioObject.battlemusic) {
     audioObject.battlemusic.loop = true; // Set loop to true
-   // audioObject.volume = 0.5;
-    audioObject.battlemusic.play().catch(error => {
+    // audioObject.volume = 0.5;
+    audioObject.battlemusic.play().catch((error) => {
       console.error("Music play failed:", error);
     });
   }
