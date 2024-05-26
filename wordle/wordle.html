@@ -12,8 +12,8 @@
     <main>
       <section class="container">
         <h1 class="header" id="title">Trial of Wisdom</h1>
-        <button class="info-button open-wordle-modal">How to Play</button>
-        <div class="modal">
+        <button class="how-to-play-button open-wordle-modal">How to Play</button>
+        <dialog class="popup-dialog">
           <div id="wordle-instructions">
             <h1>Instructions</h1>
             <p>
@@ -37,10 +37,10 @@
               correctly guessed the word.
             </p>
             <div>
-              <button class="close-button">Close</button>
+              <button class="close-popup-button">Close</button>
             </div>
           </div>
-        </div>
+        </dialog>
         <div id="board"></div>
         <!-- <br /> -->
         <h2 id="display_box"></h2>
