@@ -215,8 +215,6 @@ dialog::backdrop {
   padding: 20px;
   z-index: 1000;
   max-width: 400px;
-  background: url("../assets/images-home/pexels-instawally-176851.png")
-    no-repeat center center cover;
 }
 
 .popup-content {
@@ -249,6 +247,38 @@ dialog::backdrop {
 .dialog p {
   margin: 0;
   padding: 0;
+}
+
+#results-page {
+  background: url("../assets/images/graduation-ceremony.jpeg") no-repeat center center/cover;
+}
+
+
+.results-header, 
+.results-section,
+.results-info {
+  margin: 0 auto;
+  width: 60%;
+  height: auto;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5%;
+  border: 2px solid #f9d71c;
+  font-family: "Star Jedi", sans-serif;
+}
+
+.results-info{
+  margin-bottom: 20px;
+}
+
+.results-back-to-home-button {
+  background: #f9d71c;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: #000;
+  font-family: "Star Jedi", sans-serif;
 }
 
 /* Home Page Media Queries */
