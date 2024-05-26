@@ -1,10 +1,6 @@
 body {
   text-align: center;
-}
-
-#wordle-background-image {
   background-image: url("../assets/images/wordle-background-image.jpg");
-  background-size: cover;
 }
 
 #title {

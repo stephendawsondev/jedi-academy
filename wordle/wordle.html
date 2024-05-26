@@ -7,27 +7,55 @@
     <link rel="stylesheet" href="wordle.css" />
     <title>Star Wars - Wordle</title>
   </head>
-  <body id="wordle-background-image">
+
+  <body>
     <main>
       <section class="container">
         <h1 class="header" id="title">Trial of Wisdom</h1>
-        <button class="info-button open-wordle-modal">How to Play</button>
-        <dialog id="wordle-modal">How to Play</dialog>
+        <button class="how-to-play-button open-wordle-modal">How to Play</button>
+        <dialog class="popup-dialog">
+          <div id="wordle-instructions">
+            <h1>Instructions</h1>
+            <p>
+              So now you have become a Jedi Knight, and in order to become a Jedi
+              Master you have to play a game called the Trial of Wisdom which is
+              based on the classic game, Wordle.
+            </p>
+            <h2>How the game works</h2>
+            <p>
+              The aim of the game is to guess the word in 6 attempts. The way the
+              game works is you that you have to try and guess a word starting
+              with the top row by inputting one letter in per tile by clicking on
+              the relevant keyboard buttons. After you have tried guessing the
+              word on the top row, click enter, and then the correct letters in
+              the right place will be highlighted in green, correct letters in the
+              wrong place will be highlighted in yellow, and any letter not in the
+              word will stay as grey(same as the tile colour with the letter
+              showing). You will move down row by row entering letters and
+              clicking enter at the end of the each row. When you have correctly
+              guessed a word all tiles will become green and to say you have
+              correctly guessed the word.
+            </p>
+            <div>
+              <button class="close-popup-button">Close</button>
+            </div>
+          </div>
+        </dialog>
         <div id="board"></div>
         <!-- <br /> -->
         <h2 id="display_box"></h2>
         <div id="keyboard-container">
-          <div class="row-one">
-            <button class="keyboard-button" data-key="Q">q</button>
-            <button class="keyboard-button" data-key="W">w</button>
-            <button class="keyboard-button" data-key="E">e</button>
-            <button class="keyboard-button" data-key="R">r</button>
-            <button class="keyboard-button" data-key="T">t</button>
-            <button class="keyboard-button" data-key="Y">y</button>
-            <button class="keyboard-button" data-key="U">u</button>
-            <button class="keyboard-button" data-key="I">i</button>
-            <button class="keyboard-button" data-key="O">o</button>
-            <button class="keyboard-button" data-key="P">p</button>
+        <div class="row-one">
+            <button class="keyboard-button">q</button>
+            <button class="keyboard-button">w</button>
+            <button class="keyboard-button">e</button>
+            <button class="keyboard-button">r</button>
+            <button class="keyboard-button">t</button>
+            <button class="keyboard-button">y</button>
+            <button class="keyboard-button">u</button>
+            <button class="keyboard-button">i</button>
+            <button class="keyboard-button">o</button>
+            <button class="keyboard-button">p</button>
           </div>
           <div class="row-two">
             <button class="keyboard-button" data-key="A">a</button>

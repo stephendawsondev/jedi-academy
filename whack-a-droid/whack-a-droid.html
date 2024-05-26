@@ -11,33 +11,59 @@
 
 <body>
 
-<div class="container">
-  <header >
-    <h1 class="header">Whack-a-droid</h1>
-    <button class="btn how-to-play-button" id="instructions">How to Play</button>
-    <h2 id="score">0</h2>
-  </header>
-  <main>
-    <div id="board"></div>
-  </main>
-  <button title="Toggle music" id="music-button" class="audio-button music-button">
-    <img id="music-icon" src="../assets/images/music_on.webp" alt="music icon" />
-  </button>
+  <div class="container">
+    <header>
+      <h1 class="header">Trial of Agility</h1>
+      <button class="btn how-to-play-button" id="instructions">How to Play</button>
+      <h2 id="score">0</h2>
+    </header>
+    <main>
+      <div id="board"></div>
+    </main>
+    <button title="Toggle music" id="music-button" class="audio-button music-button">
+      <img id="music-icon" src="../assets/images/music_on.webp" alt="music icon" />
+    </button>
 
-  <button title="Toggle sound" id="sound-button" class="audio-button sound-button">
-    <img id="sound-icon" src="../assets/images/sound_on.webp" alt="sound icon" />
-  </button>
+    <button title="Toggle sound" id="sound-button" class="audio-button sound-button">
+      <img id="sound-icon" src="../assets/images/sound_on.webp" alt="sound icon" />
+    </button>
 
-  <dialog class="popup-dialog">
-    <div class="popup-content">
-      <h2>Trial of Agility</h2>
-      <p>Click on the droids when they pop up from their holes to get point but be sure to avoid Jawa!</p>
-      <button class="close-popup-button">Close</button>
-    </div>
-  </dialog>
+    <dialog class="popup-dialog">
+      <div class="popup-content">
+        <h2>Trial of Agility</h2>
+        <div class="instructions-container">
+          <div class="instructions">
+            <h3>How to Play</h3>
+            <div class="instruction-container">
+              <img src="assets/images/droid-click.png" alt="click the droid" class="instructions-img">
+              <p class="instruction-text">Whack the Droid it pops out of a hole.</p>
+            </div>
+            <div class="instruction-container">
+              <img src="assets/images/jawa-click.png" alt="click the droid" class="instructions-img">
+              <p class="instruction-text">Be careful! There's Jawas here too, so be sure not to hurt them or it's Game
+                Over!
+              </p>
+            </div>
+          </div>
+          <div class="vl"></div>
+          <div class="story-container">
+            <h3>Trial details</h3>
+            <div class="story-container__content">
+              <p class="story-text">
+                This test will
+                challenge your reflexes and ability to remain calm under pressure. The trial is
+                inspired by the lessons learned from battling droids.
+              </p>
+              <img src="assets/images/c3po.png" alt="" class="story-img">
+            </div>
+          </div>
+        </div>
+        <button class="close-popup-button">Close</button>
+      </div>
+    </dialog>
 
-  <script src="../js/script.js"></script>
-  <script src="whack-a-droid.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="whack-a-droid.js"></script>
 </body>
 
 </html>

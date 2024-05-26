@@ -89,7 +89,6 @@ User/player:
 
 ![Star Wars Main Page - Laptop View](assets/wireframes/laptop-wireframe-index.png)
 
-<<<<<<<<< Temporary merge branch 1
 ### Results Page - Phone View
 
 ![Results Page - Phone View](assets/wireframes/results-phone-view.png)
@@ -113,14 +112,13 @@ User/player:
 ### Meet The Team Page - Laptop View
 
 ![Meet The Team Page - Laptop View](assets/wireframes/meet-the-team-laptop.png)
-=========
+
 ## Technologies used
 
 - HTML
 - CSS
 - Vanilla Javascript
 
->>>>>>>>> Temporary merge branch 2
 ## Credits
 
 ### Images
