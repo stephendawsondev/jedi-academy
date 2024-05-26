@@ -185,7 +185,6 @@ Towbie
 Github: <https://github.com/tee-24>
 LinkedIn:
 
->>>>>>>>> Temporary merge branch 2
 ## Deployment
 
 ### GitHub Pages
