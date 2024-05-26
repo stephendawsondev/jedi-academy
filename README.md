@@ -115,75 +115,74 @@ User/player:
 
 ## Technologies used
 
-- HTML
-- CSS
-- Vanilla Javascript
+*  HTML
+*  CSS
+*  Vanilla Javascript
 
 ## Credits
 
 ### Images
 
-Wordle background-image - [Wordle-background-image](https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/)
-Image for whack-a-droid - [Whack-a-droid](https://pngtree.com/freepng/bb8-clipart-cartoon-star-wars-bb-vector_11054353.html)
-Image 2 for whack-a-droid  - [Whack-a-droid](https://www.deviantart.com/art-of-moore/art/Jawa-Droidsmith-310484097)
-Image 3 - <https://www.wallpaperflare.com/star-wars-building-desert-jawa-start-wars-robot-tatooine-star-wars-wallpaper-hdffs>
-Sand hole image: <https://depositphotos.com/illustrations/sand-pit.html>
-Sand background: <https://www.freepik.com/free-photo/desert-landscape-morocco_4245806.htm>
-Star Wars Logo - <https://w7.pngwing.com/pngs/723/1016/>
-Darth Vader - png-transparent-star-wars-logo-star-wars-text-logo-silhouette-thumbnail.png
-<https://w7.pngwing.com/pngs/6/73/png-transparent-anakin-skywalker-star-wars-sticker-darth-supervillain-star-wars-sticker-fictional-character-anakin-skywalker-thumbnail.png>
-Republic Logo - <https://w7.pngwing.com/pngs/83/395/png-transparent-leia-organa-rebel-alliance-star-wars-galactic-empire-logo-star-wars-thumbnail.png>
-Jedi Logo - <https://w7.pngwing.com/pngs/429/138/png-transparent-the-new-jedi-order-star-wars-the-clone-wars-star-wars-emblem-logo-monochrome-thumbnail.png>
-Stormtrooper Logo - <https://w7.pngwing.com/pngs/983/735/png-transparent-stormtrooper-illustration-stormtrooper-drawing-star-wars-stencil-stormtrooper-white-face-photography-thumbnail.png>
-Bobba-fett Logo - <https://w7.pngwing.com/pngs/854/808/png-transparent-boba-fett-jango-fett-mandalorian-leia-organa-star-wars-death-star-angle-logo-monochrome-thumbnail.png>
-Lightsaber - <https://www.pngwing.com/en/free-png-pqhkp/download>
-Jedi Temple memory game background - <https://static.wikia.nocookie.net/starwars/images/2/2d/Jedi_Temple_spires_ROTS.png/revision/latest/scale-to-width-down/1000?cb=20130215030848>
+* Wordle background-image - [Wordle-background-image](https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/)
+* Image for whack-a-droid - [Whack-a-droid](https://pngtree.com/freepng/bb8-clipart-cartoon-star-wars-bb-vector_11054353.html)
+* Image 2 for whack-a-droid  - [Whack-a-droid](https://www.deviantart.com/art-of-moore/art/Jawa-Droidsmith-310484097)
+* Image 3 - [Image 3](https://www.wallpaperflare.com/)
+* Sand hole image-  [Sand hole image](https://depositphotos.com/illustrations/sand-pit.html)
+* Sand background- [Sand backround](https://www.freepik.com/free-photo/desert-landscape-morocco_4245806.html)
+* Star Wars Logo - [Star Wars Logo](https://w7.pngwing.com/pngs/723/1016/)
+* Darth Vader - png-transparent-star-wars-logo-star-wars-text-logo-silhouette-thumbnail.png
+* Republic Logo - [Republic Logo](https://w7.pngwing.com/pngs/83/395/png-transparent-leia-organa-rebel-alliance-star-wars-galactic-empire-logo-star-wars-thumbnail.png)
+* Jedi Logo - [Jedi Logo](https://w7.pngwing.com/pngs/429/138/png-transparent-the-new-jedi-order-star-wars-the-clone-wars-star-wars-emblem-logo-monochrome-thumbnail.png)
+* Stormtrooper Logo - [Stormtrooper Logo](https://w7.pngwing.com/pngs/983/735/png-transparent-stormtrooper-illustration-stormtrooper-drawing-star-wars-stencil-stormtrooper-white-face-photography-thumbnail.png)
+* Bobba-fett Logo - [Booba-fett logo](https://w7.pngwing.com/pngs/854/808/png-transparent-boba-fett-jango-fett-mandalorian-leia-organa-star-wars-death-star-angle-logo-monochrome-thumbnail.png)
+* Lightsaber - [Lightsaber](https://www.pngwing.com/en/free-png-pqhkp/download)
+* Jedi Temple memory game background - [Jedi Temple memory game background](https://static.wikia.nocookie.net/starwars/images/2/2d/Jedi_Temple_spires_ROTS.png/revision/latest/scale-to-width-down/1000?cb=20130215030848)
 
 ### Sound Clips
 
-Wrong choice - [wrong choice](https://www.101soundboards.com/sounds/27903338-sadly-that-is-a-wrong-choice)
-From younglings - [From younglings](https://www.101soundboards.com/sounds/27911492-from-younglings-first-steps-to-padawans-eager-strides-the-journey-to-mastery-begins)
-Jawa Sounds = [Jaw Sounds](https://www.101soundboards.com/boards/10339-jawas-sounds-star-wars#goog_rewarded)
-R2D2 Sound - [R2D2 sounds](https://www.101soundboards.com/sounds/24263888-r2d2-text-short)
+* Wrong choice - [Wrong choice](https://www.101soundboards.com/sounds/27903338-sadly-that-is-a-wrong-choice)
+* From younglings - [From younglings](https://www.101soundboards.com/sounds/27911492-from-younglings-first-steps-to-padawans-eager-strides-the-journey-to-mastery-begins)
+* Jawa Sounds = [Jaw Sounds](https://www.101soundboards.com/boards/10339-jawas-sounds-star-wars#goog_rewarded)
+* R2D2 Sound - [R2D2 sounds](https://www.101soundboards.com/sounds/24263888-r2d2-text-short)
 
 ### Documentation for Code
 
-For the basic layout of the keyboard for Wordle we used [Wordle Keyboard](https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/) for the keyboard.
-For help with building the Wordle game we used [Wordle Tutorial](https://www.youtube.com/watch?v=ckjRsPaWHX8)
-For documentation on [the dialog for popup buttons](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
-Some general coding documentation - [Kenny yip](https://www.kennyyipcoding.com)
+* For the basic layout of the keyboard for Wordle we used [Wordle Keyboard](https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/) for the keyboard.
+* For help with building the Wordle game we used [Wordle Tutorial](https://www.youtube.com/watch?v=ckjRsPaWHX8)
+* For documentation on [the dialog for popup buttons](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
+* Some general coding documentation - [Kenny yip](https://www.kennyyipcoding.com)
 
 ### Other Documentation/content
 
-Wireframes - [My Moqups](https://my.moqups.com/login) and [Balsamiq](https://balsamiq.com/)
-Star Wars font - [Star Wars Font](https://www.dafont.com/star-jedi.font)
+* Wireframes - [My Moqups](https://my.moqups.com/login) and [Balsamiq](https://balsamiq.com/)
+* Star Wars font - [Star Wars Font](https://www.dafont.com/star-jedi.font)
 
 ## Collaborators
 
-Stephen Dawson
-Github: <https://www.github.com/stephendawsondev>
-LinkedIn: <https://www.linkedin.com/in/sdstephendawson/>
-Stackportfol.io: <https://www.stackportfol.io/user/stephendawson/>
+### Stephen Dawson
+* Github - [Github](https://www.github.com/stephendawsondev)
+* LinkedIn - [LinkedIn](https://www.linkedin.com/in/sdstephendawson/)
+* Stackportfol.io - [Stackportfol.io](https://www.stackportfol.io/user/stephendawson/)
 
-Donald MacRitchie
-Github: <https://github.com/donald-macritchie>
-LinkedIn: <https://www.linkedin.com/in/donald-macritchie/>
+### Donald MacRitchie
+* Github - [Github](https://github.com/donald-macritchie)
+* LinkedIn - [Linkedin](https://www.linkedin.com/in/donald-macritchie/)
 
-George Small
-Github: <https://github.com/creepersguitar>
-LinkedIn: <https://www.linkedin.com/in/george-small-055151204/>
+### George Small
+* Github - [Github](https://github.com/creepersguitar)
+* LinkedIn - [LinkedIn](https://www.linkedin.com/in/george-small-055151204/)
 
-Hannah Olbrich
-Github: <https://github.com/hannahro15>
-LinkedIn: <https://www.linkedin.com/in/hannah-olbrich-0303074b/>
+### Hannah Olbrich
+* Github - [Github](https://github.com/hannahro15)
+* LinkedIn - [LinkedIn](https://www.linkedin.com/in/hannah-olbrich-0303074b/)
 
-Tharindu Nadeeshan
-Github: <https://github.com/hpatnadeeshan>
-LinkedIn: https://www.linkedin.com/in/tharindu-nadeeshan/
+### Tharindu Nadeeshan
+* Github - [Github](https://github.com/hpatnadeeshan)
+* LinkedIn - [LinkedIn](https://www.linkedin.com/in/tharindu-nadeeshan/)
 
-Towbie
-Github: <https://github.com/tee-24>
-LinkedIn:
+## Towbie
+* Github - [Github](https://github.com/tee-24)
+* LinkedIn - []()
 
 ## Deployment
 
