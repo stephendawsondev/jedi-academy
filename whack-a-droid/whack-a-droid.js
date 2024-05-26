@@ -5,10 +5,12 @@ let gameOver = false;
 
 document.addEventListener("DOMContentLoaded", async function () {
   let whackADroidAudio;
+  const board = document.getElementById("board");
 
   const whackADroidSoundFiles = {
     droidBleep: "r2d2-sound.mp3",
     jawaAngry: "jawa-angry.mp3",
+    smashMetal: "smash-metal.mp3",
   };
 
   whackADroidAudio = await loadAudio(
@@ -21,10 +23,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     whackADroidAudio.droidBleep.play();
   }
 
-  // audioObject.r2d2Scream.play();
-
-  // audioObject.r2d2Scream.play();
-  // whackADroidAudio.jawaAngry.play();  const getRandomTile = () => {
   const getRandomTile = () => {
     let num = Math.floor(Math.random() * 9);
     return num.toString();
@@ -40,6 +38,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     let droid = document.createElement("img");
     droid.src = "assets/images/droid.png";
+    droid.setAttribute("draggable", false);
     let num = getRandomTile();
     if (jawaTile && jawaTile.id == num) {
       return;
@@ -58,6 +57,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     let jawa = document.createElement("img");
     jawa.src = "assets/images/jawa.png";
+    jawa.setAttribute("draggable", false);
 
     let num = getRandomTile();
     if (droidTile && droidTile.id == num) {
@@ -72,13 +72,11 @@ document.addEventListener("DOMContentLoaded", async function () {
       return;
     }
 
-    // Use parentElement to check the tile div instead of the image itself
     if (event.target.parentElement === droidTile) {
       if (userAllowsSounds) {
-        whackADroidAudio.droidBleep.play();
+        whackADroidAudio.smashMetal.play();
       }
       score += 10;
-      // Update score
       document.getElementById("score").innerText = score.toString();
     } else if (event.target.parentElement === jawaTile) {
       if (userAllowsSounds) {
@@ -90,18 +88,28 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
   };
 
-  function setGame() {
-    // Set up grid for game board in HTML
+  function setUpBoard() {
     for (let i = 0; i < 9; i++) {
       let tile = document.createElement("div");
       tile.id = i.toString();
       tile.addEventListener("click", selectTile);
-      document.getElementById("board").appendChild(tile);
+      board.appendChild(tile);
     }
-
-    setInterval(setDroid, 3000); // 1000ms = 1 second
-    setInterval(setJawa, 3000); // 2000ms = 2 seconds
   }
 
-  setGame();
+  const overlay = document.createElement("div");
+  overlay.className = "overlay";
+  const startButton = document.createElement("button");
+  startButton.className = "btn";
+  startButton.innerText = "Start Game";
+  startButton.addEventListener("click", () => {
+    overlay.style.display = "none";
+
+    setInterval(setDroid, 1000);
+    setInterval(setJawa, 1500);
+  });
+
+  setUpBoard();
+  overlay.appendChild(startButton);
+  board.appendChild(overlay);
 });

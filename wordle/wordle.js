@@ -106,7 +106,7 @@ function initialize() {
 
     if (!gameOver && row == height) {
       gameOver = true;
-      document.getElementById("display_box").innerText = word;
+      document.getElementById("display_box").innerText =  "Game Over! correct word is " + word;
     }
   });
 }
@@ -127,6 +127,8 @@ function checkForMatch() {
 
     if (correctCount == width) {
       gameOver = true;
+      document.getElementById("display_box").innerText =  "Congratulations! you guessed the correct word and attempt number is " + attempts;
+      
       if (userAllowsSounds) {
         wordleAudio.wisdomTrialComplete.play();
       }
@@ -189,8 +191,15 @@ function handleKeyPress(key) {
       checkForMatch();
       row += 1;
       col = 0;
+      
     } else {
       console.log("Not enough letters entered.");
+      document.getElementById("display_box").innerText =  "Not enough letters entered.";
+      setTimeout(() => {
+        console.log("This message is displayed after 2 seconds.");
+        document.getElementById("display_box").innerText =  "";
+      }, 2000);
+      
     }
   } else if (key === "Backspace") {
     if (col > 0) {

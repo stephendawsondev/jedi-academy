@@ -13,6 +13,19 @@ const envImageUrl = `${baseURL}assets/images/`;
 
 const audioFiles = {};
 
+if (document.querySelector(".how-to-play-button")) {
+  const howToPlayButton = document.querySelector(".how-to-play-button");
+  howToPlayButton?.addEventListener("click", function () {
+    popupDialog.showModal();
+  });
+}
+const popupDialog = document.querySelector(".popup-dialog");
+const closePopupButton = document.querySelector(".close-popup-button");
+
+closePopupButton.addEventListener("click", function () {
+  popupDialog.close();
+});
+
 /**
  * Initializes the local storage with the default structure if not already set.
  */
