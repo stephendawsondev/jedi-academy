@@ -5,7 +5,7 @@ let audioObject = {};
 let popupDialog;
 let closePopupButton;
 
-const repoName = "may-hackathon-2024";
+const repoName = "jedi-academy";
 
 const isGithubPages = window.location.href.includes("github.io");
 const baseURL = isGithubPages ? `/${repoName}/` : "/";
@@ -14,8 +14,8 @@ const envAudioUrl = `${baseURL}public/`;
 const envImageUrl = `${baseURL}assets/images/`;
 
 const audioFiles = {
-  battlemusic: 'starwars-battle-music.mp3',
-  youngling: 'youngling-padawan.mp3' 
+  battlemusic: "starwars-battle-music.mp3",
+  youngling: "youngling-padawan.mp3",
 };
 
 if (document.querySelector(".how-to-play-button")) {
@@ -171,7 +171,7 @@ const stopMusic = () => {
  */
 const playSoundEffect = () => {
   if (userAllowsSounds && audioObject.youngling) {
-    audioObject.youngling.play().catch(error => {
+    audioObject.youngling.play().catch((error) => {
       console.error("Sound effect play failed:", error);
     });
   }
