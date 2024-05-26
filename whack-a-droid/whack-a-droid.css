@@ -3,6 +3,7 @@ body {
   background: url(assets/images/tatooine.jpg);
   background-size: cover;
   color: black;
+  height: 100vh;
 }
 
 #board {
@@ -78,6 +79,53 @@ body {
   cursor: pointer;
 }
 
+/* Add overlay style */
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+/* Popup instructions */
+.popup-content h3 {
+  text-align: center;
+}
+
+.instructions-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.instruction-container {
+  display: flex;
+}
+
+.instruction-container + .instruction-container {
+  margin-top: 1em;
+}
+
+.instruction-text {
+  margin-left: 1em;
+}
+
+.story-container {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-img {
+  margin: 0 auto;
+}
+
 @keyframes jumpIn {
   0% {
     transform: translateY(0);
@@ -108,17 +156,41 @@ body {
   }
 }
 
-/* Add overlay style */
+@media screen and (min-width: 1200px) {
+  .popup-dialog {
+    width: 1200px;
+  }
+  .instructions-container {
+    flex-direction: row;
+    align-items: center;
+  }
 
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
+  .story-container__content {
+    margin-top: initial;
+    margin-left: 1em;
+  }
+
+  .story-container__content {
+    margin-top: initial;
+    margin-left: 1em;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+  }
+
+  .story-img {
+    order: 1;
+  }
+
+  .story-text {
+    order: 2;
+    margin-left: 1em;
+  }
+
+  .vl {
+    border-left: 3px solid black;
+    height: 200px;
+    margin-left: 2em;
+    margin-right: 3em;
+  }
 }
