@@ -108,7 +108,8 @@ img {
 
 /* Home page "Enter the jedi temple" button */
 .home-play-button,
-.info-button {
+.info-button,
+.results-button {
   margin: 5% auto;
   display: block;
   height: auto;
@@ -123,9 +124,15 @@ img {
   font-size: 1.5em;
 }
 
+.results-button {
+  width: 50%;
+  text-decoration: none;
+}
+
 .home-play-button:hover,
 .info-button:hover,
-.trial-selection:hover {
+.trial-selection:hover,
+.results-button:hover {
   background: #000;
   color: #f9d71c;
   border: 2px #f9d71c solid;
@@ -259,8 +266,9 @@ dialog::backdrop {
 
 .results-header, 
 .results-section,
-.results-info {
-  margin: 0 auto;
+.results-info,
+.all-trails-incomplete {
+  margin: 50px auto;
   width: 60%;
   height: auto;
   margin-top: 20px;
