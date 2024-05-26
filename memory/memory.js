@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', async function() {
-
+  const firstTimePlayed = playerData["memory"].firstTimePlayed;
+  if (firstTimePlayed) {
+    setTimeout(() => {
+      popupDialog.showModal();
+    }, 1000);
+  }
     // ***************** Sound Effects
     let memoryAudio;
     
@@ -13,6 +18,8 @@ document.addEventListener('DOMContentLoaded', async function() {
         memorySoundFiles,
         "assets/sounds/"
     );
+
+    
 
     // ********************* How to play button popup
 

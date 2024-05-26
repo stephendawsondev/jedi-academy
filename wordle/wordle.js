@@ -52,6 +52,12 @@ let attempts = 0;
 let wordleAudio;
 
 window.onload = async function () {
+  const firstTimePlayed = playerData["wordle"].firstTimePlayed;
+  if (firstTimePlayed) {
+    setTimeout(() => {
+      popupDialog.showModal();
+    }, 1000);
+  }
   initialize();
 
   const wordleAudioFiles = {
