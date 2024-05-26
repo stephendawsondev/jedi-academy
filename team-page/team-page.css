@@ -1,43 +1,106 @@
-body {
-    background-image: url(../team-page/team-images/team-background-image.jpg);
-}
-
 @font-face {
-  font-family: "Star Jedi";
-  src: url("../fonts/index-font/Starjedi.ttf") format("truetype");
-}
-
-#team-page-title {
-    background-color: #f9d71c; 
     font-family: "Star Jedi";
-    text-align: center;
-    border-radius: 10px;
-    margin: 30px;
+    src: url("../fonts/index-font/Starjedi.ttf") format("truetype");
+  }
+
+body {
+    background-image: url(./team-images/team-background-image.jpg);
+     font-family: "Star Jedi";
+    src: url("../fonts/index-font/Starjedi.ttf") format("truetype");
+    margin: 0;
+    padding: 0;
 }
 
-.member-name {
+header {
+    margin: 50px auto;
+    width: 40%;
     text-align: center;
-}
-
-.grid-container {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 30px;
     padding: 20px;
-}
-
-@media (min-width: 768px) {
-    .grid-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.team-member {
-    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    color: black;
-    font-family: "Star Jedi";
-    background-color: #f9d71c; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    padding: 20px;
     text-align: center;
+    box-sizing: border-box;
+    color: #f9d71c;
+    border: #f9d71c 2px solid;
+  }
+
+  main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+
+  .team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+  }
+  
+  .team-member {
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    color: #f9d71c;
+    border: #f9d71c 2px solid;
+  }
+  
+  .team-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid #f9d71c;
+  }
+  
+  .team-credit {
+    font-size: 0.9em;
+    color: #f9d71c;
+    margin-bottom: 15px;
+  }
+  
+  .team-links a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #f9d71c;
+    text-decoration: none;
+  }
+  
+  .team-links a:hover {
+    text-decoration: underline;
+  }
+
+.team-home-button-link {
+    margin: 20px auto;
+    height: auto;
+    background: #f9d71c;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: #000;
+    line-height: 25px;
+    font-family: "Star Jedi", sans-serif;
+    display: block;
+    width: 10%;
 }
+
+  /* Responsive Styles */
+  @media (max-width: 900px) {
+    .team-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .team-container {
+      grid-template-columns: 1fr;
+    }
+  }
