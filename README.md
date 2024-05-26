@@ -123,18 +123,10 @@ User/player:
 
 ### Images
 
-<https://starwars.fandom.com/wiki/Yoda>
-<https://www.shakudo.io/blog/chatgpt-the-ai-smarter-than-c-3po>
-<https://www.starwars.com/databank/c-3po>
-<https://www.starwars.com/databank/bb-8>
-<https://starwars.fandom.com/wiki/Anakin_Skywalker>
-<https://www.starwars.com/databank/leia-organa>
-<https://www.starwars.com/databank/jar-jar-binks>
-
-Wordle background-image: <https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/>
-Image for whack-a-droid: <https://pngtree.com/freepng/bb8-clipart-cartoon-star-wars-bb-vector_11054353.html>
-Image 2 for whack-a-droid: <https://www.deviantart.com/art-of-moore/art/Jawa-Droidsmith-310484097>
-Image 3: <https://www.wallpaperflare.com/star-wars-building-desert-jawa-start-wars-robot-tatooine-star-wars-wallpaper-hdffs>
+Wordle background-image - [Wordle-background-image](https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/)
+Image for whack-a-droid - [Whack-a-droid](https://pngtree.com/freepng/bb8-clipart-cartoon-star-wars-bb-vector_11054353.html)
+Image 2 for whack-a-droid  - [Whack-a-droid](https://www.deviantart.com/art-of-moore/art/Jawa-Droidsmith-310484097)
+Image 3 - <https://www.wallpaperflare.com/star-wars-building-desert-jawa-start-wars-robot-tatooine-star-wars-wallpaper-hdffs>
 Sand hole image: <https://depositphotos.com/illustrations/sand-pit.html>
 Sand background: <https://www.freepik.com/free-photo/desert-landscape-morocco_4245806.htm>
 Star Wars Logo - <https://w7.pngwing.com/pngs/723/1016/>
@@ -149,24 +141,22 @@ Jedi Temple memory game background - <https://static.wikia.nocookie.net/starwars
 
 ### Sound Clips
 
-Wrong choice - <https://www.101soundboards.com/sounds/27903338-sadly-that-is-a-wrong-choice>
-From younglings - <https://www.101soundboards.com/sounds/27911492-from-younglings-first-steps-to-padawans-eager-strides-the-journey-to-mastery-begins>
-Jawa Sounds: <https://www.101soundboards.com/boards/10339-jawas-sounds-star-wars#goog_rewarded>
-R2D2 Sound: <https://www.101soundboards.com/sounds/24263888-r2d2-text-short>
+Wrong choice - [wrong choice](https://www.101soundboards.com/sounds/27903338-sadly-that-is-a-wrong-choice)
+From younglings - [From younglings](https://www.101soundboards.com/sounds/27911492-from-younglings-first-steps-to-padawans-eager-strides-the-journey-to-mastery-begins)
+Jawa Sounds = [Jaw Sounds](https://www.101soundboards.com/boards/10339-jawas-sounds-star-wars#goog_rewarded)
+R2D2 Sound - [R2D2 sounds](https://www.101soundboards.com/sounds/24263888-r2d2-text-short)
 
 ### Documentation for Code
 
 For the basic layout of the keyboard for Wordle we used [Wordle Keyboard](https://www.freecodecamp.org/news/build-a-wordle-clone-in-javascript/) for the keyboard.
 For help with building the Wordle game we used [Wordle Tutorial](https://www.youtube.com/watch?v=ckjRsPaWHX8)
-<https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog>
-<https://www.kennyyipcoding.com>
+For documentation on [the dialog for popup buttons](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog)
+Some general coding documentation - [Kenny yip](https://www.kennyyipcoding.com)
 
 ### Other Documentation/content
 
-<https://en.wikipedia.org/wiki/Death_Star>
-Wireframes: <https://my.moqups.com/login> and <https://balsamiq.com/>
-<https://www.kennyyipcoding.com>
-Star Wars font - <https://www.dafont.com/star-jedi.font>
+Wireframes - [My Moqups](https://my.moqups.com/login) and [Balsamiq](https://balsamiq.com/)
+Star Wars font - [Star Wars Font](https://www.dafont.com/star-jedi.font)
 
 ## Collaborators
 
@@ -189,7 +179,7 @@ LinkedIn: <https://www.linkedin.com/in/hannah-olbrich-0303074b/>
 
 Tharindu Nadeeshan
 Github: <https://github.com/hpatnadeeshan>
-LinkedIn:
+LinkedIn: https://www.linkedin.com/in/tharindu-nadeeshan/
 
 Towbie
 Github: <https://github.com/tee-24>
@@ -202,24 +192,24 @@ LinkedIn:
 
 The project was deployed to GitHub Pages using the following steps...
 
-1. Log in to GitHub and locate the [Github Repository for the May Hackathon 2024](https://github.com/stephendawsondev/may-hackathon-2024)
+1. Log in to GitHub and locate the [Github Repository for the Jedia Academy](https://github.com/stephendawsondev/jedi-academy)
 2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
 3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
 4. Under "Source", click the dropdown called "None" and select "Main Branch".
 5. The page will automatically refresh.
-6. Scroll back down through the page to locate the [published site](https://stephendawsondev.github.io/may-hackathon-2024/) in the "GitHub Pages" section.
+6. Scroll back down through the page to locate the [published site](https://stephendawsondev.github.io/jedi-academy/) in the "GitHub Pages" section.
 
 ### Forking the GitHub Repository
 
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
 
-1. Log in to GitHub and locate the [May Hackathon 2024 Github Repository](https://github.com/stephendawsondev/may-hackathon-2024)
+1. Log in to GitHub and locate the [Jedi Academy Github Repository](https://github.com/stephendawsondev/jedi-academy)
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. You should now have a copy of the original repository in your GitHub account.
 
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [May Hackathon 2024 Github Repository](https://github.com/stephendawsondev/may-hackathon-2024)
+1. Log in to GitHub and locate the [Jedi Academy Github Repository](https://github.com/stephendawsondev/jedi-academy)
 2. Under the repository name, click "Clone or download".
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open Git Bash
@@ -227,7 +217,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-git clone https://github.com/stephendawsondev/may-hackathon-2024.git
+git clone https://github.com/stephendawsondev/jedi-academy.git
 ```
 
 7. Press Enter. Your local clone will be created.
