@@ -253,6 +253,9 @@ dialog::backdrop {
   background: url("../assets/images/graduation-ceremony.jpeg") no-repeat center center/cover;
 }
 
+.results-content {
+  display: none;
+}
 
 .results-header, 
 .results-section,
