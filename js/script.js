@@ -112,6 +112,14 @@ const addAudioIconEventListeners = () => {
     musicIcon.src = userAllowsMusic
       ? `${envImageUrl}music_on.webp`
       : `${envImageUrl}music_off.webp`;
+
+    if (userAllowsMusic) {
+      audioObject.battlemusic.loop = true; // Set loop to true
+      audioObject.battlemusic.play();
+    } else {
+      audioObject.battlemusic.pause();
+      audioObject.battlemusic.currentTime = 0; // Reset the audio to the beginning
+    }
   });
 
   soundButton.addEventListener("click", () => {
