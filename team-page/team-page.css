@@ -1,0 +1,43 @@
+body {
+    background-image: url(../team-page/team-images/team-background-image.jpg);
+}
+
+@font-face {
+  font-family: "Star Jedi";
+  src: url("../fonts/index-font/Starjedi.ttf") format("truetype");
+}
+
+#team-page-title {
+    background-color: #f9d71c; 
+    font-family: "Star Jedi";
+    text-align: center;
+    border-radius: 10px;
+    margin: 30px;
+}
+
+.member-name {
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 30px;
+    padding: 20px;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.team-member {
+    padding: 10px;
+    border-radius: 10px;
+    color: black;
+    font-family: "Star Jedi";
+    background-color: #f9d71c; 
+    text-align: center;
+}
