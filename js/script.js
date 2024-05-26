@@ -13,13 +13,14 @@ const envImageUrl = `${baseURL}assets/images/`;
 
 const audioFiles = {};
 
-const howToPlayButton = document.querySelector(".how-to-play-button");
+if (document.querySelector(".how-to-play-button")) {
+  const howToPlayButton = document.querySelector(".how-to-play-button");
+  howToPlayButton?.addEventListener("click", function () {
+    popupDialog.showModal();
+  });
+}
 const popupDialog = document.querySelector(".popup-dialog");
 const closePopupButton = document.querySelector(".close-popup-button");
-
-howToPlayButton.addEventListener("click", function () {
-  popupDialog.showModal();
-});
 
 closePopupButton.addEventListener("click", function () {
   popupDialog.close();
