@@ -52,6 +52,14 @@ User/player:
 ![Whack a Droid Game - Tablet View](assets/wireframes/whack-a-jar-jar-tablet.png)
 ### Whack a Droid Game - Laptop View
 ![Whack a Droid Game - Laptop View](assets/wireframes/whack-a-jar-jar-laptop.png)
+=========
+### Whack a Jar-Jar Game - Mobile View
+![Whack a Jar-Jar Game - Mobile View](assets/wireframes/whack-a-droid-mobile.png)
+### Whack a Jar-Jar Game - Tablet View
+![Whack a Jar-Jar Game - Tablet View](assets/wireframes/whack-a-droid-tablet.png)
+### Whack a Jar-Jar Game - Laptop View
+![Whack a Jar-Jar Game - Laptop View](assets/wireframes/whack-a-droid-laptop.png)
+>>>>>>>>> Temporary merge branch 2
 
 ### Star Wars Themed Wordle - Mobile View
 ![Star Wars Themed Wordle - Mobile View](assets/wireframes/star-wars-wordle-mobile.png)
@@ -67,13 +75,7 @@ User/player:
 ### Main Page - Laptop View
 ![Star Wars Main Page - Laptop View](assets/wireframes/laptop-wireframe-index.png)
 
-
-## Technologies used
-
-* HTML
-* CSS
-* Vanilla Javascript
-
+<<<<<<<<< Temporary merge branch 1
 ### Results Page - Phone View
 ![Results Page - Phone View](assets/wireframes/results-phone-view.png)
 ### Results Page - Tablet View
@@ -87,7 +89,14 @@ User/player:
 ![Meet The Team Page - Tablet View](assets/wireframes/meet-the-team-tablet.png)
 ### Meet The Team Page - Laptop View
 ![Meet The Team Page - Laptop View](assets/wireframes/meet-the-team-laptop.png)
+=========
+## Technologies used
 
+* HTML
+* CSS
+* Vanilla Javascript
+
+>>>>>>>>> Temporary merge branch 2
 ## Credits
 
 ### Images
@@ -98,7 +107,14 @@ https://www.starwars.com/databank/bb-8
 https://starwars.fandom.com/wiki/Anakin_Skywalker
 https://www.starwars.com/databank/leia-organa
 https://www.starwars.com/databank/jar-jar-binks
-
+<<<<<<<<< Temporary merge branch 1
+Wordle background-image: https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/
+Image for whack-a-droid: https://pngtree.com/freepng/bb8-clipart-cartoon-star-wars-bb-vector_11054353.html
+Image 2 for whack-a-droid: https://www.deviantart.com/art-of-moore/art/Jawa-Droidsmith-310484097
+Image 3: https://www.wallpaperflare.com/star-wars-building-desert-jawa-start-wars-robot-tatooine-star-wars-wallpaper-hdffs
+Sand hole image: https://depositphotos.com/illustrations/sand-pit.html
+Sand background: https://www.freepik.com/free-photo/desert-landscape-morocco_4245806.htm
+=========
 Wordle Background-image: https://www.pexels.com/photo/gray-and-black-galaxy-wallpaper-2150/
 Star Wars Logo - https://w7.pngwing.com/pngs/723/1016/
 Darth Vader - png-transparent-star-wars-logo-star-wars-text-logo-silhouette-thumbnail.png
@@ -109,11 +125,7 @@ Stormtrooper Logo - https://w7.pngwing.com/pngs/983/735/png-transparent-stormtro
 Bobba-fett Logo - https://w7.pngwing.com/pngs/854/808/png-transparent-boba-fett-jango-fett-mandalorian-leia-organa-star-wars-death-star-angle-logo-monochrome-thumbnail.png
 Lightsaber - https://www.pngwing.com/en/free-png-pqhkp/download
 Jedi Temple memory game background - https://static.wikia.nocookie.net/starwars/images/2/2d/Jedi_Temple_spires_ROTS.png/revision/latest/scale-to-width-down/1000?cb=20130215030848
-Image for whack-a-droid: https://pngtree.com/freepng/bb8-clipart-cartoon-star-wars-bb-vector_11054353.html
-Image 2 for whack-a-droid: https://www.deviantart.com/art-of-moore/art/Jawa-Droidsmith-310484097
-Image 3: https://www.wallpaperflare.com/star-wars-building-desert-jawa-start-wars-robot-tatooine-star-wars-wallpaper-hdffs
-Sand hole image: https://depositphotos.com/illustrations/sand-pit.html
-Sand background: https://www.freepik.com/free-photo/desert-landscape-morocco_4245806.htm
+>>>>>>>>> Temporary merge branch 2
 
 ### Sound Clips
 https://www.101soundboards.com/sounds/27903371-ow-why-did-you-do-that
@@ -124,6 +136,7 @@ https://www.101soundboards.com/sounds/27911417-oh-dear-r2-must-you-always-be-so-
 https://www.101soundboards.com/sounds/27876007-finally-a-great-victory-we-have-achieved-over-the-sith-lords-hmm
 https://www.101soundboards.com/sounds/27911699-ouchie-mesa-head-goin-bombad
 https://www.101soundboards.com/sounds/27912421-ouchie
+<<<<<<<<< Temporary merge branch 1
 Jawa Sounds: https://www.101soundboards.com/boards/10339-jawas-sounds-star-wars#goog_rewarded
 R2D2 Sound: https://www.101soundboards.com/sounds/24263888-r2d2-text-short
 
@@ -132,11 +145,14 @@ For the basic layout of the keyboard for Wordle we used [Wordle Keyboard](https:
 For help with building the Wordle game we used [Wordle Tutorial](https://www.youtube.com/watch?v=ckjRsPaWHX8)
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
 https://www.kennyyipcoding.com
-
+>>>>>>>>> Temporary merge branch 2
 
 ### Other Documentation/content
 https://en.wikipedia.org/wiki/Death_Star
 Wireframes: https://my.moqups.com/login and https://balsamiq.com/
+<<<<<<<<< Temporary merge branch 1
+https://www.kennyyipcoding.com
+=========
 Star Wars font - https://www.dafont.com/star-jedi.font
 
 ## Collaborators
@@ -147,6 +163,8 @@ LinkedIn: https://www.linkedin.com/in/sdstephendawson/
 Stackportfol.io: https://www.stackportfol.io/user/stephendawson/
 
 Donald MacRitchie
+Github: https://github.com/donald-macritchie
+LinkedIn: https://www.linkedin.com/in/donald-macritchie/
 
 George Small
 Github: https://github.com/creepersguitar
@@ -157,7 +175,45 @@ Github: https://github.com/hannahro15
 LinkedIn: https://www.linkedin.com/in/hannah-olbrich-0303074b/
 
 Tharindu Nadeeshan
+Github: https://github.com/hpatnadeeshan
+LinkedIn: 
 
 Towbie
 
+<<<<<<<<< Temporary merge branch 1
+=========
+
+>>>>>>>>> Temporary merge branch 2
 ## Deployment
+
+### GitHub Pages
+
+The project was deployed to GitHub Pages using the following steps...
+
+1. Log in to GitHub and locate the [Github Repository for the May Hackathon 2024](https://github.com/stephendawsondev/may-hackathon-2024)
+2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
+3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
+4. Under "Source", click the dropdown called "None" and select "Main Branch".
+5. The page will automatically refresh.
+6. Scroll back down through the page to locate the [published site](https://stephendawsondev.github.io/may-hackathon-2024/) in the "GitHub Pages" section.
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the [May Hackathon 2024 Github Repository](https://github.com/stephendawsondev/may-hackathon-2024)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [May Hackathon 2024 Github Repository](https://github.com/stephendawsondev/may-hackathon-2024)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+```
+$ git clone https://github.com/stephendawsondev/may-hackathon-2024.git
+```
+7. Press Enter. Your local clone will be created.
