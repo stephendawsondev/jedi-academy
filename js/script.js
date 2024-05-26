@@ -12,7 +12,8 @@ const envAudioUrl = `${baseURL}public/`;
 const envImageUrl = `${baseURL}assets/images/`;
 
 const audioFiles = {
-  battlemusic: 'starwars-battle-music.mp3'
+  battlemusic: 'starwars-battle-music.mp3',
+  youngling: 'youngling-padawan.mp3' // Add the new sound file here
 };
 
 if (document.querySelector(".how-to-play-button")) {
@@ -131,6 +132,12 @@ const addAudioIconEventListeners = () => {
     soundIcon.src = userAllowsSounds
       ? `${envImageUrl}sound_on.webp`
       : `${envImageUrl}sound_off.webp`;
+
+    if (userAllowsSounds) {
+      playSoundEffect();
+    } else {
+      stopSoundEffect();
+    }
   });
 };
 
@@ -154,6 +161,27 @@ const stopMusic = () => {
   if (audioObject.battlemusic) {
     audioObject.battlemusic.pause();
     audioObject.battlemusic.currentTime = 0; // Reset the audio to the beginning
+  }
+};
+
+/**
+ * Function to play the sound effect
+ */
+const playSoundEffect = () => {
+  if (userAllowsSounds && audioObject.youngling) {
+    audioObject.youngling.play().catch(error => {
+      console.error("Sound effect play failed:", error);
+    });
+  }
+};
+
+/**
+ * Function to stop the sound effect
+ */
+const stopSoundEffect = () => {
+  if (audioObject.youngling) {
+    audioObject.youngling.pause();
+    audioObject.youngling.currentTime = 0; // Reset the audio to the beginning
   }
 };
 
