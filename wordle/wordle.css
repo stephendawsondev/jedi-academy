@@ -31,19 +31,21 @@ h1 {
   background-size: cover;
 }
 
-#board {
+ #board {
   width: 300px;
   height: 390px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  background-color: #f9d71c;
   align-items: center;
   justify-content: space-evenly;
   vertical-align: baseline;
   border-radius: 5px;
   border: solid 3px white;
-}
+  padding: 1rem;
+  background-color: RGB(0, 0, 0 ,0.5);
+  margin-top: 10px;
+ }
 
 .keyboard-button {
   align-items: center;
@@ -56,16 +58,6 @@ h1 {
 #background-image {
   background-image: url("assets/images/wordle-background-image.jpg");
   background-size: cover;
-}
-
-#board {
-  width: 290px;
-  height: 400px;
-  margin: 0 auto;
-  margin-top: 5px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: darkolivegreen;
 }
 
 .tile {
