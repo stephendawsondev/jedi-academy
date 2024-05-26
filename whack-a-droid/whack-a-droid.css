@@ -1,7 +1,6 @@
 body {
   text-align: center;
   background: url(assets/images/tatooine.webp);
-  background-size: cover;
   color: black;
   height: 100vh;
 }
@@ -210,7 +209,6 @@ body {
     margin-left: 1em;
     display: flex;
     flex-direction: row;
-    /* align-items: center; */
   }
 
   .story-img {
