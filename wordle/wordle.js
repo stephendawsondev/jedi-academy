@@ -83,6 +83,10 @@ function initialize() {
       let key = event.target.innerText.toUpperCase();
       if (key === "ENTER") key = "Enter";
       handleKeyPress(key);
+      if (!gameOver && row == height) {
+        gameOver = true;
+        document.getElementById("display_box").innerText =  "Game Over! correct word is " + word;
+      }
     });
   });
 
@@ -124,6 +128,7 @@ function checkForMatch() {
       correctCount += 1;
       letterCount[letter] -= 1;
     }
+    console.log(word);
 
     if (correctCount == width) {
       gameOver = true;

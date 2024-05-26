@@ -1,11 +1,10 @@
-
 document.addEventListener('DOMContentLoaded', async function() {
 
     // ***************** Sound Effects
     let memoryAudio;
     
     const memorySoundFiles = {
-        r2d2happy: "r2r2-happy.mp3", // Succesful Match
+        r2d2happy: "r2r2-happy.mp3", // Successful Match
         memoryTrialComplete: "trial-memory-completion.mp3", // Game Completion
     };
     
@@ -57,41 +56,40 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     function checkForMatch() {
       let isMatch = firstCard.dataset.logo === secondCard.dataset.logo;
-    //   isMatch ? disableCards() : unflipCards();
-        if (isMatch == true){
-            disableCards();
-        } else {
-            unflipCards();
-        }
+      if (isMatch) {
+        disableCards();
+      } else {
+        unflipCards();
+      }
     }
 
     function disableCards() {
-        firstCard.removeEventListener('click', flipCard);
-        secondCard.removeEventListener('click', flipCard);
-    
-        memoryAudio.r2d2happy.play();
-    
-        resetBoard();
-        score++;
-        document.getElementById('score').innerHTML = score;
-        let playerRank = 0;
-        if (score === 5 || score === 6) {
-            playerRank = 3;
-        } else if (score === 3 || score === 4) {
-            playerRank = 2;
-        } else if (score === 2 || score === 1) {
-            playerRank = 1;
-        } else {
-            playerRank = 0;
-        }
-        
-        if (score === 6) {
-            memoryAudio.memoryTrialComplete.play();
-            stopTimer();
-        }
-        
-        console.log(playerRank);
-        updateLocalStorageGameData("memory", {result: playerRank, gameComplete: true, firstTimePlayed: false})
+      firstCard.removeEventListener('click', flipCard);
+      secondCard.removeEventListener('click', flipCard);
+  
+      memoryAudio.r2d2happy.play();
+  
+      resetBoard();
+      score++;
+      document.getElementById('score').innerHTML = score;
+      let playerRank = 0;
+      if (score === 5 || score === 6) {
+          playerRank = 3;
+      } else if (score === 3 || score === 4) {
+          playerRank = 2;
+      } else if (score === 2 || score === 1) {
+          playerRank = 1;
+      } else {
+          playerRank = 0;
+      }
+      
+      if (score === 6) {
+          memoryAudio.memoryTrialComplete.play();
+          stopTimer();
+      }
+      
+      console.log(playerRank);
+      updateLocalStorageGameData("memory", {result: playerRank, gameComplete: true, firstTimePlayed: false});
     }
     
 
@@ -125,6 +123,7 @@ document.addEventListener('DOMContentLoaded', async function() {
 
     function startGame() {
       resetGame();
+      overlay.style.display = 'none';
       cards.forEach(card => card.addEventListener('click', flipCard));
       lockBoard = false;
       timeLeft = 30;
@@ -145,6 +144,7 @@ document.addEventListener('DOMContentLoaded', async function() {
       hasFlippedCard = false;
       firstCard = null;
       secondCard = null;
+      overlay.style.display = 'flex';
     }
 
     function startTimer() {
@@ -168,13 +168,16 @@ document.addEventListener('DOMContentLoaded', async function() {
       cards.forEach(card => card.classList.remove('flip'));
     }
 
+    // Overlay functionality
+    const overlay = document.getElementById('overlay');
+    const startButton = document.getElementById('startGame');
+    
+    startButton.addEventListener('click', startGame);
+
     // Event listeners
-    document.getElementById('startGame').addEventListener('click', startGame);
     document.getElementById('resetGame').addEventListener('click', resetGame);
     cards.forEach(card => card.addEventListener('click', flipCard));
 
     // Initial shuffle
     shuffle();
 });
-
-

@@ -1,13 +1,11 @@
 body {
-<<<<<<<<< Temporary merge branch 1
   text-align: center;
   background-image: url("../assets/images/wordle-background-image.jpg");
 }
 
 #title {
   width: initial;
-=========
-    text-align: center;   
+  text-align: center;   
 }
 
 #wordle-background-image {
@@ -24,8 +22,6 @@ h1 {
 .container {
     width: 500px;
     height: 700px;
-    background-color: orange;
->>>>>>>>> Temporary merge branch 2
 }
 
 #background-image {
@@ -84,9 +80,9 @@ h1 {
   border: solid 2px black;
 }
 
-.play-again {
+/* .play-again {
   margin-top: 0.5em;
-}
+} */
 
 .row-one,
 .row-two,
@@ -152,5 +148,20 @@ h1 {
 .close-button {
   float: right;
   width: 3.2rem;
+  cursor: pointer;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Add some space between the buttons */
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  /* background-color: #333;
+  color: white; */
+  text-decoration: none;
   cursor: pointer;
 }
