@@ -1,14 +1,36 @@
 body {
+<<<<<<<<< Temporary merge branch 1
   text-align: center;
-}
-
-#wordle-background-image {
   background-image: url("../assets/images/wordle-background-image.jpg");
-  background-size: cover;
 }
 
 #title {
   width: initial;
+=========
+    text-align: center;   
+}
+
+#wordle-background-image {
+    background-image: url('../wordle-background-image.jpg');
+    background-size: cover;
+}
+
+h1 {
+    font-size: 40px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.container {
+    width: 500px;
+    height: 700px;
+    background-color: orange;
+>>>>>>>>> Temporary merge branch 2
+}
+
+#background-image {
+    background-image: url('assets/images/wordle-background-image.jpg');
+    background-size: cover;
 }
 
 #board {

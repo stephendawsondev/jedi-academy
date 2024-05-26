@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', async function() {
         "assets/sounds/"
     );
 
--
     // ********************* How to play button popup
 
     const howToPlayButton = document.querySelector('.how-to-play-button');

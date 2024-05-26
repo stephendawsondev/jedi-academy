@@ -123,6 +123,14 @@ img {
   font-size: 1.5em;
 }
 
+.home-play-button:hover,
+.info-button:hover,
+.trial-selection:hover {
+  background: #000;
+  color: #f9d71c;
+  border: 2px #f9d71c solid;
+}
+
 .trial-selection {
   display: block;
   height: auto;
@@ -191,6 +199,10 @@ img {
 }
 
 /* How to play pop up */
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
 
 .popup-container {
   position: fixed;
