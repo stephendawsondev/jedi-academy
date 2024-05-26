@@ -113,13 +113,13 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
     let rank = "You need 50 or more points to rank!";
     let result = 1;
-    if (highestScore >= 50) {
+    if (highestScore >= 200) {
       rank = "Padawan";
       result = 1;
     } else if (highestScore >= 120) {
       rank = "Jedi Knight";
       result = 2;
-    } else if (highestScore >= 200) {
+    } else if (highestScore >= 50) {
       rank = "Jedi Master";
       result = 3;
     }
