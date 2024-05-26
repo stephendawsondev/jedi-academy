@@ -109,7 +109,8 @@ img {
 /* Home page "Enter the jedi temple" button */
 .home-play-button,
 .info-button,
-.results-button {
+.results-button,
+.meet-the-team-button {
   margin: 5% auto;
   display: block;
   height: auto;
@@ -124,15 +125,18 @@ img {
   font-size: 1.5em;
 }
 
-.results-button {
+.results-button,
+.meet-the-team-button {
   width: 50%;
   text-decoration: none;
+  border: 2px #000 solid;
 }
 
 .home-play-button:hover,
 .info-button:hover,
 .trial-selection:hover,
-.results-button:hover {
+.results-button:hover,
+.meet-the-team-button:hover {
   background: #000;
   color: #f9d71c;
   border: 2px #f9d71c solid;
@@ -297,7 +301,7 @@ dialog::backdrop {
 @media screen and (max-width: 600px) {
   .header > *,
   #game-choices-header {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
 
   #game-choices-header {
@@ -306,7 +310,9 @@ dialog::backdrop {
 
   .home-play-button,
   .info-button,
-  .trial-selection {
+  .trial-selection,
+  .results-button,
+  .meet-the-team-button {
     font-size: 1rem;
   }
 
