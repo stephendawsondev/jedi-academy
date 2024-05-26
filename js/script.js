@@ -2,16 +2,28 @@ let userAllowsSounds = false;
 let userAllowsMusic = false;
 let playerData = {};
 let audioObject = {};
-const envAudioUrl =
-  window.location.href.indexOf("github.io") == -1 ? "../public/" : "public/";
-const envImageUrl =
-  window.location.href.indexOf("github.io") == -1
-    ? "../assets/images/"
-    : "assets/images/";
 
-const audioFiles = {
-  r2d2Scream: "r2d2-scream.mp3",
-};
+const repoName = "may-hackathon-2024";
+
+const isGithubPages = window.location.href.includes("github.io");
+const baseURL = isGithubPages ? `/${repoName}/` : "/";
+
+const envAudioUrl = `${baseURL}public/`;
+const envImageUrl = `${baseURL}assets/images/`;
+
+const audioFiles = {};
+
+const howToPlayButton = document.querySelector(".how-to-play-button");
+const popupDialog = document.querySelector(".popup-dialog");
+const closePopupButton = document.querySelector(".close-popup-button");
+
+howToPlayButton.addEventListener("click", function () {
+  popupDialog.showModal();
+});
+
+closePopupButton.addEventListener("click", function () {
+  popupDialog.close();
+});
 
 /**
  * Initializes the local storage with the default structure if not already set.
@@ -128,6 +140,7 @@ const calculateAverageScore = () => {
  * Updates the local storage with the provided game data.
  * @param {string} game - The name of the game (e.g., 'wordle', 'whack-a-droid', 'memory').
  * @param {Object} data - The data object containing result and gameComplete status.
+ * @example updateLocalStoragePlayerData('wordle', { result: 5, gameComplete: true, firstTimePlayed: false });
  */
 const updateLocalStorageGameData = (game, data) => {
   const gameData = JSON.parse(localStorage.getItem("gameData"));
@@ -162,6 +175,13 @@ const clearLocalStorage = () => {
   localStorage.removeItem("gameData");
   initializeLocalStorage();
 };
+
 initializeLocalStorage();
 addAudioIconEventListeners();
+
 audioObject = loadAudio(audioObject, audioFiles, envAudioUrl);
+
+if (document.querySelector(".back-button")) {
+  const backButton = document.querySelector(".back-button");
+  backButton.href = `${baseURL}`;
+}

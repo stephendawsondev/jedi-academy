@@ -1,6 +1,10 @@
 body {
   text-align: center;
+}
+
+#wordle-background-image {
   background-image: url("../assets/images/wordle-background-image.jpg");
+  background-size: cover;
 }
 
 #title {
@@ -29,6 +33,21 @@ body {
   font-family: "Star Jedi", sans-serif;
 }
 
+#background-image {
+  background-image: url("assets/images/wordle-background-image.jpg");
+  background-size: cover;
+}
+
+#board {
+  width: 290px;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: darkolivegreen;
+}
+
 .tile {
   display: flex;
   justify-content: center;
@@ -43,39 +62,32 @@ body {
   border: solid 2px black;
 }
 
+.play-again {
+  margin-top: 0.5em;
+}
+
 .row-one,
 .row-two,
 .row-three {
   margin: 5px;
 }
 
-.button-container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.back-button {
-  margin-left: 10px;
-}
-
-.next-button {
-  margin-right: 10px;
-}
-
-.back-button,
-.next-button {
-  text-transform: uppercase;
-  background-color: #f9d71c;
-  border-radius: 5px;
-  font-family: "Star Jedi";
-}
-
-.correct {
-  background-color: lightgreen;
+.guess-incorrect:not(.exist) {
+  opacity: 0.25;
 }
 
 .exist {
   background-color: #f9d71c;
+}
+
+.correct {
+  background-color: lightgreen;
+  color: #fff;
+}
+
+.exist.correct {
+  background-color: lightgreen;
+  color: #000;
 }
 
 .absent {
