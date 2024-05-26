@@ -1,32 +1,34 @@
 body {
   text-align: center;
   background-image: url("../assets/images/wordle-background-image.jpg");
+  background-repeat: repeat;
 }
 
 #title {
   width: initial;
-  text-align: center;   
+  text-align: center;
 }
 
 #wordle-background-image {
-    background-image: url('../wordle-background-image.jpg');
-    background-size: cover;
+  background-image: url("../wordle-background-image.jpg");
+  background-size: cover;
 }
 
 h1 {
-    font-size: 40px;
-    color: black;
-    margin-bottom: 30px;
+  font-size: 40px;
+  color: black;
+  margin-bottom: 30px;
 }
 
 .container {
-    width: 500px;
-    height: 700px;
+  width: 500px;
+  height: 700px;
+  padding-top: 8em;
 }
 
 #background-image {
-    background-image: url('assets/images/wordle-background-image.jpg');
-    background-size: cover;
+  background-image: url("assets/images/wordle-background-image.jpg");
+  background-size: cover;
 }
 
 #board {
@@ -153,6 +155,7 @@ h1 {
 .button-container {
   display: flex;
   justify-content: center;
+  margin-top: 2em;
   gap: 10px; /* Add some space between the buttons */
 }
 
@@ -164,4 +167,84 @@ h1 {
   color: white; */
   text-decoration: none;
   cursor: pointer;
+}
+
+.how-to-play-button {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* Popup instructions */
+.popup-content h3 {
+  text-align: center;
+}
+
+.instructions-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.instruction-container {
+  display: flex;
+}
+
+.instruction-container + .instruction-container {
+  margin-top: 1em;
+}
+
+.instruction-text {
+  margin-left: 1em;
+}
+
+.story-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-container__content {
+  text-align: center;
+}
+
+.story-img {
+  margin: 0 auto;
+}
+
+.close-popup-button {
+  margin: initial;
+}
+
+@media screen and (min-width: 1200px) {
+  .popup-dialog {
+    width: 1200px;
+  }
+  .instructions-container {
+    flex-direction: row;
+    align-items: center;
+    padding: 2em;
+    padding-top: 0;
+  }
+
+  .story-container__content {
+    margin-top: initial;
+    margin-left: 1em;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .story-img {
+    order: 1;
+  }
+
+  .story-text {
+    order: 2;
+    margin-left: 1em;
+  }
+
+  .vl {
+    border-left: 3px solid black;
+    height: 200px;
+    margin-left: 2em;
+    margin-right: 3em;
+  }
 }
