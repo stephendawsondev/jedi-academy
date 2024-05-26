@@ -2,6 +2,7 @@ let droidTile;
 let jawaTile;
 let score = 0;
 let gameOver = false;
+let timer = 30;
 
 document.addEventListener("DOMContentLoaded", async function () {
   let whackADroidAudio;
@@ -107,9 +108,31 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     setInterval(setDroid, 1000);
     setInterval(setJawa, 1500);
+
+    // Start the timer ******* DM
+    startTimer();
   });
 
   setUpBoard();
   overlay.appendChild(startButton);
   board.appendChild(overlay);
+
+  // Function to start the timer ********* DM
+  const startTimer = () => {
+    const timerDisplay = document.getElementById("timer");
+    const countdown = setInterval(() => {
+      if (gameOver) {
+        clearInterval(countdown);
+        return;
+      }
+      timer--;
+      timerDisplay.innerText = `Time Left: ${timer}`;
+      if (timer <= 0) {
+        clearInterval(countdown);
+        document.getElementById("score").innerText =
+          "Time's Up! You scored " + score.toString() + " points";
+        gameOver = true;
+      }
+    }, 1000);
+  };
 });
