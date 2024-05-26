@@ -2,8 +2,10 @@ let userAllowsSounds = false;
 let userAllowsMusic = false;
 let playerData = {};
 let audioObject = {};
+let popupDialog;
+let closePopupButton;
 
-const repoName = "may-hackathon-2024";
+const repoName = "jedi-academy";
 
 const isGithubPages = window.location.href.includes("github.io");
 const baseURL = isGithubPages ? `/${repoName}/` : "/";
@@ -12,7 +14,8 @@ const envAudioUrl = `${baseURL}public/`;
 const envImageUrl = `${baseURL}assets/images/`;
 
 const audioFiles = {
-  battlemusic: 'starwars-battle-music.mp3'
+  battlemusic: "starwars-battle-music.mp3",
+  youngling: "youngling-padawan.mp3",
 };
 
 if (document.querySelector(".how-to-play-button")) {
@@ -22,13 +25,13 @@ if (document.querySelector(".how-to-play-button")) {
   });
 }
 if (document.querySelector(".popup-dialog")) {
-  const popupDialog = document.querySelector(".popup-dialog");
-  const closePopupButton = document.querySelector(".close-popup-button");
+  popupDialog = document.querySelector(".popup-dialog");
+  closePopupButton = document.querySelector(".close-popup-button");
 
   closePopupButton.addEventListener("click", function () {
     popupDialog.close();
   });
-};
+}
 
 /**
  * Initializes the local storage with the default structure if not already set.
@@ -131,6 +134,12 @@ const addAudioIconEventListeners = () => {
     soundIcon.src = userAllowsSounds
       ? `${envImageUrl}sound_on.webp`
       : `${envImageUrl}sound_off.webp`;
+
+    if (userAllowsSounds) {
+      playSoundEffect();
+    } else {
+      stopSoundEffect();
+    }
   });
 };
 
@@ -140,8 +149,8 @@ const addAudioIconEventListeners = () => {
 const playMusic = () => {
   if (userAllowsMusic && audioObject.battlemusic) {
     audioObject.battlemusic.loop = true; // Set loop to true
-   // audioObject.volume = 0.5;
-    audioObject.battlemusic.play().catch(error => {
+    // audioObject.volume = 0.5;
+    audioObject.battlemusic.play().catch((error) => {
       console.error("Music play failed:", error);
     });
   }
@@ -154,6 +163,27 @@ const stopMusic = () => {
   if (audioObject.battlemusic) {
     audioObject.battlemusic.pause();
     audioObject.battlemusic.currentTime = 0; // Reset the audio to the beginning
+  }
+};
+
+/**
+ * Function to play the sound effect
+ */
+const playSoundEffect = () => {
+  if (userAllowsSounds && audioObject.youngling) {
+    audioObject.youngling.play().catch((error) => {
+      console.error("Sound effect play failed:", error);
+    });
+  }
+};
+
+/**
+ * Function to stop the sound effect
+ */
+const stopSoundEffect = () => {
+  if (audioObject.youngling) {
+    audioObject.youngling.pause();
+    audioObject.youngling.currentTime = 0; // Reset the audio to the beginning
   }
 };
 

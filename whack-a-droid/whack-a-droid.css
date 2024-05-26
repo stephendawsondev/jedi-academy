@@ -1,28 +1,39 @@
 body {
   text-align: center;
-  background: url(assets/images/tatooine.jpg);
+  background: url(assets/images/tatooine.webp);
   background-size: cover;
   color: black;
   height: 100vh;
 }
 
+.score-timer__container {
+  font-family: "Star Jedi";
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: #f9d71c;
+}
+
 #board {
   position: relative;
-  width: 540px;
-  height: 540px;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   background: url(assets/images/sand-background.jpg);
   background-size: cover;
-  border: 3px solid white;
-  border-radius: 25px;
+  border: 3px solid #f9d71c;
   cursor: url("assets/images/lightsaber.png"), auto;
 }
 
 #board div:not(.overlay) {
-  width: 180px; /* Ensure tiles have correct width */
-  height: 180px; /* Ensure tiles have correct height */
+  width: 33%;
+  height: 180px;
   background-image: url(assets/images/hole-325.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -79,10 +90,15 @@ body {
   cursor: pointer;
 }
 
+.back-button {
+  margin-top: 2em;
+}
+
 /* Add overlay style */
 
 .overlay {
   position: absolute;
+  font-family: "Star Jedi";
   top: 0;
   left: 0;
   width: 100%;
@@ -92,6 +108,17 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 2;
+  flex-direction: column;
+  letter-spacing: 2px;
+}
+
+.overlay .overlay-message {
+  color: white;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 /* Popup instructions */
@@ -154,6 +181,13 @@ body {
   40%,
   80% {
     transform: translateX(5px);
+  }
+}
+
+/* at 600px width */
+@media screen and (min-width: 600px) {
+  .score-timer__container {
+    flex-direction: row;
   }
 }
 
