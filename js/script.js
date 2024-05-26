@@ -11,7 +11,9 @@ const baseURL = isGithubPages ? `/${repoName}/` : "/";
 const envAudioUrl = `${baseURL}public/`;
 const envImageUrl = `${baseURL}assets/images/`;
 
-const audioFiles = {};
+const audioFiles = {
+  battlemusic: 'starwars-battle-music.mp3'
+};
 
 if (document.querySelector(".how-to-play-button")) {
   const howToPlayButton = document.querySelector(".how-to-play-button");
@@ -85,6 +87,7 @@ const loadAudio = (audioObj, audioFiles, path) => {
   audioObj = audioObj || {};
   for (const [key, fileName] of Object.entries(audioFiles)) {
     audioObj[key] = new Audio(`${path}${fileName}`);
+    audioObj[key].volume = 0.3;
   }
   return audioObj;
 };
@@ -114,6 +117,12 @@ const addAudioIconEventListeners = () => {
     musicIcon.src = userAllowsMusic
       ? `${envImageUrl}music_on.webp`
       : `${envImageUrl}music_off.webp`;
+
+    if (userAllowsMusic) {
+      playMusic();
+    } else {
+      stopMusic();
+    }
   });
 
   soundButton.addEventListener("click", () => {
@@ -123,6 +132,29 @@ const addAudioIconEventListeners = () => {
       ? `${envImageUrl}sound_on.webp`
       : `${envImageUrl}sound_off.webp`;
   });
+};
+
+/**
+ * Function to play the music
+ */
+const playMusic = () => {
+  if (userAllowsMusic && audioObject.battlemusic) {
+    audioObject.battlemusic.loop = true; // Set loop to true
+   // audioObject.volume = 0.5;
+    audioObject.battlemusic.play().catch(error => {
+      console.error("Music play failed:", error);
+    });
+  }
+};
+
+/**
+ * Function to stop the music
+ */
+const stopMusic = () => {
+  if (audioObject.battlemusic) {
+    audioObject.battlemusic.pause();
+    audioObject.battlemusic.currentTime = 0; // Reset the audio to the beginning
+  }
 };
 
 /**
@@ -183,6 +215,11 @@ initializeLocalStorage();
 addAudioIconEventListeners();
 
 audioObject = loadAudio(audioObject, audioFiles, envAudioUrl);
+
+// Start playing music if allowed
+if (userAllowsMusic) {
+  playMusic();
+}
 
 if (document.querySelector(".back-button")) {
   const backButton = document.querySelector(".back-button");
