@@ -62,9 +62,9 @@ body {
   border: solid 2px black;
 }
 
-.play-again {
+/* .play-again {
   margin-top: 0.5em;
-}
+} */
 
 .row-one,
 .row-two,
@@ -130,5 +130,20 @@ body {
 .close-button {
   float: right;
   width: 3.2rem;
+  cursor: pointer;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Add some space between the buttons */
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  /* background-color: #333;
+  color: white; */
+  text-decoration: none;
   cursor: pointer;
 }
