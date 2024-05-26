@@ -10,7 +10,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const popupDialog = document.querySelector(".popup-dialog");
   const closePopupButton = document.querySelector(".close-popup-button");
 
-  const localStorageData = JSON.parse(localStorage.getItem("gameData"));
+  const localStorageData = JSON.parse(localStorage.getItem("gameData")) || {
+    name: "",
+  };
 
   playButton.addEventListener("click", function (event) {
     event.preventDefault();
