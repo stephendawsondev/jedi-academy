@@ -19,12 +19,14 @@ if (document.querySelector(".how-to-play-button")) {
     popupDialog.showModal();
   });
 }
-const popupDialog = document.querySelector(".popup-dialog");
-const closePopupButton = document.querySelector(".close-popup-button");
+if (document.querySelector(".popup-dialog")) {
+  const popupDialog = document.querySelector(".popup-dialog");
+  const closePopupButton = document.querySelector(".close-popup-button");
 
-closePopupButton.addEventListener("click", function () {
-  popupDialog.close();
-});
+  closePopupButton.addEventListener("click", function () {
+    popupDialog.close();
+  });
+};
 
 /**
  * Initializes the local storage with the default structure if not already set.
@@ -133,7 +135,7 @@ const calculateAverageScore = () => {
     gameData.wordle.result +
     gameData["whack-a-droid"].result +
     gameData.memory.result;
-  const averageScore = Math.floor(totalScore / 3);
+  const averageScore = Math.round(totalScore / 3);
   return averageScore;
 };
 
