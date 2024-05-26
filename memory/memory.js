@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async function() {
         "assets/sounds/"
     );
 
-
+-
     // ********************* How to play button popup
 
     const howToPlayButton = document.querySelector('.how-to-play-button');
@@ -87,10 +87,12 @@ document.addEventListener('DOMContentLoaded', async function() {
         }
         
         if (score === 6) {
-            stopTimer();
             memoryAudio.memoryTrialComplete.play();
-            console.log(playerRank);
+            stopTimer();
         }
+        
+        console.log(playerRank);
+        updateLocalStorageGameData("memory", {result: playerRank, gameComplete: true, firstTimePlayed: false})
     }
     
 
