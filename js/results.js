@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const localStorageValues = JSON.parse(localStorage.getItem("gameData"));
-  localStorageValues.totalScore = await calculateAverageScore();
 
   // Ensure all game data is present before proceeding
   if (
@@ -13,12 +12,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   // Calculate the totalScore if it's not already done
-  if (!localStorageValues.allGamesComplete) {
-    localStorageValues.totalScore = await calculateAverageScore(
-      localStorageValues
-    );
-    localStorage.setItem("gameData", JSON.stringify(localStorageValues));
-  }
+  if (!localStorageValues.allGamesComplete) return;
+  localStorageValues.totalScore = await calculateAverageScore();
 
   const ranks = ["Padawan", "Jedi Knight", "Jedi Master"];
 
