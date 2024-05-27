@@ -240,6 +240,32 @@ User/player:
 | User/Player | As a player, I expect the games to be fully functioning without bugs so that I can play the game more easily and it is more enjoyable.         | Games are tested and debugged to ensure they are fully functional and free of major bugs.                                                                                          |
 | User/Player | As a user, I expect the application to be responsive so that I can view the application and play the games on all different screen sizes and so that everything can be seen clearly. | The application is responsive, and all games and elements are accessible and clearly visible on various screen sizes (mobile, tablet, desktop). |
 
+## Debugging
+### Existing Bugs
+
+- Memory Game - On iphone, the begin trial button text overflows the button container. Attempted to change using media query but has been unsuccessful.
+
+### Fixed Bugs
+- #### Bug: Mobile Button Layout Issue
+**Description:** There was an issue with the button layout on mobile devices where the "Back to Trials" and "Play again" buttons were displayed side by side, making them difficult to interact with on smaller screens.
+**Solution:** To resolve this, I implemented a CSS media query targeting devices with a screen width of 500 pixels or less. The media query changes the flex direction of the button container to a column layout and centers the buttons. This adjustment ensures that the buttons are stacked vertically and are easier to interact with on mobile devices. Here is the CSS code used to fix the issue:
+```css
+/* Styles for mobile devices (small screens) */
+@media (max-width: 500px) {
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .button-container .btn {
+    margin: 10px 0;
+    width: 80%;
+    text-align: center;
+  }
+}
+```
+By applying this fix, the user experience on mobile devices is significantly improved, ensuring that the buttons are accessible and easy to use.
+
 ## Credits
 
 ### Images

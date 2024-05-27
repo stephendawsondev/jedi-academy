@@ -143,7 +143,6 @@ const addAudioIconEventListeners = () => {
 const playMusic = () => {
   if (userAllowsMusic && audioObject.battlemusic) {
     audioObject.battlemusic.loop = true; // Set loop to true
-    // audioObject.volume = 0.5;
     audioObject.battlemusic.play().catch((error) => {
       console.error("Music play failed:", error);
     });

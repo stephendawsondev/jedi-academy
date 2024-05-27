@@ -228,7 +228,6 @@ dialog::backdrop {
 .popup-content {
   text-align: center;
   font-family: "Star Jedi", sans-serif;
-  /* font-weight: 100; */
 }
 
 .close-popup-button {
@@ -339,7 +338,7 @@ dialog::backdrop {
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 660px) {
   .name-input {
     margin-top: 80%;
 }
