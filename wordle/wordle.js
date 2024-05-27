@@ -60,7 +60,9 @@ window.onload = async function () {
   initialize();
 
   const wordleAudioFiles = {
-    wisdomTrialComplete: "complete-wisdom-trial.mp3",
+    wisdomTrialComplete: "complete-wisdom-trial.mp3",//completion of game
+    moveToNextRow:"moving-to-the-next-row.mp3",// move to next row
+    youlose:"game-over.mp3",//game lose
   };
 
   wordleAudio = loadAudio(wordleAudio, wordleAudioFiles, "assets/sounds/");
@@ -116,6 +118,9 @@ function initialize() {
     if (!gameOver && row == height) {
       gameOver = true;
       document.getElementById("display_box").innerText =  "Game Over! correct word is " + word;
+      if (userAllowsSounds) {
+        wordleAudio.youlose.play();
+      }
     }
   });
 }
@@ -198,6 +203,9 @@ function handleKeyPress(key) {
 
   if (key === "Enter") {
     if (col === width) {
+      if (userAllowsSounds && row != height) {
+        wordleAudio.moveToNextRow.play();
+      }
       checkForMatch();
       row += 1;
       col = 0;
