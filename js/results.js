@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   if (!localStorageValues.allGamesComplete) return;
   localStorageValues.totalScore = await calculateAverageScore();
 
+  const playerUserName = localStorageValues.name || "Player";
+
+
   const ranks = ["Padawan", "Jedi Knight", "Jedi Master"];
 
   document.querySelector(".results-content").style.display = "block";
@@ -28,10 +31,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   const memoryResultSpan = document.querySelector("#memory-result span");
   const agilityResultSpan = document.querySelector("#agility-result span");
   const wisdomResultSpan = document.querySelector("#wisdom-result span");
+  const userNameSpan = document.querySelector('#user-name span');
   const overallRank = document.querySelector("#overall-result");
 
   memoryResultSpan.innerText = memoryResult;
   agilityResultSpan.innerText = agilityResult;
   wisdomResultSpan.innerText = wisdomResult;
+  userNameSpan.innerText = playerUserName;
   overallRank.innerText = overallScore;
 });

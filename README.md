@@ -20,57 +20,49 @@ Throughout this game, you will embark on a Star Wars themed journey with a story
 ### Home Page
 ![Home-Page](assets/screenshots/1-home-page-screenshot.png)
 
-* The 'Home Page' gives you a link to other pages. the 'Enter the Jedi Temple' link takes you to the page where you can select your games, the 'How to Play' button gives you instructions on how the whole game works, and the 'Find Out Your Rank Button' takes you to the scoring page once you have finished playing all the games. The bottom link of the home page takes to 'Meet the Jedi Council' page with is information about our team members, their contributions to the project, and their favourite Star Wars Character.
+* The 'Home Page' gives you a link to other pages. the 'Enter the Jedi Temple' link takes you to the page where you can select your games, the 'How to Play' button gives you instructions on how the whole game works, and the 'Find Out Your Rank Button' takes you to the scoring page once you have finished playing all the games. The bottom link of the home page takes you to 'Meet the Jedi Council' page with is information about our team members, their contributions to the project, and their favourite Star Wars Character.
 
 ### Enter-Name
 ![Enter-Name](assets/screenshots/2-enter-name-screenshot.png)
 
-* A screenshot on the page where you enter your name before you start to play the games.
+* Users will enter their name before they start to play the games.
 
 ### Trial-Selection
 ![Trial-Selection](assets/screenshots/3-trial-selection.png)
 
-* The page where you select your trials. You can select the games in any order.
+* Users are now promptred to select which game they want to play.
 
 ### Memory-Game
 ![Memory-Game](assets/screenshots/4-memory-game.png)
 
-* A screenshot of the memory game page.
+* The memory game is designed to test your memory and connection to the force!
+* You will face a grid that presents immages that you will have to match before they disappear again.
 
 ### Agility-Game
-![Agility-Game](assets/screenshots/6-agility-game.png)
+![Agility-Game](assets/screenshots/8-agility-game-play.png)
 
-* A screen shot of the agility game right at the start, which is Whack-a-Droid.
+* Your next trial is a trial of agility.
+* This test will challenge your reflexes and your ability to remain calm under pressure.
+* Whack the droid as many times as you can before the time runs out.
+* Be sure NOT to hit any of the Jawas!
 
-### Agility-how-to-play
-![Agility-how-to-play](assets/screenshots/7-agility-how-to-play.png)
-
-* The 'agility how to play' button is a pop-up on the agility(Whack-a-droid) page that gives you instructions in how to play.
-
-### Agility-game-play
-![Agility-game-play](assets/screenshots/8-agility-game-play.png)
-
-* A screenshot of the Whack-a-droid game once the game is in action.
 
 ### Wisdom-game
 ![Wisdom Game](assets/screenshots/9-wisdom-game.png)
 
-* A screenshot of the Wordle game.
+* Here you will face a Star Wars themed version of the classic game Wordle.
+* The game presents you with a series of words related to Star Wars.
 
-### Home-how-to-play
-![Home how-to-play](assets/screenshots/11-home-how-play.png)
-
-* A screenshot of the how to play button on the home page which gives you information on how to play the game.
 
 ### Team-page
 ![Team-Page](assets/screenshots/12-team-page.png)
 
-* The Team page, also called the 'Meet the Jedi Council' page with is information about our team members, their contributions to the project, and their favourite Star Wars Character.
+* The Team page, also called the 'Meet the Jedi Council' page, contains information about our team members, their contributions to the project, and their favourite Star Wars Character.
 
 ### Results-page
 ![Results-page](assets/screenshots/13-results-page.png)
 
-* The results page show you the Jedi rank once you have finished playing all the games. This link is found on the home page.
+* The results page shows the User their newly acheived Jedi rank once they have finished playing all the games. This link is found on the home page.
 
 ## User stories
 
@@ -257,6 +249,9 @@ User/player:
 * From younglings - [From younglings](https://www.101soundboards.com/sounds/27911492-from-younglings-first-steps-to-padawans-eager-strides-the-journey-to-mastery-begins)
 * Jawa Sounds = [Jaw Sounds](https://www.101soundboards.com/boards/10339-jawas-sounds-star-wars#goog_rewarded)
 * R2D2 Sound - [R2D2 sounds](https://www.101soundboards.com/sounds/24263888-r2d2-text-short)
+* Lightsaber Ignition - [lightsaber-ignition](https://www.101soundboards.com/sounds/23924273-lightsaber-ignition)
+* Taskmaster sound - [taskmaster-sound](https://www.101soundboards.com/sounds/4528406-those-who-lose-will-be-serving-taskmaster-grint)
+
 
 ### Documentation for Code
 
