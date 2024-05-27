@@ -192,4 +192,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   // Initial shuffle
   shuffle();
+  
 });
+

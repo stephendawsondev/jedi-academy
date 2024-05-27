@@ -68,7 +68,7 @@ Throughout this game, you will embark on a Star Wars themed journey with a story
 * The Team page, also called the 'Meet the Jedi Council' page with is information about our team members, their contributions to the project, and their favourite Star Wars Character.
 
 ### Results-page
-![Results-page](assets/screenshots/13-results page.png)
+![Results-page](assets/screenshots/13-results-page.png)
 
 * The results page show you the Jedi rank once you have finished playing all the games. This link is found on the home page.
 
