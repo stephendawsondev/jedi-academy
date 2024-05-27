@@ -65,7 +65,6 @@ img {
 .how-to-play-button,
 .back-button {
   display: block;
-  max-width: 200px;
   background: #f9d71c;
   padding: 0.5em 1em;
   text-align: center;
@@ -273,6 +272,7 @@ dialog::backdrop {
 .all-trails-incomplete {
   margin: 30px auto;
   width: 60%;
+  min-width: 340px;
   height: auto;
   margin-top: 20px;
   padding: 10px;

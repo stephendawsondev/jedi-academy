@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     droidBleep: "r2d2-sound.mp3",
     jawaAngry: "jawa-angry.mp3",
     smashMetal: "smash-metal.mp3",
+    trialComplete: "complete-trial-agility.mp3",
   };
 
   whackADroidAudio = await loadAudio(
@@ -125,6 +126,11 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     if (highestScore > 50) {
+      if (userAllowsSounds) {
+        setTimeout(() => {
+          whackADroidAudio.trialComplete.play();
+        }, 1000);
+      }
       updateLocalStorageGameData("whack-a-droid", {
         result: result,
         gameComplete: true,

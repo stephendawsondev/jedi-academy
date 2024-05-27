@@ -9,8 +9,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const infoButton = document.querySelector(".info-button");
   const popupDialog = document.querySelector(".popup-dialog");
   const closePopupButton = document.querySelector(".close-popup-button");
-  const resultsButton = document.querySelector('.results-button');
-  const meetTheTeamButton = document.querySelector('.meet-the-team-button');
+  const resultsButton = document.querySelector(".results-button");
+  const meetTheTeamButton = document.querySelector(".meet-the-team-button");
+
+  if (userAllowsSounds) {
+    playSoundEffect();
+  } else {
+    stopSoundEffect();
+  }
 
   const localStorageData = JSON.parse(localStorage.getItem("gameData")) || {
     name: "",
@@ -21,9 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hide the main header and the play button, and show the name input field
     header.style.display = "none";
     playButton.style.display = "none";
-    infoButton.style.display = "none"; 
-    resultsButton.style.display = "none"; 
-    meetTheTeamButton.style.display = "none"; 
+    infoButton.style.display = "none";
+    resultsButton.style.display = "none";
+    meetTheTeamButton.style.display = "none";
 
     if (
       localStorageData["name"] == "" ||
