@@ -137,6 +137,7 @@ User/player:
 * Bobba-fett Logo - [Booba-fett logo](https://w7.pngwing.com/pngs/854/808/png-transparent-boba-fett-jango-fett-mandalorian-leia-organa-star-wars-death-star-angle-logo-monochrome-thumbnail.png)
 * Lightsaber - [Lightsaber](https://www.pngwing.com/en/free-png-pqhkp/download)
 * Jedi Temple memory game background - [Jedi Temple memory game background](https://static.wikia.nocookie.net/starwars/images/2/2d/Jedi_Temple_spires_ROTS.png/revision/latest/scale-to-width-down/1000?cb=20130215030848)
+* LightSaber Favicon - [LightSaber Favicon](https://www.flaticon.com/free-icon/lightsaber_4643798?term=star+wars&page=1&position=52&origin=tag&related_id=4643798)
 
 ### Sound Clips
 
