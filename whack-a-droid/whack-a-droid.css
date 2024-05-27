@@ -1,8 +1,13 @@
 body {
   text-align: center;
   background: url(assets/images/tatooine.webp);
+  background-size: cover;
   color: black;
   height: 100vh;
+}
+
+.container {
+  padding-bottom: 2em;
 }
 
 .score-timer__container {
