@@ -41,7 +41,7 @@ User/player:
 
 
 <details>
-<summary>Memory Game - Mobile</summary>
+<summary>Memory Game - Mobile View</summary>
 
 ![memorygamewireframe wireframe](assets/wireframes/memory-game-mobile.png)
 </details>
@@ -90,44 +90,83 @@ User/player:
 
 ### Star Wars Themed Wordle - Laptop View
 
-![Star Wars Themed Wordle - Laptop View](assets/wireframes/star-wars-wordle-laptop.png)
+<details>
+<summary>Star Wars Themed Wordle - Laptop View</summary>
 
+![Star Wars Themed Wordle - Laptop View](assets/wireframes/star-wars-wordle-laptop.png)
+</details>
 
 ### Main Page - Mobile View
 
-![Star Wars Main Page - Phone View](assets/wireframes/phone-wireframe-index.png)
+<details>
+<summary>Main Page - Mobile View</summary>
+
+![Star Wars Main Page - Mobile View](assets/wireframes/phone-wireframe-index.png)
+</details>
 
 ### Main Page - Tablet View
 
+<details>
+<summary>Main Page - Tablet View</summary>
+
 ![Star Wars Main Page - Tablet View](assets/wireframes/tablet-wireframe-index.png)
+</details>
 
 ### Main Page - Laptop View
 
+<details>
+<summary>Main Page - Laptop View</summary>
+
 ![Star Wars Main Page - Laptop View](assets/wireframes/laptop-wireframe-index.png)
+</details>
 
-### Results Page - Phone View
+### Results Page - Mobile View
 
-![Results Page - Phone View](assets/wireframes/results-phone-view.png)
+<details>
+<summary>Results Page - Mobile View</summary>
+
+![Results Page - Mobile View](assets/wireframes/results-phone-view.png)
+</details>
 
 ### Results Page - Tablet View
 
+<details>
+<summary>Results Page - Tablet View</summary>
+
 ![Results Page - Tablet View](assets/wireframes/Results-tablet-view.png)
+</details>
 
 ### Results Page - Laptop View
 
-![Results Page - Laptop View](assets/wireframes/Results-laptop-view.png)
+<details>
+<summary>Results Page - Laptop View</summary>
 
-### Meet The Team Page - Phone View
+![Results Page - Laptop View](assets/wireframes/Results-laptop-view.png)
+</details>
+
+### Meet The Team Page - Mobile View
+
+<details>
+<summary>Meet The Team Page - Mobile View</summary>
 
 ![Meet The Team Page - Phone View](assets/wireframes/meet-the-team-phone.png)
+</details>
 
 ### Meet The Team Page - Tablet View
 
+<details>
+<summary>Meet The Team Page - Tablet View</summary>
+
 ![Meet The Team Page - Tablet View](assets/wireframes/meet-the-team-tablet.png)
+</details>
 
 ### Meet The Team Page - Laptop View
 
+<details>
+<summary>Meet The Team Page - Laptop View</summary>
+
 ![Meet The Team Page - Laptop View](assets/wireframes/meet-the-team-laptop.png)
+</details>
 
 ## Technologies used
 
