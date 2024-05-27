@@ -15,6 +15,63 @@ Throughout this game, you will embark on a Star Wars themed journey with a story
 
 "May the force be with you, always!"
 
+## Features
+
+### Home Page
+![Home-Page](assets/screenshots/1-home-page-screenshot.png)
+
+* The 'Home Page' gives you a link to other pages. the 'Enter the Jedi Temple' link takes you to the page where you can select your games, the 'How to Play' button gives you instructions on how the whole game works, and the 'Find Out Your Rank Button' takes you to the scoring page once you have finished playing all the games. The bottom link of the home page takes to 'Meet the Jedi Council' page with is information about our team members, their contributions to the project, and their favourite Star Wars Character.
+
+### Enter-Name
+![Enter-Name](assets/screenshots/2-enter-name-screenshot.png)
+
+* A screenshot on the page where you enter your name before you start to play the games.
+
+### Trial-Selection
+![Trial-Selection](assets/screenshots/3-trial-selection.png)
+
+* The page where you select your trials. You can select the games in any order.
+
+### Memory-Game
+![Memory-Game](assets/screenshots/4-memory-game.png)
+
+* A screenshot of the memory game page.
+
+### Agility-Game
+![Agility-Game](assets/screenshots/6-agility-game.png)
+
+* A screen shot of the agility game right at the start, which is Whack-a-Droid.
+
+### Agility-how-to-play
+![Agility-how-to-play](assets/screenshots/7-agility-how-to-play.png)
+
+* The 'agility how to play' button is a pop-up on the agility(Whack-a-droid) page that gives you instructions in how to play.
+
+### Agility-game-play
+![Agility-game-play](assets/screenshots/8-agility-game-play.png)
+
+* A screenshot of the Whack-a-droid game once the game is in action.
+
+### Wisdom-game
+![Wisdom Game](assets/screenshots/9-wisdom-game.png)
+
+* A screenshot of the Wordle game.
+
+### Home-how-to-play
+![Home how-to-play](assets/screenshots/11-home-how-play.png)
+
+* A screenshot of the how to play button on the home page which gives you information on how to play the game.
+
+### Team-page
+![Team-Page](assets/screenshots/12-team-page.png)
+
+* The Team page, also called the 'Meet the Jedi Council' page with is information about our team members, their contributions to the project, and their favourite Star Wars Character.
+
+### Results-page
+![Results-page](assets/screenshots/13-results page.png)
+
+* The results page show you the Jedi rank once you have finished playing all the games. This link is found on the home page.
+
 ## User stories
 
 Team of designers/developers:
