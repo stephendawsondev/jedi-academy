@@ -344,4 +344,10 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 git clone https://github.com/stephendawsondev/jedi-academy.git
 ```
 
-7. Press Enter. Your local clone will be created.
+
+## Future Implementations
+
+ * The memory game currently does not have an obvious ending to the game like the other games do. Something to add in would be an overlay with a message to the user making it clear the game has finsihed.
+ * A scoreboard functionality. Create an online database so the site can have a universal scoreboard. 
+ * User decision making. Adding to the Story at the end of the game, the user can have a choice to remain a Jedi or turn to the dark side. 
+ * Sliding Puzzle game. 

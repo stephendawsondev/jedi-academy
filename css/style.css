@@ -338,3 +338,12 @@ dialog::backdrop {
     display: flex;
   }
 }
+
+@media screen and (max-width: 425px) {
+  .name-input {
+    margin-top: 80%;
+}
+.game-choices {
+  margin-top: 50%;
+}
+}
