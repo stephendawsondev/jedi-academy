@@ -88,16 +88,16 @@ h1 {
 }
 
 .exist {
-  background-color: #f9d71c;
+  background-color: orange;
 }
 
 .correct {
-  background-color: lightgreen;
+  background-color: green;
   color: #fff;
 }
 
 .exist.correct {
-  background-color: lightgreen;
+  background-color: green;
   color: #000;
 }
 

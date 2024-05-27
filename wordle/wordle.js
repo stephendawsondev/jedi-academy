@@ -15,7 +15,6 @@ const words = [
     term: "EWOKS",
     hint: "Small, furry inhabitants of the forest moon of Endor.",
   },
-  { term: "LEIAS", hint: "Princess and later General of the Rebel Alliance." },
   {
     term: "CLONE",
     hint: "Genetically identical soldiers created for the Grand Army of the Republic.",
