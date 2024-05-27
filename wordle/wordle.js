@@ -203,12 +203,12 @@ function handleKeyPress(key) {
 
   if (key === "Enter") {
     if (col === width) {
-      if (userAllowsSounds && row != height) {
-        wordleAudio.moveToNextRow.play();
-      }
       checkForMatch();
       row += 1;
       col = 0;
+      if (userAllowsSounds && row != height) {
+        wordleAudio.moveToNextRow.play();
+      }
       
     } else {
       console.log("Not enough letters entered.");
