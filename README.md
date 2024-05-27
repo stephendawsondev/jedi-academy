@@ -1,4 +1,4 @@
-# may-hackathon-2024
+# Jedi Academy - A Star Wars Story
 
 A Star Wars-themed Hackathon Project
 
@@ -9,12 +9,11 @@ At the heart of the Order lies the Jedi Temple, where younglings from across the
 galaxy come to begin their journey towards becoming a Jedi. You are one of these
 younglings, chosen for your potential and sensitivity to the Force. Your journey will be
 filled with trials that test your memory, agility, and wisdom.
-Only by passing these trials will you ascend through the ranks and achieve the revered
-status of Jedi Master.
+What rank you acheive will be determined by how well you do in these trials.
 
-Throughout this game, you will embark on a Star Wars themed journey with a story and featuring a range of mini-games which include a memory game, Whack-a-mole, and a Star Wars themed Wordle. Each part of the story leads to a mini-game. The journey starts of being a youngling and then in order to become a Padawan you have a complete a game to test your memory at level 1 called "The Trial of Memory". The next part of the story at level 2 is called "The Trial of Agility" and this is to turn a Padawan into a Jedi Knight, the game here is Whack-a-droid. The final part of the game at level 3 is to turn a Jedi Knight to a Jedi Master and in order to complete this you have to take part in a game called "The Trial of Wisdom" which is a Star Wars themed Wordle game.
+Throughout this game, you will embark on a Star Wars themed journey with a story featuring a range of mini-games which include a memory game, Whack-a-droid, and a Star Wars themed Wordle. As you enter the Jedi temple as a youngling, you will be faced with three tasks. "The Trial of Memory", "The Trial of Agility" and "The Trial of Wisdom". Each game has its own scoring criteria. Based on your performance, you will achieve either the rank of Padawan, Jedi Knight or Jedi Master. Once all trials have been completed, you will be awarded an overall rank as you graduate from the Jedi Academy.
 
-May the force be with you, as always!
+"May the force be with you, always!"
 
 ## User stories
 
@@ -28,12 +27,10 @@ Team of designers/developers:
 
 User/player:
 
-- As a player, I want to experience an engaging Star Wars storyline so that I can make choices and affect the outcome.
 - As a user, I want to play a Star Wars themed memory game so that I can match pairs of images.
-- As a user, I can play a Whack a Droid game so that I can progress with the story.
+- As a user, I can play a Whack a Droid game so that I can get the highest score possible.
 - As a user, I want to play a Star Wars themed Wordle game so that I can have fun guessing words.
 - As a user, I can have my data persist so that I can have a sense of story continuity in the game.
-- As a player, I want to play mini-games that affect the storyline so that my performance influences the story.
 - As a user, I expect the 'How to Play' buttons on the each game to open up so I can see the instructions on how to play the game and how the game works.
 - As a user, when I click on the buttons throughout the website, I expect it to take me to the relevant page or part of the application.
 - As a player, I expect the games to be fully functioning without bugs so that I can play the game more easily and it is more enjoyable.
@@ -41,41 +38,60 @@ User/player:
 
 ## Wireframes
 
-### Memory Game - Mobile View
 
-![Memory Game - Mobile View](assets/wireframes/memory-game-mobile.png)
 
-### Memory Game - Tablet View
+<details>
+<summary>Memory Game - Mobile</summary>
+
+![memorygamewireframe wireframe](assets/wireframes/memory-game-mobile.png)
+</details>
+
+<details>
+<summary>Memory Game - Tablet View</summary>
 
 ![Memory Game - Tablet View](assets/wireframes/memory-game-tablet.png)
+</details>
 
-### Memory Game - Laptop View
+<details>
+<summary>Memory Game - Laptop View</summary>
 
 ![Memory Game - Laptop View](assets/wireframes/memory-game-laptop.png)
+</details>
 
-### Whack a Droid Game - Mobile View
+<details>
+<summary>Whack a Droid Game - Mobile View</summary>
 
 ![Whack a Droid Game - Mobile View](assets/wireframes/whack-a-droid-mobile.png)
+</details>
 
-### Whack a Droid Game - Tablet View
+<details>
+<summary>Whack a Droid Game - Tablet View</summary>
 
 ![Whack a Droid Game - Tablet View](assets/wireframes/whack-a-droid-tablet.png)
+</details>
 
-### Whack a Droid Game - Laptop View
+<details>
+<summary>Whack a Droid Game - Laptop View</summary>
 
 ![Whack a Droid Game - Laptop View](assets/wireframes/whack-a-droid-laptop.png)
+</details>
 
-### Star Wars Themed Wordle - Mobile View
+<details>
+<summary>Star Wars Themed Wordle - Mobile View</summary>
 
 ![Star Wars Themed Wordle - Mobile View](assets/wireframes/star-wars-wordle-mobile.png)
+</details>
 
-### Star Wars Themed Wordle - Tablet View
+<details>
+<summary>Star Wars Themed Wordle - Tablet View</summary>
 
 ![Star Wars Themed Wordle - Tablet View](assets/wireframes/star-wars-wordle-tablet.png)
+</details>
 
 ### Star Wars Themed Wordle - Laptop View
 
 ![Star Wars Themed Wordle - Laptop View](assets/wireframes/star-wars-wordle-laptop.png)
+
 
 ### Main Page - Mobile View
 
@@ -181,9 +197,10 @@ User/player:
 * Github - [Github](https://github.com/hpatnadeeshan)
 * LinkedIn - [LinkedIn](https://www.linkedin.com/in/tharindu-nadeeshan/)
 
-## Towbie
+### Towbie Idowu
 * Github - [Github](https://github.com/tee-24)
-* LinkedIn - []()
+* LinkedIn - [LinkedIn](https://www.linkedin.com/in/towbie-idowu-18b920270/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app)
+
 
 ## Deployment
 
