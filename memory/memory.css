@@ -215,6 +215,8 @@ header h1 {
   border: 2px #f9d71c solid;
 }
 
+
+
 /* Responsive styles */
 @media (max-width: 650px) {
   header h1 {
