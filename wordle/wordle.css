@@ -146,18 +146,32 @@ h1 {
 .button-container {
   display: flex;
   justify-content: center;
-  margin-top: 2em;
-  gap: 10px; /* Add some space between the buttons */
+  margin-top: 1em;
+  gap: 10px;
+  padding-bottom: 20px;
 }
 
 .btn {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  /* background-color: #333;
-  color: white; */
   text-decoration: none;
   cursor: pointer;
+}
+
+/* Styles for mobile devices (small screens) */
+@media (max-width: 500px) {
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-container .btn {
+    margin: 10px 0;
+    width: 80%;
+    text-align: center;
+  }
 }
 
 .how-to-play-button {
