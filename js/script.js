@@ -134,12 +134,6 @@ const addAudioIconEventListeners = () => {
     soundIcon.src = userAllowsSounds
       ? `${envImageUrl}sound_on.webp`
       : `${envImageUrl}sound_off.webp`;
-
-    if (userAllowsSounds) {
-      playSoundEffect();
-    } else {
-      stopSoundEffect();
-    }
   });
 };
 
@@ -189,9 +183,9 @@ const stopSoundEffect = () => {
 
 /**
  * Calculates the average score of all games rounded to the nearest integer.
- * @returns {number} - The average score of all games.
+ * @returns {Promise<number>} - The average score of all games.
  */
-const calculateAverageScore = () => {
+const calculateAverageScore = async () => {
   const gameData = JSON.parse(localStorage.getItem("gameData"));
   const totalScore =
     gameData.wordle.result +
@@ -207,7 +201,7 @@ const calculateAverageScore = () => {
  * @param {Object} data - The data object containing result and gameComplete status.
  * @example updateLocalStoragePlayerData('wordle', { result: 5, gameComplete: true, firstTimePlayed: false });
  */
-const updateLocalStorageGameData = (game, data) => {
+const updateLocalStorageGameData = async (game, data) => {
   const gameData = JSON.parse(localStorage.getItem("gameData"));
   gameData[game] = data;
 
@@ -217,7 +211,7 @@ const updateLocalStorageGameData = (game, data) => {
     gameData.memory.gameComplete;
 
   if (gameData.allGamesComplete) {
-    gameData.totalScore = calculateAverageScore();
+    gameData.totalScore = await calculateAverageScore();
   }
 
   localStorage.setItem("gameData", JSON.stringify(gameData));
